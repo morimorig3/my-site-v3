@@ -26,3 +26,29 @@
   - スナップスクロール
   - アニメーション
 - ダークテーマに対応させる
+
+# 遷移要件
+
+## 既存の遷移要件
+
+```mermaid
+graph LR
+
+Home-->Blog
+Home-->About
+Home-->プライバシーポリシー
+Home-->お問合せ["お問合せ※Googleフォーム"]
+```
+
+## リニューアル後の遷移要件
+
+```mermaid
+graph LR
+
+Home-->Blog
+Home-->About
+Home-->Experience
+Home-->Projects
+Home-->プライバシーポリシー
+Home-->お問合せ["お問合せ※Googleフォーム"]
+```
