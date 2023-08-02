@@ -1,38 +1,28 @@
-# create-svelte
+# リニューアルの目的
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+課題解決のためという旗は掲げておくが、実情は新しい技術を試したいというお気持ちのリニューアル
 
-## Creating a project
+## 現状の課題
 
-If you're seeing this, you've probably already done this step. Congrats!
+- どのようなスキルを持っているのかわからない
+  - どんな働き方をしていたのかも知れるといい
+- 経験を知るには長い文章を読まなければならない（読まない）
+- 経験した技術スタックが増えているがアップデートされていない
+- ホワイト基調で目に優しくないデザイン
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## 課題解決の方針
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- プロジェクツページを新設する
+  - ページ内で制作したものを（掲載できる範囲で）紹介する
+  - 関わってた案件に対して、技術スタック、開発環境、経験年数などを記載（React、jQuery、チーム開発とか）
+- エクスペリエンスページを新設する
+  - 一般的なスキルを記述する（チーム開発とかGitとか）
+- アバウトページを刷新する
+  - 文章による表現を止める
+  - 何が得意かをわかるように記述しておく（細部にまでこだわるとか、すべての媒体で美しく見せるとか、パフォーマンスにこだわるなど）
+- グラフィック付きで表現する
+  - SVGアイコン
+- スクロールしてみたくなるような仕組みを実装する
+  - スナップスクロール
+  - アニメーション
+- ダークテーマに対応させる
