@@ -91,7 +91,9 @@ Home-->お問合せ["お問合せ※Googleフォーム"]
   - 個人的に開発しているものがわかる
   - 最新の3件くらい
 - Projects
-  - 【要検討】最新の1件の簡易表示？
+  - 最新の1件の簡易表示
+- Books
+  - お気に入りの上位3件くらい
 - About
   - 現行のAuthorと同じようなのもの
   - GitHubのリンクなどがわかる
@@ -112,6 +114,8 @@ Home-->お問合せ["お問合せ※Googleフォーム"]
 - 一番上が現在で下に向かうにつれて過去に向かう
 - シャープなデザインがよい
 
+参考：[https://blog.universe-web.jp/1680/](https://blog.universe-web.jp/1680/)
+
 ## Develop
 
 ## コンテンツ
@@ -127,9 +131,10 @@ Home-->お問合せ["お問合せ※Googleフォーム"]
   - なぜ作ろうとしたとか
   - 改善したい箇所とか
 
+
+
 ## Projects
 
-参考: [https://johnkavanagh.co.uk/projects/](https://johnkavanagh.co.uk/projects/)
 
 ### コンテンツ
 
@@ -139,7 +144,7 @@ Home-->お問合せ["お問合せ※Googleフォーム"]
 
 ### デザイン
 
-【要検討】
+参考: [https://johnkavanagh.co.uk/projects/](https://johnkavanagh.co.uk/projects/)
 
 ## Books
 
@@ -157,6 +162,8 @@ Home-->お問合せ["お問合せ※Googleフォーム"]
   - 一段目は長いスクロールで新社会人向け
   - 駆け出しエンジニア向け
   - 深掘りする人向けなど
+
+参考：[https://techbookfest.org/](https://techbookfest.org/)
 
 ## プライバシーポリシー
 
