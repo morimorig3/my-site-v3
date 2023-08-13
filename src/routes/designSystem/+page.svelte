@@ -1,4 +1,4 @@
-<h1 class="text-2xl font-bold py-4 tablet:py-6">デザインシステム</h1>
+<h1 class="text-heading-1 py-4 tablet:py-6">デザインシステム</h1>
 
 <section>
 	<h2 class="font-bold text-xl py-4">Colors</h2>
@@ -91,23 +91,77 @@
 		<div>
 			<h3 class="text-lg font-bold">Font</h3>
 			<ul>
-				<li class="flex items-center gap-4">
+				<li>
 					<div>
 						<p class="text-2xl font-normal">Noto Sans Japanese</p>
 						<p class="text-textDescription text-base">400</p>
 					</div>
 				</li>
-				<li class="flex items-center gap-4">
+				<li>
 					<div>
 						<p class="text-2xl font-medium">Noto Sans Japanese</p>
 						<p class="text-textDescription text-base">500</p>
 					</div>
 				</li>
-				<li class="flex items-center gap-4">
+				<li>
 					<div>
 						<p class="text-2xl font-bold">Noto Sans Japanese</p>
 						<p class="text-textDescription text-base">700</p>
 					</div>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h3 class="text-lg font-bold">Heading</h3>
+			<ul>
+				<li>
+					<p class="text-heading-1">Heading 1</p>
+					<p class="text-textDescription text-base">32px</p>
+				</li>
+				<li>
+					<p class="text-heading-2">Heading 2</p>
+					<p class="text-textDescription text-base">28px</p>
+				</li>
+				<li>
+					<p class="text-heading-3">Heading 3</p>
+					<p class="text-textDescription text-base">24px</p>
+				</li>
+				<li>
+					<p class="text-heading-4">Heading 4</p>
+					<p class="text-textDescription text-base">20px</p>
+				</li>
+				<li>
+					<p class="text-heading-5">Heading 5</p>
+					<p class="text-textDescription text-base">16px</p>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h3 class="text-lg font-bold">Other Style</h3>
+			<ul>
+				<li>
+					<p class="text-body">本文</p>
+					<p class="text-textDescription text-base">16px</p>
+				</li>
+				<li>
+					<p class="text-body-sm">本文S</p>
+					<p class="text-textDescription text-base">14px</p>
+				</li>
+				<li>
+					<p class="text-label">ラベル</p>
+					<p class="text-textDescription text-base">14px</p>
+				</li>
+				<li>
+					<p class="text-label-sm">ラベルS</p>
+					<p class="text-textDescription text-base">12px</p>
+				</li>
+				<li>
+					<p class="text-desc">説明</p>
+					<p class="text-textDescription text-base">12px</p>
+				</li>
+				<li>
+					<p class="text-desc-sm">説明S</p>
+					<p class="text-textDescription text-base">10px</p>
 				</li>
 			</ul>
 		</div>
