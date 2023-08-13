@@ -1,9 +1,17 @@
-<nav>
-	<a href="/">ホーム</a>
-	<a href="/develop">Develop</a>
-	<a href="/projects">Projects</a>
-	<a href="/books">Books</a>
-	<a href="/about">About</a>
-	<a href="/privacy">プライバシーポリシー</a>
-</nav>
-<slot />
+<script>
+	import MainLayout from '$lib/component/MainLayout.svelte';
+	import '../app.css';
+</script>
+
+<MainLayout>
+	<slot />
+</MainLayout>
+
+<style lang="postcss">
+	:global(html) {
+		font-family: 'Noto Sans JP', -apple-system, blinkmacsystemfont, 'Segoe UI',
+			'Hiragino Kaku Gothic ProN', 'BIZ UDPGothic', meiryo, sans-serif;
+		color: theme(colors.body);
+		line-height: 1.15;
+	}
+</style>
