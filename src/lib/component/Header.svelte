@@ -1,1 +1,1 @@
-<header>ヘッダー</header>
+<header class="custom-container">ヘッダー</header>

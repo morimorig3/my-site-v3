@@ -1,19 +1,15 @@
 <script>
-	import Footer from '$lib/component/Footer.svelte';
-	import Header from '$lib/component/Header.svelte';
-	import Navigation from '$lib/component/Navigation.svelte';
+	import MainLayout from '$lib/component/MainLayout.svelte';
 	import '../app.css';
 </script>
 
-<Header />
-<Navigation />
-<main>
+<MainLayout>
 	<slot />
-</main>
-<Footer />
+</MainLayout>
 
 <style lang="postcss">
 	:global(html) {
 		color: theme(colors.textBody);
+		line-height: 1.15;
 	}
 </style>

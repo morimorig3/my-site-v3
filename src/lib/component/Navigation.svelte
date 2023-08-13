@@ -1,4 +1,4 @@
-<nav>
+<nav class="custom-container">
 	<a href="/">ホーム</a>
 	<a href="/develop">Develop</a>
 	<a href="/projects">Projects</a>

@@ -13,6 +13,11 @@ export default {
 			borderDivider: '#D8D8DB',
 			primary: '#2563EB',
 			disabled: '#949497'
+		},
+		screens: {
+			tablet: '520px',
+			laptop: '960px',
+			desktop: '1024px'
 		}
 	},
 	plugins: []

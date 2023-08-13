@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-container {
+	@apply px-6 tablet:px-8 laptop:px-10 max-w-screen-desktop mx-auto w-full;
+}

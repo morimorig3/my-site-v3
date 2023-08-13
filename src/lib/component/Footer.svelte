@@ -1,1 +1,1 @@
-<footer>フッター</footer>
+<footer class="custom-container">フッター</footer>

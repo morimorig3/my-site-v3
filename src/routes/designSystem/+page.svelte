@@ -3,73 +3,73 @@
 <div>
 	<h2>Text Colors</h2>
 	<ul>
-		<li class="flex square before:bg-textBody">
+		<li class="flex items-center gap-4 square before:bg-textBody">
 			<div>
-				<p class="font-bold">Text Body</p>
-				<p class="text-textDescription">#1A1A1C</p>
+				<p class="font-bold text-base">Text Body</p>
+				<p class="text-textDescription text-sm">#1A1A1C</p>
 			</div>
 		</li>
-		<li class="flex square before:bg-textDescription">
+		<li class="flex items-center gap-4 square before:bg-textDescription">
 			<div>
-				<p class="font-bold">Text Description</p>
-				<p class="text-textDescription">#626264</p>
+				<p class="font-bold text-base">Text Description</p>
+				<p class="text-textDescription text-sm">#626264</p>
 			</div>
 		</li>
-		<li class="flex square before:bg-textPlaceholder">
+		<li class="flex items-center gap-4 square before:bg-textPlaceholder">
 			<div>
-				<p class="font-bold">Text Placeholder</p>
-				<p class="text-textDescription">#757578</p>
+				<p class="font-bold text-base">Text Placeholder</p>
+				<p class="text-textDescription text-sm">#757578</p>
 			</div>
 		</li>
 	</ul>
 	<h2>Background Colors</h2>
 	<ul>
-		<li class="flex square before:bg-bgPrimary">
+		<li class="flex items-center gap-4 square before:bg-bgPrimary">
 			<div>
-				<p class="font-bold">BackGround Primary</p>
-				<p class="text-textDescription">#FFFFFF</p>
+				<p class="font-bold text-base">BackGround Primary</p>
+				<p class="text-textDescription text-sm">#FFFFFF</p>
 			</div>
 		</li>
-		<li class="flex square before:bg-bgSecondary">
+		<li class="flex items-center gap-4 square before:bg-bgSecondary">
 			<div>
-				<p class="font-bold">BackGround Secondary</p>
-				<p class="text-textDescription">#F1F1F4</p>
+				<p class="font-bold text-base">BackGround Secondary</p>
+				<p class="text-textDescription text-sm">#F1F1F4</p>
 			</div>
 		</li>
-		<li class="flex square before:bg-bgTertiary">
+		<li class="flex items-center gap-4 square before:bg-bgTertiary">
 			<div>
-				<p class="font-bold">BackGround Tertiary</p>
-				<p class="text-textDescription">#F8F8FB</p>
+				<p class="font-bold text-base">BackGround Tertiary</p>
+				<p class="text-textDescription text-sm">#F8F8FB</p>
 			</div>
 		</li>
 	</ul>
 	<h2>Border Colors</h2>
 	<ul>
-		<li class="flex square before:!border-borderField">
+		<li class="flex items-center gap-4 square before:!border-borderField">
 			<div>
-				<p class="font-bold">Border Field</p>
-				<p class="text-textDescription">#1A1A1C</p>
+				<p class="font-bold text-base">Border Field</p>
+				<p class="text-textDescription text-sm">#1A1A1C</p>
 			</div>
 		</li>
-		<li class="flex square before:!border-borderDivider">
+		<li class="flex items-center gap-4 square before:!border-borderDivider">
 			<div>
-				<p class="font-bold">Border Divider</p>
-				<p class="text-textDescription">#D8D8DB</p>
+				<p class="font-bold text-base">Border Divider</p>
+				<p class="text-textDescription text-sm">#D8D8DB</p>
 			</div>
 		</li>
 	</ul>
 	<h2>Other Colors</h2>
 	<ul>
-		<li class="flex square before:!bg-primary">
+		<li class="flex items-center gap-4 square before:!bg-primary">
 			<div>
-				<p class="font-bold">Primary</p>
-				<p class="text-textDescription">#1A1A1C</p>
+				<p class="font-bold text-base">Primary</p>
+				<p class="text-textDescription text-sm">#1A1A1C</p>
 			</div>
 		</li>
-		<li class="flex square before:!bg-disabled">
+		<li class="flex items-center gap-4 square before:!bg-disabled">
 			<div>
-				<p class="font-bold">Disabled</p>
-				<p class="text-textDescription">#D8D8DB</p>
+				<p class="font-bold text-base">Disabled</p>
+				<p class="text-textDescription text-sm">#D8D8DB</p>
 			</div>
 		</li>
 	</ul>
