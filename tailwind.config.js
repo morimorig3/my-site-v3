@@ -26,12 +26,13 @@ export default {
 				'heading-3': ['24px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
 				'heading-4': ['20px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
 				'heading-5': ['16px', { lineHeight: 1.7, fontWeight: 500, letterSpacing: '0.04em' }],
+				subtitle: ['20px', { lineHeight: 1.5, letterSpacing: '0.04em' }],
 				body: ['16px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
 				'body-sm': ['14px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
 				label: ['14px', { lineHeight: 1.5, letterSpacing: '0.04em' }],
 				'label-sm': ['12px', { lineHeight: 1.5, letterSpacing: '0.04em' }],
-				desc: ['12px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
-				'desc-sm': ['10px', { lineHeight: 1.7, letterSpacing: '0.04em' }]
+				caption: ['12px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
+				'caption-sm': ['10px', { lineHeight: 1.7, letterSpacing: '0.04em' }]
 			}
 		}
 	},
