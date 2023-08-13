@@ -9,6 +9,8 @@
 
 <style lang="postcss">
 	:global(html) {
+		font-family: 'Noto Sans JP', -apple-system, blinkmacsystemfont, 'Segoe UI',
+			'Hiragino Kaku Gothic ProN', 'BIZ UDPGothic', meiryo, sans-serif;
 		color: theme(colors.textBody);
 		line-height: 1.15;
 	}
