@@ -58,6 +58,21 @@
 			</div>
 		</li>
 	</ul>
+	<h2>Other Colors</h2>
+	<ul>
+		<li class="flex square before:!bg-primary">
+			<div>
+				<p class="font-bold">Primary</p>
+				<p class="text-textDescription">#1A1A1C</p>
+			</div>
+		</li>
+		<li class="flex square before:!bg-disabled">
+			<div>
+				<p class="font-bold">Disabled</p>
+				<p class="text-textDescription">#D8D8DB</p>
+			</div>
+		</li>
+	</ul>
 </div>
 
 <style>
