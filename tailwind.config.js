@@ -17,7 +17,7 @@ export default {
 				bgTertiary: '#F8F8FB',
 				field: '#1A1A1C',
 				divider: '#D8D8DB',
-				primary: '#2563EB',
+				primary: 'rgba(37, 99, 235, 0.9)',
 				disabled: '#949497'
 			},
 			fontSize: {

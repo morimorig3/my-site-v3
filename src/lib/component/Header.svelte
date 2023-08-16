@@ -1,4 +1,5 @@
 <script lang="ts">
+	import HamburgerMenu from './HamburgerMenu.svelte';
 	import Navigation from './Navigation.svelte';
 
 	let isOpen = false;
@@ -7,10 +8,12 @@
 	}
 </script>
 
-<header class="fixed w-full">
-	<div class="custom-container relative z-50">
-		<p>ロゴ</p>
-		<button on:click={toggleMenu}>ハンバーガーボタン</button>
+<header class="fixed top-0 w-full bg-primary">
+	<div class="custom-container flex items-center justify-between relative z-50 h-16 tablet:h-20">
+		<a class="font-bold text-lg tablet:text-xl text-white" href="/">morimorig3.com</a>
+		<button on:click={toggleMenu}>
+			<HamburgerMenu {isOpen} />
+		</button>
 	</div>
 	<Navigation {isOpen} />
 </header>
