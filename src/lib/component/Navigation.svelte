@@ -8,7 +8,7 @@
 {#if isOpen}
 	<div
 		transition:slide={{ duration: 250, easing: expoOut }}
-		class="dynamicHeight fixed top-16 tablet:top-20 left-0 w-full grid place-items-center bg-primary"
+		class="dynamicHeight fixed top-16 tablet:top-20 left-0 w-full grid place-items-center bg-primary backdrop-blur-sm"
 	>
 		<nav class="max-w-screen-tablet w-full flex flex-col">
 			<a in:fly={{ delay: 250, y: -50 }} class="text-title text-white" href="/about">ABOUT</a>
