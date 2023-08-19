@@ -3,6 +3,15 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			keyframes: {
+				fadeInDown: {
+					'0%': { transform: 'translateY(-30px)', opacity: '0' },
+					'100%': { transform: 'translateY(0px)', opacity: '1' }
+				}
+			},
+			animation: {
+				fadeInDown: 'fadeInDown 0.25s forwards'
+			},
 			screens: {
 				tablet: '520px',
 				laptop: '960px',

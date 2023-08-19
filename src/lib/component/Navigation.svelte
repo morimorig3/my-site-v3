@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { expoOut } from 'svelte/easing';
-	import { slide, fly } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
+
+	import { NAVIGATION_LIST } from '$lib/const';
 
 	export let isOpen = false;
 </script>
@@ -10,27 +12,17 @@
 		transition:slide={{ duration: 250, easing: expoOut }}
 		class="dynamicHeight fixed top-16 tablet:top-20 left-0 w-full grid place-items-center bg-primary backdrop-blur-sm"
 	>
-		<nav class="max-w-screen-tablet w-full flex flex-col">
-			<a
-				in:fly={{ delay: 250, y: -50 }}
-				class="text-title text-white hover:translate-x-2 transition-transform"
-				href="/about">ABOUT</a
-			>
-			<a
-				in:fly={{ delay: 300, y: -50 }}
-				class="text-title text-white hover:translate-x-2 transition-transform"
-				href="/develop">DEVELOP</a
-			>
-			<a
-				in:fly={{ delay: 350, y: -50 }}
-				class="text-title text-white hover:translate-x-2 transition-transform"
-				href="/projects">PROJECTS</a
-			>
-			<a
-				in:fly={{ delay: 400, y: -50 }}
-				class="text-title text-white hover:translate-x-2 transition-transform"
-				href="/books">BOOKS</a
-			>
+		<nav class="max-w-screen-tablet w-full">
+			<ul>
+				{#each NAVIGATION_LIST as { title, path }, index}
+					<li class="animate-fadeInDown opacity-0" style="animation-delay:{150 + index * 50}ms">
+						<a
+							class="inline-block text-title text-white hover:translate-x-2 transition-transform"
+							href={path}>{title}</a
+						>
+					</li>
+				{/each}
+			</ul>
 		</nav>
 	</div>
 {/if}
