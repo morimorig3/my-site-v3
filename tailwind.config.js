@@ -3,6 +3,15 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			keyframes: {
+				fadeInDown: {
+					'0%': { transform: 'translateY(-30px)', opacity: '0' },
+					'100%': { transform: 'translateY(0px)', opacity: '1' }
+				}
+			},
+			animation: {
+				fadeInDown: 'fadeInDown 0.25s forwards'
+			},
 			screens: {
 				tablet: '520px',
 				laptop: '960px',
@@ -17,8 +26,12 @@ export default {
 				bgTertiary: '#F8F8FB',
 				field: '#1A1A1C',
 				divider: '#D8D8DB',
-				primary: '#2563EB',
-				disabled: '#949497'
+				primary: 'rgba(30, 64, 175, 0.9)',
+				disabled: '#949497',
+				github: '#181717',
+				xTwitter: '#000000',
+				linkedIn: '#0A66C2',
+				qiita: '#55C500'
 			},
 			fontSize: {
 				'heading-1': ['32px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
@@ -26,7 +39,8 @@ export default {
 				'heading-3': ['24px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
 				'heading-4': ['20px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
 				'heading-5': ['16px', { lineHeight: 1.7, fontWeight: 500, letterSpacing: '0.04em' }],
-				subtitle: ['20px', { lineHeight: 1.5, letterSpacing: '0.04em' }],
+				title: ['32px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
+				subtitle: ['20px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
 				body: ['16px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
 				'body-sm': ['14px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
 				label: ['14px', { lineHeight: 1.5, letterSpacing: '0.04em' }],

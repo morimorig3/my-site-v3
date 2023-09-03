@@ -1,13 +1,11 @@
 <script>
 	import Footer from './Footer.svelte';
 	import Header from './Header.svelte';
-	import Navigation from './Navigation.svelte';
 </script>
 
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen pt-16 tablet:pt-20">
 	<Header />
-	<Navigation />
-	<main class="custom-container flex-1">
+	<main class="l-container flex-1">
 		<slot />
 	</main>
 	<Footer />

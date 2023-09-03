@@ -163,6 +163,14 @@
 						<p class="text-caption-sm">説明S</p>
 						<p class="text-description text-label">10px</p>
 					</li>
+					<li>
+						<p class="text-title">タイトル</p>
+						<p class="text-description text-label">32px / 700</p>
+					</li>
+					<li>
+						<p class="text-subtitle">サブタイトル</p>
+						<p class="text-description text-label">20px / 700</p>
+					</li>
 				</ul>
 			</div>
 		</div>
