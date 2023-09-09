@@ -12,7 +12,7 @@
 
 <div class="wrap">
 	<div class="dot" />
-	<div class="bubble">
+	<div class="bubble" data-is-open={isOpen}>
 		<button
 			class="inline-flex flex-col w-full p-4 text-left relative hover:bg-sky-50 transition-colors"
 			on:click|preventDefault={handleClick}
@@ -86,7 +86,6 @@
 		border-radius: 10px;
 		background-color: #fff;
 		filter: drop-shadow(rgba(0, 0, 0, 0.16) 0px 1px 2px);
-		overflow: hidden;
 	}
 	.bubble::before {
 		content: '';
@@ -98,6 +97,13 @@
 		top: 50%;
 		right: 100%;
 		transform: translateY(-50%);
+		background-color: #fff;
+	}
+	.bubble:hover::before {
+		background-color: theme(colors.sky.50);
+		transition: theme(transitionDuration.150);
+	}
+	.bubble[data-is-open='true']:hover::before {
 		background-color: #fff;
 	}
 </style>
