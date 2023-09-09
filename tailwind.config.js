@@ -42,7 +42,7 @@ export default {
 				title: ['32px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
 				subtitle: ['20px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
 				body: ['16px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
-				'body-sm': ['14px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
+				'body-sm': ['14px', { lineHeight: 1.5, letterSpacing: '0.04em' }],
 				label: ['14px', { lineHeight: 1.5, letterSpacing: '0.04em' }],
 				'label-sm': ['12px', { lineHeight: 1.5, letterSpacing: '0.04em' }],
 				caption: ['12px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
