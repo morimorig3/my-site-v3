@@ -8,12 +8,12 @@
 	}
 </script>
 
-<header class="fixed top-0 w-full bg-primary backdrop-blur-sm">
-	<div class="l-container flex items-center justify-between relative z-50 h-16 tablet:h-20">
+<header class="fixed top-0 w-full bg-primary backdrop-blur-sm z-50">
+	<div class="l-container flex items-center justify-between relative h-16 tablet:h-20">
 		<a class="font-bold text-lg tablet:text-xl text-white" href="/">morimorig3.com</a>
 		<button on:click={toggleMenu}>
 			<HamburgerMenu {isOpen} />
 		</button>
 	</div>
 </header>
-<Navigation {isOpen} />
+<Navigation handleLinkClick={toggleMenu} {isOpen} />

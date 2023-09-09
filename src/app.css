@@ -7,6 +7,18 @@
 	@apply px-6 tablet:px-8 laptop:px-10 max-w-screen-desktop mx-auto w-full;
 }
 
+.u-list {
+	list-style-type: disc;
+	padding-left: 1em;
+}
+
+.u-dynamicHeight {
+	height: calc(100vh - theme(space.16));
+	@media (min-width: theme(screens.tablet)) {
+		height: calc(100vh - theme(space.20));
+	}
+}
+
 .u-underline-animation {
 	position: relative;
 	&::after {
