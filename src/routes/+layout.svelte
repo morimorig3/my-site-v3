@@ -14,4 +14,7 @@
 		color: theme(colors.body);
 		line-height: 1.15;
 	}
+	:global(a) {
+		color: theme(colors.link);
+	}
 </style>

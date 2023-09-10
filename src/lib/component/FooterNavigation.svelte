@@ -6,7 +6,7 @@
 	<ul class="grid gap-y-1">
 		{#each NAVIGATION_LIST as { path, title }}
 			<li>
-				<a class="inline-block text-label font-semibold u-underline-animation" href={path}
+				<a class="inline-block text-body text-label font-semibold u-underline-animation" href={path}
 					>{title}</a
 				>
 			</li>
