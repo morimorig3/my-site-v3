@@ -12,8 +12,9 @@
 			<ProfileIcon />
 		</a>
 		<p class="text-label">morimorig3</p>
-		<a class="text-label font-semibold u-underline-animation py-1" href="mailto:mori.nto@outlook.jp"
-			>mori.nto@outlook.jp</a
+		<a
+			class="text-label text-body font-semibold u-underline-animation py-1"
+			href="mailto:mori.nto@outlook.jp">mori.nto@outlook.jp</a
 		>
 	</div>
 	<ul class="flex gap-x-2">

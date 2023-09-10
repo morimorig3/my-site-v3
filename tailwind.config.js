@@ -19,6 +19,7 @@ export default {
 			},
 			colors: {
 				body: '#1A1A1C',
+				link: '#0f83fd',
 				description: '#626264',
 				placeholder: '#757578',
 				bgPrimary: '#FFFFFF',
@@ -27,18 +28,13 @@ export default {
 				field: '#1A1A1C',
 				divider: '#D8D8DB',
 				primary: 'rgba(30, 64, 175, 0.9)',
-				disabled: '#949497',
-				github: '#181717',
-				xTwitter: '#000000',
-				linkedIn: '#0A66C2',
-				qiita: '#55C500'
+				disabled: '#949497'
 			},
 			fontSize: {
-				'heading-1': ['32px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
-				'heading-2': ['28px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
-				'heading-3': ['24px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
-				'heading-4': ['20px', { lineHeight: 1.5, fontWeight: 500, letterSpacing: '0.04em' }],
-				'heading-5': ['16px', { lineHeight: 1.7, fontWeight: 500, letterSpacing: '0.04em' }],
+				'heading-1': ['28px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
+				'heading-2': ['24px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
+				'heading-3': ['20px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
+				'heading-4': ['16px', { lineHeight: 1.7, fontWeight: 700, letterSpacing: '0.04em' }],
 				title: ['32px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
 				subtitle: ['20px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
 				body: ['16px', { lineHeight: 1.7, letterSpacing: '0.04em' }],
