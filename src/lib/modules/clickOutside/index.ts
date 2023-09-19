@@ -1,6 +1,4 @@
-import type { Action } from 'svelte/types/runtime/action';
-
-export const clickOutside: Action = (node: HTMLElement) => {
+export const clickOutside = (node: HTMLElement) => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const handleClick = (event: any) => {
 		if (!node.contains(event.target)) {
