@@ -15,5 +15,6 @@
 		"FLOCSS",
 		"Dreamweaver",
 		"Photoshop"
-	]
+	],
+	"ignorePaths": ["**/*.test.ts", "books.json"]
 }

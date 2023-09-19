@@ -6,6 +6,13 @@
 .l-container {
 	@apply px-6 tablet:px-8 laptop:px-10 max-w-screen-desktop mx-auto w-full;
 }
+.u-negative-container {
+	@apply -mx-6 tablet:-mx-8 laptop:-mx-10;
+	@media (min-width: theme(screens.desktop)) {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+	}
+}
 
 .u-list {
 	list-style-type: disc;
@@ -58,5 +65,12 @@
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+.u-link-hover {
+	@apply transition-colors;
+	&:hover {
+		@apply bg-sky-50 !important;
 	}
 }

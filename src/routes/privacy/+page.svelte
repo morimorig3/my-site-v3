@@ -1,4 +1,4 @@
-<div class="text-body py-6 tablet:py-8 laptop:py-10">
+<div class="l-container text-body py-6 tablet:py-8 laptop:py-10">
 	<h1 class="text-heading-1">プライバシーポリシー・免責事項</h1>
 	<h2 class="text-heading-2">プライバシーポリシー</h2>
 	<h3 class="text-heading-3">個人情報の利用目的</h3>

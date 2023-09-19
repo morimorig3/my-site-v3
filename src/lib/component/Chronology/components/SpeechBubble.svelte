@@ -14,7 +14,7 @@
 	<div class="dot" />
 	<div class="bubble" data-is-open={isOpen}>
 		<button
-			class="inline-flex flex-col w-full p-4 text-left relative hover:bg-sky-50 transition-colors"
+			class="inline-flex flex-col w-full p-4 text-left relative u-link-hover"
 			on:click|preventDefault={handleClick}
 		>
 			{#if title}

@@ -1,4 +1,4 @@
-<div class="py-6 tablet:py-8 laptop:py-10">
+<div class="l-container py-6 tablet:py-8 laptop:py-10">
 	<h1 class="text-heading-1 mb-4 tablet:mb-6">デザインシステム</h1>
 	<section>
 		<h2 class="font-bold text-heading-2 py-4">Colors</h2>
