@@ -1,18 +1,18 @@
 export const NAVIGATION_LIST = [
 	{
 		path: '/about',
-		title: 'ABOUT'
+		title: 'About'
 	},
 	{
 		path: '/develop',
-		title: 'DEVELOP'
+		title: 'Develop'
 	},
 	{
 		path: '/projects',
-		title: 'PROJECTS'
+		title: 'Projects'
 	},
 	{
 		path: '/books',
-		title: 'BOOKS'
+		title: 'Books'
 	}
 ] as const;

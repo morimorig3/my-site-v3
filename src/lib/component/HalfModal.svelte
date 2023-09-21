@@ -3,14 +3,10 @@
 	import { focusTrap } from 'svelte-focus-trap';
 
 	import { clickOutside } from '$lib/modules/clickOutside';
-	export let isOpen = false;
+	export let isOpen: boolean;
 	export let onClickCloseButton: () => void;
 	export let ariaLabelledby: string;
 	export let ariaDescribedby: string;
-
-	function hideModal() {
-		isOpen = false;
-	}
 </script>
 
 <svelte:head>
@@ -23,12 +19,6 @@
 	{/if}
 </svelte:head>
 
-<svelte:window
-	on:keydown={(event) => {
-		if (event.key === 'Escape') hideModal();
-	}}
-/>
-
 {#if isOpen}
 	<div
 		use:focusTrap
@@ -38,7 +28,7 @@
 		aria-describedby={ariaDescribedby}
 		class="grid place-items-center fixed top-0 right-0 bottom-0 left-0 z-50"
 	>
-		<div use:clickOutside on:clickOutside={hideModal} transition:slide class="wrapper">
+		<div use:clickOutside on:clickOutside={onClickCloseButton} transition:slide class="wrapper">
 			<button on:click={onClickCloseButton} class="close">
 				<span />
 				<span />

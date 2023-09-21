@@ -7,25 +7,28 @@
 
 	export let bookItem: ReviewedWith<BookItems>;
 	let isOpen = false;
-	function handleClick() {
-		isOpen = !isOpen;
+	function openModal() {
+		isOpen = true;
+	}
+	function closeModal() {
+		isOpen = false;
 	}
 	$: ({ volumeInfo } = bookItem);
 </script>
 
-<div class="w-40 flex-shrink-0 flex flex-col gap-y-4">
-	<div
-		role="button"
-		tabindex="0"
-		on:click={handleClick}
-		on:keydown={(e) => {
-			if (e.key === 'Enter' || e.key === ' ') {
-				handleClick();
-			}
-		}}
-		class="h-52 overflow-hidden border rounded-xl shadow-md"
-	>
-		<figure class="hover:scale-110 transition-transform duration-200">
+<div
+	class="w-40 flex-shrink-0 flex flex-col gap-y-4"
+	role="button"
+	tabindex="0"
+	on:click={openModal}
+	on:keydown={(e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			openModal();
+		}
+	}}
+>
+	<div class="h-52 overflow-hidden border rounded-xl shadow-md">
+		<figure class="hover:scale-105 transition-transform duration-200">
 			<img class="w-full h-full object-cover" src={volumeInfo.imageLinks?.thumbnail} alt="" />
 		</figure>
 	</div>
@@ -38,4 +41,4 @@
 		{/if}
 	</div>
 </div>
-<BookModal {bookItem} {isOpen} onClickCloseButton={handleClick} />
+<BookModal {bookItem} {isOpen} onClickCloseButton={closeModal} />

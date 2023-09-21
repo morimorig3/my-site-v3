@@ -23,7 +23,7 @@
 		height: 2px;
 		width: 100%;
 		border-radius: 9999px;
-		background-color: theme(colors.white);
+		background-color: theme(colors.body);
 		transform-origin: right;
 		transition: transform 0.25s, opacity 0.25s;
 		&:nth-child(1) {
