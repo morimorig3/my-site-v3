@@ -6,7 +6,7 @@
 	import type { BookItems, ReviewedWith } from '$lib/server/types';
 
 	import { toSingleByteChar } from '$lib/functions/toSingleByteChar';
-	export let isOpen = false;
+	export let isOpen: boolean;
 	export let onClickCloseButton: () => void;
 	export let bookItem: ReviewedWith<BookItems>;
 	$: ({ volumeInfo, review } = bookItem);

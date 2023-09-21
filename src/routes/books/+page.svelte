@@ -15,7 +15,7 @@
 
 <svelte:window bind:innerWidth={screenSize} />
 
-<div class="bg-gray-50">
+<div class="bg-lightTertiary">
 	<div class="shadow-md bg-white">
 		<div class="l-container py-6 tablet:py-8 laptop:py-10 mb-6">
 			<h1 class="text-heading-1 mb-6">{favorite.title}</h1>
