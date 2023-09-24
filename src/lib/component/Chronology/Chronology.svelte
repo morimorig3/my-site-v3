@@ -36,12 +36,12 @@
 		<BubbleContent slot="content">
 			<WorkOverview title="転職サイトアプリ フロント実装" term="Apr. 2022 ~">
 				<svelte:fragment slot="icons">
-					<li><SiTs className="h-5" /></li>
-					<li><SiReact className="h-5" /></li>
-					<li><SiRedux className="h-5" /></li>
-					<li><SiRealm className="h-5" /></li>
-					<li><SiGitLab className="h-5" /></li>
-					<li><SiRedmine className="h-5" /></li>
+					<li data-tooltip="TypeScript"><SiTs className="h-5" /></li>
+					<li data-tooltip="React"><SiReact className="h-5" /></li>
+					<li data-tooltip="Redux"><SiRedux className="h-5" /></li>
+					<li data-tooltip="Realm"><SiRealm className="h-5" /></li>
+					<li data-tooltip="Gitlab"><SiGitLab className="h-5" /></li>
+					<li data-tooltip="Redmine"><SiRedmine className="h-5" /></li>
 				</svelte:fragment>
 				<p class="text-body-sm" slot="description">
 					React
@@ -51,10 +51,10 @@
 			<Divider />
 			<WorkOverview title="個人学習">
 				<svelte:fragment slot="icons">
-					<li><SiGo className="h-5" /></li>
-					<li><SiNext className="h-5" /></li>
-					<li><SiGatsby className="h-5" /></li>
-					<li><SiSvelte className="h-5" /></li>
+					<li data-tooltip="Go language"><SiGo className="h-5" /></li>
+					<li data-tooltip="Next"><SiNext className="h-5" /></li>
+					<li data-tooltip="Gatsby"><SiGatsby className="h-5" /></li>
+					<li data-tooltip="Svelte"><SiSvelte className="h-5" /></li>
 				</svelte:fragment>
 				<p class="text-body-sm" slot="description">
 					Web開発技術を中心に、バックエンドのAPI設計やデータベースの知識を補完するために、GO言語の学習を行いました。
@@ -69,9 +69,9 @@
 		<BubbleContent slot="content">
 			<WorkOverview title="Web制作業務" term="Apr. 2020 ~ Mar. 2022">
 				<svelte:fragment slot="icons">
-					<li><SiJs className="h-5" /></li>
-					<li><SiJQuery className="h-5" /></li>
-					<li><SiSass className="h-5" /></li>
+					<li data-tooltip="JavaScript"><SiJs className="h-5" /></li>
+					<li data-tooltip="jQuery"><SiJQuery className="h-5" /></li>
+					<li data-tooltip="Sass"><SiSass className="h-5" /></li>
 				</svelte:fragment>
 				<div class="text-body-sm" slot="description">
 					<ul class="u-list">
@@ -88,9 +88,9 @@
 			<Divider />
 			<WorkOverview title="デジタルサイネージコンテンツ更新業務" term="Oct. 2019 ~ Mar. 2020">
 				<svelte:fragment slot="icons">
-					<li><SiHtml5 className="h-5" /></li>
-					<li><SiCss3 className="h-5" /></li>
-					<li><SiAdobeIllustrator className="h-5" /></li>
+					<li data-tooltip="HTML"><SiHtml5 className="h-5" /></li>
+					<li data-tooltip="CSS"><SiCss3 className="h-5" /></li>
+					<li data-tooltip="Adobe Illustrator"><SiAdobeIllustrator className="h-5" /></li>
 				</svelte:fragment>
 				<p class="text-body-sm" slot="description">
 					Web更新チームの一員として、更新業務を担当しつつ、主にデジタルサイネージのコンテンツ制作を担当していました。
@@ -99,9 +99,9 @@
 			<Divider />
 			<WorkOverview title="Webサイト更新業務" term="Jan. 2019 ~ Sep. 2019">
 				<svelte:fragment slot="icons">
-					<li><SiHtml5 className="h-5" /></li>
-					<li><SiCss3 className="h-5" /></li>
-					<li><SiAdobeIllustrator className="h-5" /></li>
+					<li data-tooltip="HTML"><SiHtml5 className="h-5" /></li>
+					<li data-tooltip="CSS"><SiCss3 className="h-5" /></li>
+					<li data-tooltip="Adobe Illustrator"><SiAdobeIllustrator className="h-5" /></li>
 				</svelte:fragment>
 				<p class="text-body-sm" slot="description">
 					商業施設全12支店のWebサイトの隔週更新とバナー制作を担当し、7人構成のチームで連携しながら作業を行っていました。
@@ -110,11 +110,11 @@
 			<Divider />
 			<WorkOverview title="個人学習">
 				<svelte:fragment slot="icons">
-					<li><SiJs className="h-5" /></li>
-					<li><SiReact className="h-5" /></li>
-					<li><SiGatsby className="h-5" /></li>
-					<li><SiTs className="h-5" /></li>
-					<li><SiCss3 className="h-5" /></li>
+					<li data-tooltip="JavaScript"><SiJs className="h-5" /></li>
+					<li data-tooltip="React"><SiReact className="h-5" /></li>
+					<li data-tooltip="Gatsby"><SiGatsby className="h-5" /></li>
+					<li data-tooltip="TypeScript"><SiTs className="h-5" /></li>
+					<li data-tooltip="CSS"><SiCss3 className="h-5" /></li>
 				</svelte:fragment>
 				<div slot="description" class="flex flex-col gap-y-2">
 					<p class="text-body-sm">
@@ -154,10 +154,10 @@
 		<BubbleContent slot="content">
 			<WorkOverview title="卒業制作" term="Sep. 2019">
 				<svelte:fragment slot="icons">
-					<li><SiWordPress className="h-5" /></li>
-					<li><SiGulp className="h-5" /></li>
-					<li><SiJQuery className="h-5" /></li>
-					<li><SiSass className="h-5" /></li>
+					<li data-tooltip="WordPress"><SiWordPress className="h-5" /></li>
+					<li data-tooltip="Gulp"><SiGulp className="h-5" /></li>
+					<li data-tooltip="jQuery"><SiJQuery className="h-5" /></li>
+					<li data-tooltip="Sass"><SiSass className="h-5" /></li>
 				</svelte:fragment>
 				<p class="text-body-sm" slot="description">
 					卒業制作ではお世話になっていたヘアサロンのWebサイトを制作させていただきました。
@@ -166,11 +166,11 @@
 			<Divider />
 			<WorkOverview title="Web制作について本格的に学習" term="Mar. 2019 ~ Sep. 2019">
 				<svelte:fragment slot="icons">
-					<li><SiHtml5 className="h-5" /></li>
-					<li><SiCss3 className="h-5" /></li>
-					<li><SiAdobeIllustrator className="h-5" /></li>
-					<li><SiAdobePhotoShop className="h-5" /></li>
-					<li><SiAdobeDreamWeaver className="h-5" /></li>
+					<li data-tooltip="HTML"><SiHtml5 className="h-5" /></li>
+					<li data-tooltip="CSS"><SiCss3 className="h-5" /></li>
+					<li data-tooltip="Adobe Illustrator"><SiAdobeIllustrator className="h-5" /></li>
+					<li data-tooltip="Adobe PhotoShop"><SiAdobePhotoShop className="h-5" /></li>
+					<li data-tooltip="Adobe DreamWeaver"><SiAdobeDreamWeaver className="h-5" /></li>
 				</svelte:fragment>
 				<p class="text-body-sm" slot="description">
 					商業施設全12支店のWebサイトの隔週更新とバナー制作を担当し、7人構成のチームで連携しながら作業を行っていました。
@@ -182,8 +182,8 @@
 		<BubbleContent slot="content">
 			<WorkOverview title="HTML5とCSS3の本（すでに廃盤）" term="Jan. 2019 ~ Mar. 2019">
 				<svelte:fragment slot="icons">
-					<li><SiHtml5 className="h-5" /></li>
-					<li><SiCss3 className="h-5" /></li>
+					<li data-tooltip="HTML"><SiHtml5 className="h-5" /></li>
+					<li data-tooltip="CSS"><SiCss3 className="h-5" /></li>
 				</svelte:fragment>
 				<p class="text-body-sm" slot="description">
 					路頭に迷っているときに書店でたまたま手に取った本。ハンズオン形式でやってみると楽しくてWeb業界に興味を持つきっかけに。
