@@ -1,0 +1,37 @@
+[
+	{
+		"repositoryName": "base64css",
+		"link": "https://base64css.netlify.app/"
+	},
+	{
+		"repositoryName": "todo-board",
+		"link": "https://todo-board-app.netlify.app/"
+	},
+	{
+		"repositoryName": "my-site",
+		"link": "https://my-site-pied.vercel.app/"
+	},
+	{
+		"repositoryName": "percent-encoder",
+		"link": "https://percent-encoder.netlify.app/"
+	},
+	{
+		"repositoryName": "go_svelte_todo_app"
+	},
+	{
+		"repositoryName": "my-site-v3",
+		"link": "https://my-site-v3.vercel.app/"
+	},
+	{
+		"repositoryName": "blog",
+		"link": "https://my-blog-morimorig3.vercel.app/"
+	},
+	{
+		"repositoryName": "oho-keywords",
+		"link": "https://oho-keywords.vercel.app/"
+	},
+	{
+		"repositoryName": "weather-app",
+		"link": "https://weather-app-10b.pages.dev/"
+	}
+]
