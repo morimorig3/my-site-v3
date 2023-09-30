@@ -23,7 +23,7 @@
 	{/if}
 	<LinkList homepageHref={item.homepage} htmlHref={item.html_url} />
 	{#if item.topics}
-		<TopicList />
+		<TopicList topics={item.topics} />
 	{/if}
 </div>
 
