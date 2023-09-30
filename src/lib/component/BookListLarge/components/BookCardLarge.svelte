@@ -1,7 +1,7 @@
 <script lang="ts">
 	import BookModal from '../../BookModal.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/types';
+	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
 
 	import { toSingleByteChar } from '$lib/functions/toSingleByteChar';
 

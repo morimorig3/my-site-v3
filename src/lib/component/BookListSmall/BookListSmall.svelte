@@ -3,7 +3,7 @@
 
 	import BookCardSmall from './components/BookCardSmall.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/types';
+	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
 
 	export let bookItems: ReviewedWith<BookItems>[];
 	const ITEMS_PER_PAGE = 3;
@@ -29,7 +29,7 @@
 		on:click={loadNext}
 		class="w-full flex justify-center items-center text-label border shadow rounded-md bg-white h-12 relative u-link-hover"
 		>もっと見る <span
-			class="grid items-center text-white bg-red-500 text-label rounded-full w-6 h-6 absolute right-4"
+			class="grid place-items-center text-white bg-red-500 text-label rounded-full w-6 h-6 absolute right-4"
 			>{restItemsLength}</span
 		></button
 	>

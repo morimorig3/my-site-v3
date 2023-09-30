@@ -3,7 +3,7 @@
 	import FaArrowUpRightFromSquare from '../../Icons/FaArrowUpRightFromSquare.svelte';
 	import FaCommentDots from '../../Icons/FaCommentDots.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/types';
+	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
 
 	export let bookItem: ReviewedWith<BookItems>;
 
@@ -23,11 +23,11 @@
 		<ul class="flex gap-x-2">
 			<li>
 				{#if review}
-					<button class="iconWrapper u-link-hover" on:click={handleClick}>
+					<button class="u-circle-icon u-link-hover" on:click={handleClick}>
 						<FaCommentDots className="h-4 fill-body" />
 					</button>
 				{:else}
-					<div class="iconWrapper">
+					<div class="u-circle-icon">
 						<FaCommentDots className="h-4 fill-disabled" />
 					</div>
 				{/if}
@@ -35,7 +35,7 @@
 			<li>
 				{#if volumeInfo.infoLink}
 					<a
-						class="iconWrapper u-link-hover"
+						class="u-circle-icon u-link-hover"
 						href={volumeInfo.infoLink}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -43,7 +43,7 @@
 						<FaArrowUpRightFromSquare className="h-3 fill-body" />
 					</a>
 				{:else}
-					<div class="iconWrapper">
+					<div class="u-circle-icon">
 						<FaArrowUpRightFromSquare className="h-3 fill-disabled" />
 					</div>
 				{/if}
@@ -52,9 +52,3 @@
 	</div>
 </div>
 <BookModal {bookItem} {isOpen} onClickCloseButton={handleClick} />
-
-<style lang="postcss">
-	.iconWrapper {
-		@apply w-8 h-8 grid place-items-center overflow-hidden rounded-full bg-white border shadow;
-	}
-</style>
