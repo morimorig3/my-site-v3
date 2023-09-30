@@ -3,7 +3,7 @@
 	import HalfModal from './HalfModal.svelte';
 	import FaArrowUpRightFromSquare from './Icons/FaArrowUpRightFromSquare.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/types';
+	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
 
 	import { toSingleByteChar } from '$lib/functions/toSingleByteChar';
 	export let isOpen: boolean;

@@ -79,3 +79,51 @@
 		@apply bg-sky-50 !important;
 	}
 }
+
+[data-tooltip] {
+	position: relative;
+	&::after {
+		content: attr(data-tooltip);
+		display: block;
+		background-color: #fff;
+		white-space: nowrap;
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		font-size: 12px;
+		transform-origin: center bottom;
+		transform: translateX(-50%) translateY(-10px) scale(0, 0);
+		user-select: none;
+		transition: transform 100ms;
+		@apply shadow-md px-2 py-1 border rounded-md;
+	}
+	&::before {
+		content: '';
+		display: block;
+		height: calc(15px / 2 * tan(60deg));
+		width: 15px;
+		clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%) scale(0, 0);
+		z-index: 1;
+		background-color: #fff;
+	}
+	&:hover {
+		&::after {
+			transform: translateX(-50%) translateY(-10px) scale(1, 1);
+		}
+		&::before {
+			transform: translateX(-50%) scale(1, 1);
+		}
+	}
+}
+
+.u-circle-icon {
+	@apply w-8 h-8 grid place-items-center overflow-hidden rounded-full bg-white border shadow;
+}
+
+.topic {
+	@apply px-2 py-1 border rounded-full whitespace-nowrap shrink-0 text-description text-label-sm;
+}

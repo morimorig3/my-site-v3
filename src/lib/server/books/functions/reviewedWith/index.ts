@@ -1,4 +1,4 @@
-import type { BookItems, LoadBookReviewResponse, ReviewedWith } from '$lib/server/types';
+import type { BookItems, LoadBookReviewResponse, ReviewedWith } from '$lib/server/books/types';
 
 /**
  * 本棚リストにレビュー情報を追加する

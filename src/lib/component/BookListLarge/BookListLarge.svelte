@@ -1,7 +1,7 @@
 <script lang="ts">
 	import BookCardLarge from './components/BookCardLarge.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/types';
+	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
 	export let bookItems: ReviewedWith<BookItems>[];
 </script>
 

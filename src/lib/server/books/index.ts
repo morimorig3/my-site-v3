@@ -1,12 +1,11 @@
 import { readFile } from 'fs/promises';
 
-import { AXIOS } from '../axios';
-
 import { BOOK_SHELVES_INDEX, GOOGLE_BOOKS_UID } from './const';
 
-import type { GetBookListResponse, LoadBookReviewResponse } from '../types';
+import type { GetBookListResponse, LoadBookReviewResponse } from './types';
 
 import { env } from '$env/dynamic/private';
+import { AXIOS } from '$lib';
 
 export async function getBookList() {
 	return Promise.all([
