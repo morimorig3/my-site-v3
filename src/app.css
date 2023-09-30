@@ -119,3 +119,11 @@
 		}
 	}
 }
+
+.u-circle-icon {
+	@apply w-8 h-8 grid place-items-center overflow-hidden rounded-full bg-white border shadow;
+}
+
+.topic {
+	@apply px-2 py-1 border rounded-full whitespace-nowrap shrink-0 text-description text-label-sm;
+}

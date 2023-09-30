@@ -1,9 +1,47 @@
 <script lang="ts">
-	// export let data;
+	import { fade } from 'svelte/transition';
+
+	import { filterTopics } from '../../store.js';
+
+	import DevelopCard from '$lib/component/DevelopCard/DevelopCard.svelte';
+
+	export let data;
+	$: ({ items } = data);
+	$: filteredItems = $filterTopics.length
+		? items.filter(({ topics }) => {
+				return topics?.some((topic) => $filterTopics.includes(topic));
+		  })
+		: items;
 </script>
 
-<h1>Develop</h1>
-<dl>
-	<dt>path</dt>
-	<dd>/develop</dd>
-</dl>
+<div class="l-container py-6 tablet:py-8 laptop:py-10">
+	<div class="flex flex-col gap-y-6">
+		{#if $filterTopics.length}
+			<div transition:fade={{ duration: 250 }} class="flex flex-col gap-y-2 items-start">
+				<ul class="flex gap-2 flex-wrap">
+					{#each $filterTopics as topic}
+						<li>
+							<button class="topic relative" on:click={() => filterTopics.remove(topic)}>
+								#{topic}
+								<span
+									class="absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 grid place-items-center text-white bg-red-500 text-label-sm rounded-full w-5 h-5 font-bold"
+									>×</span
+								>
+							</button>
+						</li>
+					{/each}
+				</ul>
+				<button class="px-2 text-description text-caption-sm" on:click={filterTopics.reset}
+					>絞り込みを解除</button
+				>
+			</div>
+		{/if}
+		<ul class="grid gap-6 tablet:gap-8 tablet:grid-cols-2 laptop:grid-cols-3">
+			{#each filteredItems as item}
+				<li transition:fade={{ duration: 250 }}>
+					<DevelopCard {item} />
+				</li>
+			{/each}
+		</ul>
+	</div>
+</div>
