@@ -1,6 +1,7 @@
 <script lang="ts">
 	import BookListLarge from '$lib/component/BookListLarge/BookListLarge.svelte';
 	import BookListSmall from '$lib/component/BookListSmall/BookListSmall.svelte';
+	import TabButton from '$lib/component/TabButton.svelte';
 	export let data;
 	$: ({ favorite, forBeginner, toRead } = data);
 	$: bookList = [favorite, forBeginner, toRead];
@@ -29,12 +30,11 @@
 				class="w-full grid auto-cols-fr grid-flow-col rounded-lg border shadow bg-white"
 			>
 				{#each bookList as { title }, index}
-					<button on:click={() => setActiveTabIndex(index)}
-						><span
-							class:text-placeholder={activeTabIndex !== index}
-							class="block p-3 text-label font-bold u-link-hover">{title}</span
-						></button
-					>
+					<TabButton
+						handleClick={() => setActiveTabIndex(index)}
+						isActive={activeTabIndex === index}
+						label={title}
+					/>
 				{/each}
 			</div>
 		{/if}
