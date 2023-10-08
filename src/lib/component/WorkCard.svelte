@@ -14,11 +14,17 @@
 
 <style lang="postcss">
 	.card {
-		min-height: 245px;
+		height: 65.3vw;
+		@media (min-width: theme(screens.tablet)) {
+			height: 30.5vw;
+		}
+		@media (min-width: theme(screens.laptop)) {
+			height: 200px;
+		}
 		@apply relative p-6 text-white block shadow rounded-lg overflow-hidden;
 	}
 	.card__plus {
-		@apply w-10 h-10 block absolute right-6 top-6;
+		@apply w-10 h-10 block absolute right-6 bottom-6;
 		&:after,
 		&:before {
 			display: block;

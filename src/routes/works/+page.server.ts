@@ -6,11 +6,12 @@ import { loadWorkDetails } from '$lib/server/works';
 
 export const prerender = true;
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async () => {
 	const response = await loadWorkDetails();
-	const work = response.find(({ slug }) => slug === params.slug);
-	if (work) {
-		return work;
+	if (response) {
+		return {
+			works: response.map(({ slug, title, term, image }) => ({ slug, title, term, image }))
+		};
 	}
 
 	throw error(404, 'Not found');

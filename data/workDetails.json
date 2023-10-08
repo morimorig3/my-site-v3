@@ -1,0 +1,200 @@
+[
+	{
+		"slug": "2204-front-end-engineer",
+		"image": "/works_front-end_01.jpg",
+		"term": "Apr. 2022 ~",
+		"title": "フロントエンドエンジニア",
+		"overview": "React NativeによるiOS/Androidアプリのフロントエンド開発",
+		"stacks": [
+			{
+				"iconName": "SiReact",
+				"label": "React"
+			},
+			{
+				"iconName": "SiTs",
+				"label": "TypeScript"
+			},
+			{
+				"iconName": "SiRedux",
+				"label": "Redux"
+			},
+			{
+				"iconName": "SiGitLab",
+				"label": "GitLab"
+			},
+			{
+				"iconName": "SiRealm",
+				"label": "Realm"
+			},
+			{
+				"iconName": "SiRedmine",
+				"label": "Redmine"
+			}
+		],
+		"features": [
+			{
+				"iconName": "FaCode",
+				"title": "主要スキル",
+				"label": "React／TypeScript"
+			},
+			{
+				"iconName": "FaDev",
+				"title": "開発体制",
+				"label": "アジャイル／スクラム"
+			},
+			{
+				"iconName": "FaPeopleGroup",
+				"title": "チーム",
+				"label": "3〜8人"
+			},
+			{
+				"iconName": "FaBuildings",
+				"title": "勤務形態",
+				"label": "リモート／オフィス"
+			},
+			{
+				"iconName": "FaLocationDot",
+				"title": "勤務地",
+				"label": "東京"
+			}
+		],
+		"descriptions": [
+			{
+				"label": "PR",
+				"body": ["静的なhtmlとcssがメインでインタラクティブの表現にはjQueryを使用していました。"]
+			},
+			{
+				"label": "Details",
+				"body": [
+					"バナー制作やコンテンツ追加・差し替えなどのWebサイト運用業務に携わりました",
+					"クライアント担当者・Webディレクター・デザイナー・エンジニアのそれぞれ1人ずつで"
+				]
+			}
+		]
+	},
+	{
+		"slug": "2004-web-engineer",
+		"image": "/works_web-engineer_01.jpg",
+		"term": "Apr. 2020 ~ Mar. 2022",
+		"title": "Webエンジニア",
+		"overview": "ランディングページ、コーポレートサイト開発",
+		"stacks": [
+			{
+				"iconName": "SiJs",
+				"label": "JavaScript"
+			},
+			{
+				"iconName": "SiJQuery",
+				"label": "jQuery"
+			},
+			{
+				"iconName": "SiSass",
+				"label": "Sass"
+			},
+			{
+				"iconName": "SiHtml5",
+				"label": "HTML"
+			},
+			{
+				"iconName": "SiCss3",
+				"label": "CSS"
+			}
+		],
+		"features": [
+			{
+				"iconName": "FaCode",
+				"title": "主要スキル",
+				"label": "JavaScript／CSS"
+			},
+			{
+				"iconName": "FaDev",
+				"title": "開発体制",
+				"label": "ウォーターフォール"
+			},
+			{
+				"iconName": "FaPeopleGroup",
+				"title": "チーム",
+				"label": "1人"
+			},
+			{
+				"iconName": "FaBuildings",
+				"title": "勤務形態",
+				"label": "オフィス／リモート"
+			},
+			{
+				"iconName": "FaLocationDot",
+				"title": "勤務地",
+				"label": "大阪"
+			}
+		],
+		"descriptions": [
+			{
+				"label": "PR",
+				"body": ["静的なhtmlとcssがメインでインタラクティブの表現にはjQueryを使用していました。"]
+			},
+			{
+				"label": "Details",
+				"body": [
+					"バナー制作やコンテンツ追加・差し替えなどのWebサイト運用業務に携わりました",
+					"クライアント担当者・Webディレクター・デザイナー・エンジニアのそれぞれ1人ずつで"
+				]
+			}
+		]
+	},
+	{
+		"slug": "1901-coder",
+		"image": "/works_coder_01.jpg",
+		"term": "Jan. 2019 ~ Sep. 2019",
+		"title": "コーダー",
+		"overview": "Webサイトのコンテンツ更新、バナー制作業務",
+		"stacks": [
+			{
+				"iconName": "SiHtml5",
+				"label": "HTML"
+			},
+			{
+				"iconName": "SiCss3",
+				"label": "CSS"
+			},
+			{
+				"iconName": "SiAdobeIllustrator",
+				"label": "Illustrator"
+			}
+		],
+		"features": [
+			{
+				"iconName": "FaCode",
+				"title": "主要スキル",
+				"label": "HTML・CSS"
+			},
+			{
+				"iconName": "FaPeopleGroup",
+				"title": "チーム",
+				"label": "6〜7人"
+			},
+			{
+				"iconName": "FaBuildings",
+				"title": "勤務形態",
+				"label": "オフィス"
+			},
+			{
+				"iconName": "FaLocationDot",
+				"title": "勤務地",
+				"label": "大阪"
+			}
+		],
+		"descriptions": [
+			{
+				"label": "PR",
+				"body": ["静的なhtmlとcssがメインでインタラクティブの表現にはjQueryを使用していました。"]
+			},
+			{
+				"label": "Details",
+				"body": [
+					"バナー制作やコンテンツ追加・差し替えなどのWebサイト運用業務に携わりました",
+					"クライアント担当者・Webディレクター・デザイナー・エンジニアのそれぞれ1人ずつで"
+				]
+			}
+		]
+	}
+]
