@@ -6,7 +6,7 @@
 	$: bgImage = `url(${src})`;
 </script>
 
-<a {href} class="card card--layered" style:--bg-image={bgImage}>
+<a {href} class="card u-layered-bg" style:--bg-image={bgImage}>
 	<p class="text-subtitle">{title}</p>
 	<p class="text-label-sm">{term}</p>
 	<span class="card__plus" />
@@ -16,10 +16,6 @@
 	.card {
 		min-height: 245px;
 		@apply relative p-6 text-white block shadow rounded-lg overflow-hidden;
-	}
-	.card--layered {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--bg-image);
-		@apply bg-cover bg-center bg-no-repeat;
 	}
 	.card__plus {
 		@apply w-10 h-10 block absolute right-6 top-6;

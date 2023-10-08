@@ -127,3 +127,8 @@
 .topic {
 	@apply px-2 py-1 border rounded-full whitespace-nowrap shrink-0 text-description text-label-sm;
 }
+
+.u-layered-bg {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--bg-image);
+	@apply bg-cover bg-center bg-no-repeat;
+}
