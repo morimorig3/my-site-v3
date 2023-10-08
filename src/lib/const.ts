@@ -8,8 +8,8 @@ export const NAVIGATION_LIST = [
 		title: 'Develop'
 	},
 	{
-		path: '/projects',
-		title: 'Projects'
+		path: '/works',
+		title: 'Works'
 	},
 	{
 		path: '/books',

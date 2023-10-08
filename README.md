@@ -96,7 +96,7 @@ graph LR
 
 Home-->Blog
 Home-->About
-Home-->Projects
+Home-->Works
 Home-->Develop
 Home-->Books
 Home-->プライバシーポリシー
@@ -116,7 +116,7 @@ Home-->お問合せ["お問合せ※Googleフォーム"]
 - Home（リンク）
 - About（リンク）
 - Develop（リンク）
-- Projects（リンク）
+- Works（リンク）
 - Books（リンク）
 - Blog（外部リンク）
 
@@ -130,7 +130,7 @@ Home-->お問合せ["お問合せ※Googleフォーム"]
   - 現行のDevelopと同じようなもの
   - 個人的に開発しているものがわかる
   - 最新の3件くらい
-- Projects
+- Works
   - 最新の1件の簡易表示
 - Books
   - お気に入りの上位3件くらい
@@ -173,7 +173,7 @@ Home-->お問合せ["お問合せ※Googleフォーム"]
 
 
 
-## Projects
+## Works
 
 
 ### コンテンツ
