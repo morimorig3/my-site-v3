@@ -35,12 +35,4 @@
 			transform: translate(-50%, -50%) rotate(90deg);
 		}
 	}
-	.plus.isOpen {
-		&:after {
-			transform: translate(-50%, -50%) rotate(0deg);
-		}
-		&:before {
-			transform: translate(-50%, -50%) rotate(180deg);
-		}
-	}
 </style>
