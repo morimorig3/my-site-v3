@@ -8,7 +8,7 @@ interface Work {
 	slug: string;
 	image: string;
 	title: string;
-	term: string;
+	term: Term;
 	overview: string;
 	stacks: Card[];
 	features: Card[];
@@ -24,4 +24,8 @@ interface Card {
 interface Description {
 	label: string;
 	body: string[];
+}
+export interface Term {
+	from: string;
+	to: string;
 }

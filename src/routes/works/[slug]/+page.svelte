@@ -7,6 +7,7 @@
 	import CardIcon from '$lib/component/CardList/components/CardIcon.svelte';
 	import CardItem from '$lib/component/CardList/components/CardItem.svelte';
 	import TabButton from '$lib/component/TabButton.svelte';
+	import { formatTerm } from '$lib/functions/formatTerm';
 
 	export let data;
 	$: ({ title, term, overview, image, stacks, features, descriptions } = data);
@@ -23,7 +24,7 @@
 		style:--bg-image={bgImage}
 	>
 		<h1 class="text-subtitle text-white">{title}</h1>
-		<p class="text-label-sm text-white">{term}</p>
+		<p class="text-label-sm text-white">{formatTerm(term)}</p>
 	</div>
 	<div class="flex flex-col gap-y-6">
 		<Section label="Overview">

@@ -2,7 +2,10 @@
 	{
 		"slug": "2204-front-end-engineer",
 		"image": "/works_front-end_01.jpg",
-		"term": "Apr. 2022 ~",
+		"term": {
+			"from": "2022-04",
+			"to": ""
+		},
 		"title": "フロントエンドエンジニア",
 		"overview": "React NativeによるiOS/Androidアプリのフロントエンド開発",
 		"stacks": [
@@ -75,7 +78,10 @@
 	{
 		"slug": "2004-web-engineer",
 		"image": "/works_web-engineer_01.jpg",
-		"term": "Apr. 2020 ~ Mar. 2022",
+		"term": {
+			"from": "2020-04",
+			"to": "2022-03"
+		},
 		"title": "Webエンジニア",
 		"overview": "ランディングページ、コーポレートサイト開発",
 		"stacks": [
@@ -144,7 +150,10 @@
 	{
 		"slug": "1901-coder",
 		"image": "/works_coder_01.jpg",
-		"term": "Jan. 2019 ~ Sep. 2019",
+		"term": {
+			"from": "2019-01",
+			"to": "2019-09"
+		},
 		"title": "コーダー",
 		"overview": "Webサイトのコンテンツ更新、バナー制作業務",
 		"stacks": [
