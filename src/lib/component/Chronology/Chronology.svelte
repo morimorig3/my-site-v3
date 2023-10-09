@@ -173,7 +173,7 @@
 					<li data-tooltip="Adobe DreamWeaver"><SiAdobeDreamWeaver className="h-5" /></li>
 				</svelte:fragment>
 				<p class="text-body-sm" slot="description">
-					商業施設全12支店のWebサイトの隔週更新とバナー制作を担当し、7人構成のチームで連携しながら作業を行っていました。
+					主に書籍を中心にJavaScriptやHTML、CSS、デザインについての学習を進めました。
 				</p>
 			</WorkOverview>
 		</BubbleContent>
