@@ -3,7 +3,8 @@
 
 	import { filterTopics } from '../../store.js';
 
-	import DevelopCard from '$lib/component/DevelopCard/DevelopCard.svelte';
+	import DevelopCardList from '$lib/component/DevelopCardList/DevelopCardList.svelte';
+	import DevelopCard from '$lib/component/DevelopCardList/components/DevelopCard.svelte';
 
 	export let data;
 	$: ({ items } = data);
@@ -36,12 +37,12 @@
 				>
 			</div>
 		{/if}
-		<ul class="grid gap-6 tablet:gap-8 tablet:grid-cols-2 laptop:grid-cols-3">
+		<DevelopCardList>
 			{#each filteredItems as item}
 				<li transition:fade={{ duration: 250 }}>
 					<DevelopCard {item} />
 				</li>
 			{/each}
-		</ul>
+		</DevelopCardList>
 	</div>
 </div>
