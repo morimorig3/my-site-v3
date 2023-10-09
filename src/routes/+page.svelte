@@ -1,9 +1,11 @@
 <script>
 	import DevelopCardList from '$lib/component/DevelopCardList/DevelopCardList.svelte';
 	import DevelopCard from '$lib/component/DevelopCardList/components/DevelopCard.svelte';
+	import WorkCardList from '$lib/component/WorkCardList/WorkCardList.svelte';
+	import WorkCard from '$lib/component/WorkCardList/components/WorkCard.svelte';
 
 	export let data;
-	$: ({ developData } = data);
+	$: ({ developData, workData } = data);
 </script>
 
 <div class="flex flex-col">
@@ -31,6 +33,15 @@
 				<h2 class="text-subtitle">Works</h2>
 				<p class="text-label text-placeholder">過去から現在までのお仕事について</p>
 			</div>
+			<WorkCardList isLarge={true}>
+				{#each workData as { slug, title, term, image }, index}
+					{#if index < 2}
+						<li>
+							<WorkCard href={`/works/${slug}`} {title} {term} src={image} />
+						</li>
+					{/if}
+				{/each}
+			</WorkCardList>
 			<a href="/works" class="text-link self-end">もっと見る</a>
 		</div>
 	</section>
