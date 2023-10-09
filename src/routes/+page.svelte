@@ -1,11 +1,13 @@
 <script>
+	import Bio from '$lib/component/BIO.svelte';
+	import BookListLarge from '$lib/component/BookListLarge/BookListLarge.svelte';
 	import DevelopCardList from '$lib/component/DevelopCardList/DevelopCardList.svelte';
 	import DevelopCard from '$lib/component/DevelopCardList/components/DevelopCard.svelte';
 	import WorkCardList from '$lib/component/WorkCardList/WorkCardList.svelte';
 	import WorkCard from '$lib/component/WorkCardList/components/WorkCard.svelte';
 
 	export let data;
-	$: ({ developData, workData } = data);
+	$: ({ developData, workData, bookData } = data);
 </script>
 
 <div class="flex flex-col">
@@ -51,15 +53,17 @@
 				<h2 class="text-subtitle">Books</h2>
 				<p class="text-label text-placeholder">お気に入りの本たち</p>
 			</div>
+			<BookListLarge bookItems={bookData.items} />
 			<a href="/books" class="text-link self-end">もっと見る</a>
 		</div>
 	</section>
-	<section>
+	<section class="bg-bgTertiary">
 		<div class="l-container py-6 tablet:py-8 laptop:py-10 flex flex-col gap-y-6">
 			<div class="text-center">
 				<h2 class="text-subtitle">About</h2>
 				<p class="text-label text-placeholder">経歴っぽいモノ</p>
 			</div>
+			<Bio />
 			<a href="/about" class="text-link self-end">もっと見る</a>
 		</div>
 	</section>

@@ -1,7 +1,11 @@
 import type { PageServerLoad } from './$types';
 
+import { getBookList, loadBookReview } from '$lib/server/books';
+import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
 import { getUserRepos, loadDevelopRepos } from '$lib/server/githubAPI';
 import { loadWorkDetails } from '$lib/server/works';
+
+export const prerender = true;
 
 export const load: PageServerLoad = async () => {
 	const repoResponse = await getUserRepos();
@@ -17,8 +21,18 @@ export const load: PageServerLoad = async () => {
 		term,
 		image
 	}));
+
+	const { favorite } = await getBookList();
+	const reviewData = await loadBookReview();
+	const [reviewedWithFavorite] = [favorite].map((bookItem) => ({
+		...bookItem,
+		items: reviewedWith(bookItem.items, reviewData)
+	}));
+	const bookData = reviewedWithFavorite;
+
 	return {
 		developData,
-		workData
+		workData,
+		bookData
 	};
 };
