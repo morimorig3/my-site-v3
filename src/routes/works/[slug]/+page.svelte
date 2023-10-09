@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { isDeskTop } from '../../../store';
+
 	import Section from './components/Section.svelte';
 
 	import CardList from '$lib/component/CardList/CardList.svelte';
@@ -13,11 +15,7 @@
 	function setActiveTabIndex(index: number) {
 		activeTabIndex = index;
 	}
-	let screenSize: number;
-	$: isDesktop = screenSize > 959;
 </script>
-
-<svelte:window bind:innerWidth={screenSize} />
 
 <div class="l-container py-6 tablet:py-8 laptop:py-10">
 	<div
@@ -52,7 +50,7 @@
 				{/each}
 			</CardList>
 		</Section>
-		{#if isDesktop}
+		{#if $isDeskTop}
 			{#each descriptions as { body, label }}
 				<Section {label}>
 					{#each body as paragraph}

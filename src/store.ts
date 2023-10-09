@@ -14,3 +14,13 @@ function createFilterTopics() {
 }
 
 export const filterTopics = createFilterTopics();
+
+function createIsDesktop() {
+	const { subscribe, update } = writable(false);
+	return {
+		subscribe,
+		set: (screenSize: number) => update(() => screenSize > 959)
+	};
+}
+
+export const isDeskTop = createIsDesktop();
