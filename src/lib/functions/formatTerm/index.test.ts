@@ -64,5 +64,11 @@ describe('formatTerm', () => {
 				to: '2022-04'
 			})
 		).toBe('Apr. 2020 ~ Apr. 2022（2年）');
+		expect(
+			formatTerm({
+				from: '2020-04',
+				to: '2020-04'
+			})
+		).toBe('Apr. 2020');
 	});
 });

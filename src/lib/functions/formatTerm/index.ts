@@ -12,6 +12,10 @@ export const formatTerm = ({ from, to }: Term) => {
 	const fromLabel = transformDateString(from); // input: 2020-04 output:Apr. 2020
 	const toLabel = hasToLabel ? transformDateString(to) : '現在';
 
+	if (fromLabel === toLabel) {
+		return fromLabel;
+	}
+
 	const toTimeStamp = hasToLabel ? new Date(to).getTime() : new Date().getTime();
 	const fromTimeStamp = new Date(from).getTime();
 
