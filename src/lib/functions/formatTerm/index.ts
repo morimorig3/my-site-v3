@@ -1,6 +1,6 @@
 import { transformDateString } from '../transformDateString';
 
-import type { Term } from '$lib/server/works/types';
+import type { Term } from '$lib/server/types';
 
 /**
  * Term型を期間文字列に変換する

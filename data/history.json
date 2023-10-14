@@ -1,0 +1,339 @@
+[
+	{
+		"title": "フロントエンドエンジニア",
+		"description": "bitA Inc.",
+		"term": {
+			"from": "2022-04",
+			"to": ""
+		},
+		"workOverviews": [
+			{
+				"title": "転職サイトアプリ フロント実装",
+				"term": {
+					"from": "2022-04",
+					"to": ""
+				},
+				"stacks": [
+					{
+						"iconName": "SiTs",
+						"label": "TypeScript"
+					},
+					{
+						"iconName": "SiReact",
+						"label": "React"
+					},
+					{
+						"iconName": "SiRedux",
+						"label": "Redux"
+					},
+					{
+						"iconName": "SiRealm",
+						"label": "Realm"
+					},
+					{
+						"iconName": "SiGitLab",
+						"label": "Gitlab"
+					},
+					{
+						"iconName": "SiRedmine",
+						"label": "Redmine"
+					}
+				],
+				"description": "React Nativeを用いたスマートフォン向けアプリの開発を、1スプリント1週間のスクラム開発チームで担当し、フロントエンドの新規画面の実装や改修を行いました。"
+			},
+			{
+				"title": "個人学習",
+				"stacks": [
+					{
+						"iconName": "SiGo",
+						"label": "Go language"
+					},
+					{
+						"iconName": "SiNext",
+						"label": "Next"
+					},
+					{
+						"iconName": "SiGatsby",
+						"label": "Gatsby"
+					},
+					{
+						"iconName": "SiSvelte",
+						"label": "Svelte"
+					}
+				],
+				"description": "Web開発技術を中心に、バックエンドのAPI設計やデータベースの知識を補完するために、GO言語の学習を行いました。"
+			}
+		]
+	},
+	{
+		"title": "Webエンジニア",
+		"description": "hankyu hanshin marketing solutions Inc.",
+		"term": {
+			"from": "2019-01",
+			"to": "2022-03"
+		},
+		"workOverviews": [
+			{
+				"title": "Web制作業務",
+				"term": {
+					"from": "2020-04",
+					"to": "2022-03"
+				},
+				"stacks": [
+					{
+						"iconName": "SiJs",
+						"label": "JavaScript"
+					},
+					{
+						"iconName": "SiJQuery",
+						"label": "jQuery"
+					},
+					{
+						"iconName": "SiSass",
+						"label": "Sass"
+					}
+				],
+				"description": "ブランドサイト立ち上げ・コーポレートサイトのリニューアル・ランディングページ製作などを行っていました。ランディングページは毎週のように制作する機会があったため、CSSのスキルが高められる環境でした。"
+			},
+			{
+				"title": "デジタルサイネージコンテンツ更新業務",
+				"term": {
+					"from": "2019-10",
+					"to": "2020-03"
+				},
+				"stacks": [
+					{
+						"iconName": "SiAdobeIllustrator",
+						"label": "Adobe Illustrator"
+					},
+					{
+						"iconName": "SiCss3",
+						"label": "CSS"
+					},
+					{
+						"iconName": "SiHtml5",
+						"label": "HTML"
+					}
+				],
+				"description": "Web更新チームの一員として、更新業務を担当しつつ、主にデジタルサイネージのコンテンツ制作を担当していました。"
+			},
+			{
+				"title": "Webサイト更新業務",
+				"term": {
+					"from": "2019-01",
+					"to": "2019-09"
+				},
+				"stacks": [
+					{
+						"iconName": "SiHtml5",
+						"label": "HTML"
+					},
+					{
+						"iconName": "SiCss3",
+						"label": "CSS"
+					},
+					{
+						"iconName": "SiAdobeIllustrator",
+						"label": "Adobe Illustrator"
+					}
+				],
+				"description": "商業施設全12支店のWebサイトの隔週更新とバナー制作を担当し、7人構成のチームで連携しながら作業を行っていました。"
+			},
+			{
+				"title": "個人学習",
+				"stacks": [
+					{
+						"iconName": "SiJs",
+						"label": "JavaScript"
+					},
+					{
+						"iconName": "SiReact",
+						"label": "React"
+					},
+					{
+						"iconName": "SiGatsby",
+						"label": "Gatsby"
+					},
+					{
+						"iconName": "SiTs",
+						"label": "TypeScript"
+					},
+					{
+						"iconName": "SiCss3",
+						"label": "CSS"
+					}
+				],
+				"description": "業務に必要なHTML・CSS・JavaScriptの基礎知識はもちろん、デザインや設計など発展的な内容まで幅広く学習しました。コーディング関連は、CSS設計（BEM・SMACSS・FLOCSS）・セマンティックマークアップ・オブジェクト指向について。資格は、基本情報技術者・応用情報技術者・HTML5プロフェッショナル。そのほかは、React・TypeScript・タスクランナー・色やレイアウトの基礎知識"
+			}
+		]
+	},
+	{
+		"title": "Webデザイナー専攻",
+		"description": "デジタルハリウッド大阪本校",
+		"term": {
+			"from": "2018-04",
+			"to": "2018-12"
+		},
+		"workOverviews": [
+			{
+				"title": "卒業制作",
+				"term": {
+					"from": "2018-09",
+					"to": "2018-09"
+				},
+				"stacks": [
+					{
+						"iconName": "SiWordPress",
+						"label": "WordPress"
+					},
+					{
+						"iconName": "SiGulp",
+						"label": "Gulp"
+					},
+					{
+						"iconName": "SiJQuery",
+						"label": "jQuery"
+					},
+					{
+						"iconName": "SiSass",
+						"label": "Sass"
+					}
+				],
+				"description": "卒業制作ではお世話になっていたヘアサロンのWebサイトを制作させていただきました。"
+			},
+			{
+				"title": "Web制作について本格的に学習",
+				"term": {
+					"from": "2018-04",
+					"to": "2018-12"
+				},
+				"stacks": [
+					{
+						"iconName": "SiHtml5",
+						"label": "HTML"
+					},
+					{
+						"iconName": "SiCss3",
+						"label": "CSS"
+					},
+					{
+						"iconName": "SiAdobeIllustrator",
+						"label": "Adobe Illustrator"
+					},
+					{
+						"iconName": "SiAdobePhotoShop",
+						"label": "Adobe PhotoShop"
+					},
+					{
+						"iconName": "SiAdobeDreamWeaver",
+						"label": "Adobe DreamWeaver"
+					}
+				],
+				"description": "主に書籍を中心にJavaScriptやHTML、CSS、デザインについての学習を進めました。"
+			}
+		]
+	},
+	{
+		"title": "Web制作の学習",
+		"description": "独学期間",
+		"term": {
+			"from": "2018-01",
+			"to": "2018-03"
+		},
+		"workOverviews": [
+			{
+				"title": "HTML5とCSS3の本",
+				"term": {
+					"from": "2018-01",
+					"to": "2018-03"
+				},
+				"stacks": [
+					{
+						"iconName": "SiHtml5",
+						"label": "HTML"
+					},
+					{
+						"iconName": "SiCss3",
+						"label": "CSS"
+					}
+				],
+				"description": "路頭に迷っているときに書店でたまたま手に取った本。ハンズオン形式でやってみると楽しくてWeb業界に興味を持つきっかけに。"
+			}
+		]
+	},
+	{
+		"title": "市職員を目指していた時期",
+		"description": "迷走期間",
+		"term": {
+			"from": "2017-01",
+			"to": "2017-12"
+		},
+		"workOverviews": [
+			{
+				"title": "公務員試験勉強",
+				"term": {
+					"from": "2017-01",
+					"to": "2017-12"
+				},
+				"description": "何を血迷ったか市職員を目指していた時期があったため、一年間みっちり勉強してました。おかげ（？）で本を読める人間になりました。"
+			}
+		]
+	},
+	{
+		"title": "空白の3ヶ月間",
+		"term": {
+			"from": "2016-09",
+			"to": "2016-12"
+		},
+		"workOverviews": [
+			{
+				"title": "null",
+				"term": {
+					"from": "2016-09",
+					"to": "2016-12"
+				},
+				"description": "心と身体を癒してた期間。自分に向いていないことを無理して頑張っていたけど、やりぬく体力も精神力もなかったのだろうと思い至りました。"
+			}
+		]
+	},
+	{
+		"title": "カスタマーエンジニア",
+		"description": "東芝テックソリューションサービス株式会社",
+		"term": {
+			"from": "2015-04",
+			"to": "2016-09"
+		},
+		"workOverviews": [
+			{
+				"title": "外回り技術営業",
+				"term": {
+					"from": "2015-07",
+					"to": "2016-09"
+				},
+				"stacks": [
+					{
+						"iconName": "FaCar",
+						"label": "企業ドライバー"
+					},
+					{
+						"iconName": "FaScrewDriverWrench",
+						"label": "カスタマーエンジニア"
+					},
+					{
+						"iconName": "FaPhone",
+						"label": "電話対応"
+					}
+				],
+				"description": "量販店や飲食店のPOSレジの修理・点検・販売を担当しました。定期点検・1日7件ほどの訪問修理・POSレジ設置・導入・POSレジ撤去。労働時間が長く1年でドロップアウト。機械に詳しくないお客さんを相手に電話越しや対面でお話しする機会が多かったので折衝能力は磨かれました。"
+			},
+			{
+				"title": "社会人研修",
+				"term": {
+					"from": "2015-04",
+					"to": "2015-06"
+				},
+				"description": "ゆるめの新社会人研修を1ヶ月と、強烈な営業研修を受けさせてもらいました。2ヶ月もリッチな研修を受けさせてもらえたのは今思うととてもありがたかった。"
+			}
+		]
+	}
+]

@@ -4,8 +4,8 @@
 	import Section from './components/Section.svelte';
 
 	import CardList from '$lib/component/CardList/CardList.svelte';
-	import CardIcon from '$lib/component/CardList/components/CardIcon.svelte';
 	import CardItem from '$lib/component/CardList/components/CardItem.svelte';
+	import RenderIcon from '$lib/component/RenderIcon.svelte';
 	import TabButton from '$lib/component/TabButton.svelte';
 	import { formatTerm } from '$lib/functions/formatTerm';
 
@@ -34,7 +34,7 @@
 			<CardList>
 				{#each stacks as { iconName, label }}
 					<CardItem>
-						<CardIcon {iconName} className="h-8" />
+						<RenderIcon {iconName} className="h-8" />
 						<p class="text-label font-bold">{label}</p>
 					</CardItem>
 				{/each}
@@ -44,7 +44,7 @@
 			<CardList>
 				{#each features as { iconName, title, label }}
 					<CardItem>
-						<CardIcon {iconName} className="h-6" />
+						<RenderIcon {iconName} className="h-6" />
 						<p class="text-label-sm text-placeholder">{title}</p>
 						<p class="text-label font-bold">{label}</p>
 					</CardItem>
