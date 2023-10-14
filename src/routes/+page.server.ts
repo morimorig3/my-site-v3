@@ -1,5 +1,6 @@
 import type { PageServerLoad } from './$types';
 
+import { loadHistory } from '$lib/server/about';
 import { getBookList, loadBookReview } from '$lib/server/books';
 import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
 import { getUserRepos, loadDevelopRepos } from '$lib/server/githubAPI';
@@ -21,6 +22,8 @@ export const load: PageServerLoad = async () => {
 		term,
 		image
 	}));
+	const historyResponse = await loadHistory();
+	const historyData = historyResponse[0];
 
 	const { favorite } = await getBookList();
 	const reviewData = await loadBookReview();
@@ -33,6 +36,7 @@ export const load: PageServerLoad = async () => {
 	return {
 		developData,
 		workData,
-		bookData
+		bookData,
+		historyData
 	};
 };

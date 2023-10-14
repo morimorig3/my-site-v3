@@ -1,13 +1,17 @@
 <script>
 	import Bio from '$lib/component/BIO.svelte';
 	import BookListLarge from '$lib/component/BookListLarge/BookListLarge.svelte';
+	import BubbleContent from '$lib/component/Chronology/components/BubbleContent.svelte';
+	import SpeechBubble from '$lib/component/Chronology/components/SpeechBubble.svelte';
+	import WorkOverview from '$lib/component/Chronology/components/WorkOverview.svelte';
 	import DevelopCardList from '$lib/component/DevelopCardList/DevelopCardList.svelte';
 	import DevelopCard from '$lib/component/DevelopCardList/components/DevelopCard.svelte';
+	import Divider from '$lib/component/Divider.svelte';
 	import WorkCardList from '$lib/component/WorkCardList/WorkCardList.svelte';
 	import WorkCard from '$lib/component/WorkCardList/components/WorkCard.svelte';
 
 	export let data;
-	$: ({ developData, workData, bookData } = data);
+	$: ({ developData, workData, bookData, historyData } = data);
 </script>
 
 <div class="flex flex-col">
@@ -35,7 +39,7 @@
 				<h2 class="text-subtitle">Works</h2>
 				<p class="text-label text-placeholder">過去から現在までのお仕事について</p>
 			</div>
-			<WorkCardList isLarge={true}>
+			<WorkCardList>
 				{#each workData as { slug, title, term, image }, index}
 					{#if index < 2}
 						<li>
@@ -63,8 +67,22 @@
 				<h2 class="text-subtitle">About</h2>
 				<p class="text-label text-placeholder">経歴っぽいモノ</p>
 			</div>
-			<Bio />
+			<SpeechBubble
+				arrowPosition="bottom"
+				title={historyData.title}
+				description={historyData.description}
+			>
+				<BubbleContent slot="content">
+					{#each historyData.workOverviews as workOverview, index}
+						<WorkOverview {workOverview} />
+						{#if index < historyData.workOverviews.length - 1}
+							<Divider />
+						{/if}
+					{/each}
+				</BubbleContent>
+			</SpeechBubble>
 			<a href="/about" class="text-link self-end">もっと見る</a>
+			<Bio />
 		</div>
 	</section>
 </div>
