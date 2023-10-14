@@ -1,6 +1,6 @@
 import { transformDateString } from '../transformDateString';
 
-import type { Term } from '$lib/server/works/types';
+import type { Term } from '$lib/server/types';
 
 /**
  * Term型を期間文字列に変換する
@@ -11,6 +11,10 @@ export const formatTerm = ({ from, to }: Term) => {
 
 	const fromLabel = transformDateString(from); // input: 2020-04 output:Apr. 2020
 	const toLabel = hasToLabel ? transformDateString(to) : '現在';
+
+	if (fromLabel === toLabel) {
+		return fromLabel;
+	}
 
 	const toTimeStamp = hasToLabel ? new Date(to).getTime() : new Date().getTime();
 	const fromTimeStamp = new Date(from).getTime();

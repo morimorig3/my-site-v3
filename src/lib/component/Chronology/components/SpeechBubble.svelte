@@ -1,18 +1,22 @@
-<script>
+<script lang="ts">
 	import { slide } from 'svelte/transition';
+
+	type PositionType = 'left' | 'top' | 'right' | 'bottom';
 
 	export let title = '';
 	export let description = '';
+	export let arrowPosition: PositionType = 'left';
 	let isOpen = false;
 
 	function handleClick() {
 		isOpen = !isOpen;
 	}
+
+	$: arrowClass = arrowPosition;
 </script>
 
 <div class="wrap">
-	<div class="dot" />
-	<div class="bubble" data-is-open={isOpen}>
+	<div class={`bubble ${arrowClass}`} data-is-open={isOpen}>
 		<button
 			class="inline-flex flex-col w-full p-4 text-left relative u-link-hover rounded-xl"
 			on:click|preventDefault={handleClick}
@@ -24,7 +28,7 @@
 				<span class="text-label-sm text-placeholder">{description}</span>
 			{/if}
 			{#if isOpen}
-				<div class="close" />
+				<span class="close" />
 			{/if}
 		</button>
 		{#if isOpen}
@@ -65,24 +69,8 @@
 		position: relative;
 		margin-bottom: 1em;
 	}
-	.dot {
-		width: 24px;
-		height: 24px;
-		background-color: theme(colors.divider);
-		border-radius: 9999px;
-		position: absolute;
-		top: 50%;
-		z-index: 10;
-		transform: translateY(-50%) translateX(-50%);
-		border: 4px solid #fff;
-		@media (min-width: theme(screens.tablet)) {
-			margin-left: theme(space.5);
-		}
-	}
 	.bubble {
 		position: relative;
-		width: 90%;
-		margin-left: auto;
 		border-radius: 10px;
 		background-color: #fff;
 		filter: drop-shadow(rgba(0, 0, 0, 0.16) 0px 1px 2px);
@@ -90,14 +78,34 @@
 	.bubble::before {
 		content: '';
 		display: block;
-		height: calc(20px / 2 * tan(60deg));
-		width: 14px;
-		clip-path: polygon(0 50%, 100% 0, 100% 100%);
 		position: absolute;
+		background-color: #fff;
+		height: calc(20px / 2 * tan(60deg));
+		width: 20px;
+	}
+	.left.bubble::before {
 		top: 50%;
 		right: 100%;
 		transform: translateY(-50%);
-		background-color: #fff;
+		clip-path: polygon(0 50%, 100% 0, 100% 100%);
+	}
+	.top.bubble::before {
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
+	.right.bubble::before {
+		top: 50%;
+		left: 100%;
+		transform: translateY(-50%);
+		clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+	}
+	.bottom.bubble::before {
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		clip-path: polygon(0% 0%, 100% 0, 50% 100%);
 	}
 	.bubble:hover::before {
 		background-color: theme(colors.sky.50);

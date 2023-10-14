@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Term } from '$lib/server/works/types';
+	import type { Term } from '$lib/server/types';
 
 	import { formatTerm } from '$lib/functions/formatTerm';
 

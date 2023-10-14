@@ -1,14 +1,15 @@
 <script lang="ts">
-	import DevelopCardHeader from './components/DevelopCardHeader.svelte';
-	import DevelopLanguage from './components/DevelopLanguage.svelte';
-	import LinkList from './components/LinkList.svelte';
-	import TopicList from './components/TopicList.svelte';
+	import DevelopCardHeader from './DevelopCardHeader.svelte';
+	import DevelopLanguage from './DevelopLanguage.svelte';
+	import LinkList from './LinkList.svelte';
+	import TopicList from './TopicList.svelte';
 
 	import type { GitHubGetUserReposData } from '$lib/server/githubAPI/types';
 
 	import { formatDate } from '$lib/functions/formatDate';
 
 	export let item: GitHubGetUserReposData;
+	export let disableSort = false;
 </script>
 
 <div class="wrapper">
@@ -22,7 +23,7 @@
 		<DevelopLanguage language={item.language} />
 	{/if}
 	<LinkList homepageHref={item.homepage} htmlHref={item.html_url} />
-	{#if item.topics}
+	{#if item.topics && !disableSort}
 		<TopicList topics={item.topics} />
 	{/if}
 </div>

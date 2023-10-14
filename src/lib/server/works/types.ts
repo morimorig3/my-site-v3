@@ -1,8 +1,6 @@
-import type { ICON_MAP } from '$lib/const';
+import type { Icon, Term } from '../types';
 
 export type LoadWorkDetailsResponse = Work[];
-
-export type IconNameType = keyof typeof ICON_MAP;
 
 interface Work {
 	slug: string;
@@ -10,22 +8,12 @@ interface Work {
 	title: string;
 	term: Term;
 	overview: string;
-	stacks: Card[];
-	features: Card[];
+	stacks: Icon[];
+	features: Icon[];
 	descriptions: Description[];
-}
-
-interface Card {
-	iconName: IconNameType;
-	title?: string;
-	label: string;
 }
 
 interface Description {
 	label: string;
 	body: string[];
-}
-export interface Term {
-	from: string;
-	to: string;
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { LANGUAGE_COLOR_CODES } from '../const';
+	import { LANGUAGE_COLOR_CODES } from './const';
 
 	export let language: string;
 
