@@ -50,7 +50,7 @@
 	}
 	.wrapper {
 		background-color: #fff;
-		height: calc(100vh * 0.83);
+		height: calc(100lvh * 0.83);
 		z-index: 101;
 		border-top-left-radius: theme(borderRadius.2xl);
 		border-top-right-radius: theme(borderRadius.2xl);
