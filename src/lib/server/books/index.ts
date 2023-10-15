@@ -6,7 +6,7 @@ import type { LoadBookReviewResponse } from './types';
 
 import { ERROR_MESSAGE_COMMON } from '$lib/const';
 
-export async function loadBookReview() {
+export async function loadBookReviewList() {
 	const data = await readFile('data/booksReview.json', {
 		encoding: 'utf-8'
 	}).catch(() => {

@@ -2,16 +2,20 @@ import { error } from '@sveltejs/kit';
 
 import type { PageServerLoad } from './$types';
 
-import { loadWorkDetails } from '$lib/server/works';
+import { ERROR_MESSAGE_COMMON } from '$lib/const';
+import { loadWorkDetailList } from '$lib/server/works';
 
 export const prerender = true;
 
 export const load: PageServerLoad = async ({ params }) => {
-	const response = await loadWorkDetails();
+	const response = await loadWorkDetailList();
+	if (!response) {
+		throw error(404, { message: ERROR_MESSAGE_COMMON });
+	}
 	const work = response.find(({ slug }) => slug === params.slug);
-	if (work) {
-		return work;
+	if (!work) {
+		throw error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 
-	throw error(404, 'Not found');
+	return work;
 };

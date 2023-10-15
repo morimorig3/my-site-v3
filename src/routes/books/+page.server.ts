@@ -1,21 +1,42 @@
-import { loadBookReview } from '$lib/server/books';
+import { error } from '@sveltejs/kit';
+
+import type { PageServerLoad } from '../$types';
+
+import { ERROR_MESSAGE_COMMON } from '$lib/const';
+import { loadBookReviewList } from '$lib/server/books';
 import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
 import { getBookList } from '$lib/server/googleBooks';
 
 export const prerender = true;
 
-export async function load() {
-	const { favorite, toRead, forBeginner } = await getBookList();
-	const reviewData = await loadBookReview();
+export const load: PageServerLoad = async () => {
+	const {
+		favoriteBookShelves: favoriteBookShelvesResponse,
+		forBeginnerBookShelves: forBeginnerBookShelvesResponse,
+		toReadBookShelves: toReadBookShelvesResponse
+	} = await getBookList();
+	const loadBookReviewListResponse = await loadBookReviewList();
+
+	if (
+		!favoriteBookShelvesResponse ||
+		!forBeginnerBookShelvesResponse ||
+		!toReadBookShelvesResponse ||
+		!loadBookReviewListResponse
+	) {
+		throw error(404, { message: ERROR_MESSAGE_COMMON });
+	}
 	const [reviewedWithFavorite, reviewedWithForBeginner, reviewedWithToRead] = [
-		favorite,
-		toRead,
-		forBeginner
-	].map((bookItem) => ({ ...bookItem, items: reviewedWith(bookItem.items, reviewData) }));
+		favoriteBookShelvesResponse,
+		forBeginnerBookShelvesResponse,
+		toReadBookShelvesResponse
+	].map((bookItem) => ({
+		...bookItem,
+		bookList: reviewedWith(bookItem.bookList, loadBookReviewListResponse)
+	}));
 
 	return {
-		favorite: reviewedWithFavorite,
-		forBeginner: reviewedWithForBeginner,
-		toRead: reviewedWithToRead
+		favoriteBookShelves: reviewedWithFavorite,
+		forBeginnerBookShelves: reviewedWithForBeginner,
+		toReadBookShelves: reviewedWithToRead
 	};
-}
+};

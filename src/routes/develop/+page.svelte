@@ -7,12 +7,12 @@
 	import DevelopCard from '$lib/component/DevelopCardList/components/DevelopCard.svelte';
 
 	export let data;
-	$: ({ items } = data);
+	$: ({ developList } = data);
 	$: filteredItems = $filterTopics.length
-		? items.filter(({ topics }) => {
+		? developList.filter(({ topics }) => {
 				return topics?.some((topic) => $filterTopics.includes(topic));
 		  })
-		: items;
+		: developList;
 </script>
 
 <div class="l-container py-6 tablet:py-8 laptop:py-10">

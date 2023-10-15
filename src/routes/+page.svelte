@@ -57,7 +57,7 @@
 				<h2 class="text-subtitle">Books</h2>
 				<p class="text-label text-placeholder">お気に入りの本たち</p>
 			</div>
-			<BookListLarge bookItems={bookData.items} />
+			<BookListLarge bookItems={bookData.bookList} />
 			<a href="/books" class="text-link self-end">もっと見る</a>
 		</div>
 	</section>

@@ -14,20 +14,26 @@ export async function getBookList() {
 		getBookShelves(BOOK_SHELVES_INDEX.TO_READ),
 		getBookShelves(BOOK_SHELVES_INDEX.FOR_BEGINNER)
 	])
-		.then(([{ items: favoriteItems }, { items: toReadItems }, { items: forBeginnerItems }]) => ({
-			favorite: {
-				items: favoriteItems,
-				title: 'お気に入り'
-			},
-			toRead: {
-				items: toReadItems,
-				title: '読みたい'
-			},
-			forBeginner: {
-				items: forBeginnerItems,
-				title: '基礎知識'
-			}
-		}))
+		.then(
+			([
+				{ items: favoriteBookList },
+				{ items: toReadBookList },
+				{ items: forBeginnerBookList }
+			]) => ({
+				favoriteBookShelves: {
+					bookList: favoriteBookList,
+					title: 'お気に入り'
+				},
+				toReadBookShelves: {
+					bookList: toReadBookList,
+					title: '読みたい'
+				},
+				forBeginnerBookShelves: {
+					bookList: forBeginnerBookList,
+					title: '基礎知識'
+				}
+			})
+		)
 		.catch(() => {
 			throw error(500, {
 				message: ERROR_MESSAGE_COMMON
