@@ -10,10 +10,3 @@ interface BookReview {
 export type ReviewedWith<T> = T & {
 	review?: string;
 };
-
-interface DevelopRepo {
-	repositoryName: string;
-	link?: string;
-}
-
-export type LoadDevelopReposResponse = DevelopRepo[];

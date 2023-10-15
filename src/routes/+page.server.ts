@@ -3,7 +3,8 @@ import type { PageServerLoad } from './$types';
 import { loadHistory } from '$lib/server/about';
 import { loadBookReview } from '$lib/server/books';
 import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
-import { getUserRepos, loadDevelopRepos } from '$lib/server/github';
+import { loadDevelopRepos } from '$lib/server/develop';
+import { getUserRepos } from '$lib/server/github';
 import { getBookList } from '$lib/server/googleBooks';
 import { loadWorkDetails } from '$lib/server/works';
 
