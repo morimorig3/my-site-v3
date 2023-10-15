@@ -3,9 +3,10 @@
 
 	import BookCardSmall from './components/BookCardSmall.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
+	import type { ReviewedWith } from '$lib/server/books/types';
+	import type { BookItem } from '$lib/server/googleBooks/types';
 
-	export let bookItems: ReviewedWith<BookItems>[];
+	export let bookItems: ReviewedWith<BookItem>[];
 	const ITEMS_PER_PAGE = 3;
 	let pageCount = 1;
 	$: isLoadAllItems = bookItems.length > pageCount * 3;

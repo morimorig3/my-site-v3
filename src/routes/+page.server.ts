@@ -1,9 +1,10 @@
 import type { PageServerLoad } from './$types';
 
 import { loadHistory } from '$lib/server/about';
-import { getBookList, loadBookReview } from '$lib/server/books';
+import { loadBookReview } from '$lib/server/books';
 import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
 import { getUserRepos, loadDevelopRepos } from '$lib/server/github';
+import { getBookList } from '$lib/server/googleBooks';
 import { loadWorkDetails } from '$lib/server/works';
 
 export const prerender = true;

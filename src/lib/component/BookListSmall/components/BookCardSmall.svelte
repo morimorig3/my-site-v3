@@ -3,9 +3,10 @@
 	import FaArrowUpRightFromSquare from '../../Icons/FaArrowUpRightFromSquare.svelte';
 	import FaCommentDots from '../../Icons/FaCommentDots.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
+	import type { ReviewedWith } from '$lib/server/books/types';
+	import type { BookItem } from '$lib/server/googleBooks/types';
 
-	export let bookItem: ReviewedWith<BookItems>;
+	export let bookItem: ReviewedWith<BookItem>;
 
 	let isOpen = false;
 	function handleClick() {

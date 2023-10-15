@@ -3,12 +3,13 @@
 	import HalfModal from './HalfModal.svelte';
 	import FaArrowUpRightFromSquare from './Icons/FaArrowUpRightFromSquare.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
+	import type { ReviewedWith } from '$lib/server/books/types';
+	import type { BookItem } from '$lib/server/googleBooks/types';
 
 	import { toSingleByteChar } from '$lib/functions/toSingleByteChar';
 	export let isOpen: boolean;
 	export let onClickCloseButton: () => void;
-	export let bookItem: ReviewedWith<BookItems>;
+	export let bookItem: ReviewedWith<BookItem>;
 	$: ({ volumeInfo, review } = bookItem);
 </script>
 

@@ -1,5 +1,6 @@
-import { getBookList, loadBookReview } from '$lib/server/books';
+import { loadBookReview } from '$lib/server/books';
 import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
+import { getBookList } from '$lib/server/googleBooks';
 
 export const prerender = true;
 
