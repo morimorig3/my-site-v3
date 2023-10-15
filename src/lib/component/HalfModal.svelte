@@ -1,12 +1,24 @@
 <script lang="ts">
 	import { fade, slide } from 'svelte/transition';
 	import { focusTrap } from 'svelte-focus-trap';
+	import { swipe } from 'svelte-gestures';
 
-	import { clickOutside } from '$lib/modules/clickOutside';
 	export let isOpen: boolean;
 	export let onClickCloseButton: () => void;
 	export let ariaLabelledby: string;
 	export let ariaDescribedby: string;
+
+	let direction;
+
+	function handler({
+		detail
+	}: CustomEvent<{
+		direction: 'top' | 'right' | 'bottom' | 'left';
+		target: EventTarget;
+	}>) {
+		direction = detail.direction;
+		if (direction === 'bottom') onClickCloseButton();
+	}
 </script>
 
 <svelte:head>
@@ -28,7 +40,8 @@
 		aria-describedby={ariaDescribedby}
 		class="grid place-items-center fixed top-0 right-0 bottom-0 left-0 z-50"
 	>
-		<div use:clickOutside on:clickOutside={onClickCloseButton} transition:slide class="wrapper">
+		<div use:swipe={{ minSwipeDistance: 60 }} on:swipe={handler} transition:slide class="wrapper">
+			<span class="drag-bar" />
 			<button on:click={onClickCloseButton} class="close">
 				<span />
 				<span />
@@ -100,5 +113,10 @@
 		&:nth-child(3) {
 			transform: rotate(45deg) translateY(6px);
 		}
+	}
+	.drag-bar {
+		width: 150px;
+		background-color: theme(colors.placeholder);
+		@apply rounded-full block absolute top-3 left-1/2 -translate-x-1/2 h-1;
 	}
 </style>

@@ -10,6 +10,12 @@ declare global {
 	declare namespace svelteHTML {
 		interface HTMLAttributes<T> {
 			'on:clickOutside'?: CompositionEventHandler<T>;
+			'on:swipe'?: (
+				event: CustomEvent<{
+					direction: 'top' | 'right' | 'bottom' | 'left';
+					target: EventTarget;
+				}>
+			) => void;
 		}
 	}
 }
