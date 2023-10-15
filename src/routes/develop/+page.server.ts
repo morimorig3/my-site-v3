@@ -1,4 +1,4 @@
-import { getUserRepos, loadDevelopRepos } from '$lib/server/githubAPI';
+import { getUserRepos, loadDevelopRepos } from '$lib/server/github';
 
 export const prerender = true;
 

@@ -3,7 +3,7 @@ import type { PageServerLoad } from './$types';
 import { loadHistory } from '$lib/server/about';
 import { getBookList, loadBookReview } from '$lib/server/books';
 import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
-import { getUserRepos, loadDevelopRepos } from '$lib/server/githubAPI';
+import { getUserRepos, loadDevelopRepos } from '$lib/server/github';
 import { loadWorkDetails } from '$lib/server/works';
 
 export const prerender = true;
