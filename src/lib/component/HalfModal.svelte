@@ -164,8 +164,12 @@
 		}
 	}
 	.drag-bar {
-		width: 150px;
-		background-color: theme(colors.placeholder);
-		@apply rounded-full block absolute top-3 left-1/2 -translate-x-1/2 h-1 cursor-grab;
+		&::after {
+			content: '';
+			width: 150px;
+			background-color: theme(colors.placeholder);
+			@apply rounded-full block h-1;
+		}
+		@apply absolute top-1 left-1/2 -translate-x-1/2 cursor-grab p-4 w-full flex justify-center;
 	}
 </style>
