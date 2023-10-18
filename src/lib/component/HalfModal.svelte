@@ -32,7 +32,7 @@
 		event: CustomEvent<{
 			x: number;
 			y: number;
-			target: any;
+			target: HTMLDivElement;
 		}>
 	) {
 		const newPanY = event.detail.y;
