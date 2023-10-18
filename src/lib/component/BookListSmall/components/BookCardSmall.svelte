@@ -52,4 +52,4 @@
 		</ul>
 	</div>
 </div>
-<BookModal {bookItem} {isOpen} onClickCloseButton={handleClick} />
+<BookModal {bookItem} {isOpen} handleCloseModal={handleClick} />

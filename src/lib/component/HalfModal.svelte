@@ -1,23 +1,60 @@
 <script lang="ts">
+	import { afterUpdate } from 'svelte';
+
 	import { fade, slide } from 'svelte/transition';
 	import { focusTrap } from 'svelte-focus-trap';
-	import { swipe } from 'svelte-gestures';
+	import { pan } from 'svelte-gestures';
 
 	export let isOpen: boolean;
-	export let onClickCloseButton: () => void;
+	export let handleCloseModal: () => void;
 	export let ariaLabelledby: string;
 	export let ariaDescribedby: string;
 
-	let direction;
+	let modal: HTMLDivElement;
+	let panY = 0;
+	let modalOffsetTop = 0;
+	$: translateY = panY - modalOffsetTop;
+	$: threshold = modalOffsetTop + 51;
 
-	function handler({
-		detail
-	}: CustomEvent<{
-		direction: 'top' | 'right' | 'bottom' | 'left';
-		target: EventTarget;
-	}>) {
-		direction = detail.direction;
-		if (direction === 'bottom') onClickCloseButton();
+	// ドラッグ可能範囲
+	$: minPanY = modalOffsetTop;
+	$: maxPanY = modalOffsetTop + 101;
+
+	afterUpdate(() => {
+		// モーダルを閉じた時に値を初期化する
+		if (isOpen) return;
+		panY = 0;
+		modalOffsetTop = 0;
+		translateY = 0;
+	});
+
+	function handlePan(
+		event: CustomEvent<{
+			x: number;
+			y: number;
+			target: any;
+		}>
+	) {
+		const newPanY = event.detail.y;
+		// モーダル表示後にoffsetTopを取得する
+		if (!modalOffsetTop) {
+			modalOffsetTop = modal.offsetTop;
+		}
+
+		// スクロールポジションが指定の範囲外のとき抜ける
+		if (newPanY < minPanY || newPanY > maxPanY) return;
+		// 値が同じ時は抜ける
+		if (panY === newPanY) return;
+
+		panY = newPanY;
+	}
+
+	function handlePanUp() {
+		if (panY > threshold && panY < maxPanY) {
+			handleCloseModal();
+		} else {
+			translateY = 0;
+		}
 	}
 </script>
 
@@ -38,20 +75,32 @@
 		aria-modal="true"
 		aria-labelledby={ariaLabelledby}
 		aria-describedby={ariaDescribedby}
-		class="grid place-items-center fixed top-0 right-0 bottom-0 left-0 z-50"
+		class="fixed top-0 right-0 bottom-0 left-0 z-50"
 	>
-		<div use:swipe={{ minSwipeDistance: 60 }} on:swipe={handler} transition:slide class="wrapper">
-			<span class="drag-bar" />
-			<button on:click={onClickCloseButton} class="close">
-				<span />
-				<span />
-				<span />
-			</button>
-			<div class="inner">
-				<slot />
+		<div
+			class="w-full h-full grid place-items-center"
+			use:pan={{ delay: 100 }}
+			on:pan={handlePan}
+			on:panup={handlePanUp}
+		>
+			<div
+				bind:this={modal}
+				transition:slide
+				class="wrapper transition-transform"
+				style:transform={`translateY(${translateY}px)`}
+			>
+				<span class="drag-bar" />
+				<button on:click={handleCloseModal} class="close">
+					<span />
+					<span />
+					<span />
+				</button>
+				<div class="inner">
+					<slot />
+				</div>
 			</div>
 		</div>
-		<div transition:fade={{ duration: 100 }} class="overlay" />
+		<button on:click={handleCloseModal} transition:fade={{ duration: 100 }} class="overlay" />
 	</div>
 {/if}
 
@@ -117,6 +166,6 @@
 	.drag-bar {
 		width: 150px;
 		background-color: theme(colors.placeholder);
-		@apply rounded-full block absolute top-3 left-1/2 -translate-x-1/2 h-1;
+		@apply rounded-full block absolute top-3 left-1/2 -translate-x-1/2 h-1 cursor-grab;
 	}
 </style>

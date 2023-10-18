@@ -8,7 +8,7 @@
 
 	import { toSingleByteChar } from '$lib/functions/toSingleByteChar';
 	export let isOpen: boolean;
-	export let onClickCloseButton: () => void;
+	export let handleCloseModal: () => void;
 	export let bookItem: ReviewedWith<BookItem>;
 	$: ({ volumeInfo, review } = bookItem);
 </script>
@@ -17,7 +17,7 @@
 	ariaLabelledby="book-modal-title"
 	ariaDescribedby="book-modal-description"
 	{isOpen}
-	{onClickCloseButton}
+	{handleCloseModal}
 >
 	<div class="flex flex-col gap-y-4">
 		<header class="flex flex-col">

@@ -42,4 +42,4 @@
 		{/if}
 	</div>
 </div>
-<BookModal {bookItem} {isOpen} onClickCloseButton={closeModal} />
+<BookModal {bookItem} {isOpen} handleCloseModal={closeModal} />
