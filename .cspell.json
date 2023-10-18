@@ -14,7 +14,8 @@
 		"SMACSS",
 		"FLOCSS",
 		"Dreamweaver",
-		"Photoshop"
+		"Photoshop",
+		"panup"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }

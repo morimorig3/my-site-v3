@@ -1,35 +1,36 @@
 import type { PageServerLoad } from './$types';
 
-import { loadHistory } from '$lib/server/about';
-import { getBookList, loadBookReview } from '$lib/server/books';
+import { loadHistoryList } from '$lib/server/about';
+import { loadBookReviewList } from '$lib/server/books';
 import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
-import { getUserRepos, loadDevelopRepos } from '$lib/server/githubAPI';
-import { loadWorkDetails } from '$lib/server/works';
+import { loadDevelopRepoList } from '$lib/server/develop';
+import { getUserRepos } from '$lib/server/github';
+import { getBookList } from '$lib/server/googleBooks';
+import { loadWorkDetailList } from '$lib/server/works';
 
 export const prerender = true;
 
 export const load: PageServerLoad = async () => {
-	const repoResponse = await getUserRepos();
-	const repoNameResponse = await loadDevelopRepos().then((res) =>
-		res.map(({ repositoryName }) => repositoryName)
-	);
-	const developData = repoResponse.filter(({ name }) => repoNameResponse.includes(name));
+	const userReposResponse = await getUserRepos();
+	const developRepoListResponse = await loadDevelopRepoList();
+	const developRepoNameList = developRepoListResponse.map(({ repositoryName }) => repositoryName);
+	const developData = userReposResponse.filter(({ name }) => developRepoNameList.includes(name));
 
-	const worksResponse = await loadWorkDetails();
+	const worksResponse = await loadWorkDetailList();
 	const workData = worksResponse.map(({ slug, title, term, image }) => ({
 		slug,
 		title,
 		term,
 		image
 	}));
-	const historyResponse = await loadHistory();
+	const historyResponse = await loadHistoryList();
 	const historyData = historyResponse[0];
 
-	const { favorite } = await getBookList();
-	const reviewData = await loadBookReview();
-	const [reviewedWithFavorite] = [favorite].map((bookItem) => ({
+	const { favoriteBookShelves } = await getBookList();
+	const reviewData = await loadBookReviewList();
+	const [reviewedWithFavorite] = [favoriteBookShelves].map((bookItem) => ({
 		...bookItem,
-		items: reviewedWith(bookItem.items, reviewData)
+		bookList: reviewedWith(bookItem.bookList, reviewData)
 	}));
 	const bookData = reviewedWithFavorite;
 

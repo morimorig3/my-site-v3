@@ -1,11 +1,12 @@
 <script lang="ts">
 	import BookModal from '../../BookModal.svelte';
 
-	import type { BookItems, ReviewedWith } from '$lib/server/books/types';
+	import type { ReviewedWith } from '$lib/server/books/types';
+	import type { BookItem } from '$lib/server/googleBooks/types';
 
 	import { toSingleByteChar } from '$lib/functions/toSingleByteChar';
 
-	export let bookItem: ReviewedWith<BookItems>;
+	export let bookItem: ReviewedWith<BookItem>;
 	let isOpen = false;
 	function openModal() {
 		isOpen = true;
@@ -41,4 +42,4 @@
 		{/if}
 	</div>
 </div>
-<BookModal {bookItem} {isOpen} onClickCloseButton={closeModal} />
+<BookModal {bookItem} {isOpen} handleCloseModal={closeModal} />

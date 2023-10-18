@@ -1,12 +1,23 @@
 <script lang="ts">
 	import { fade, slide } from 'svelte/transition';
 	import { focusTrap } from 'svelte-focus-trap';
+	import { swipe } from 'svelte-gestures';
 
-	import { clickOutside } from '$lib/modules/clickOutside';
 	export let isOpen: boolean;
-	export let onClickCloseButton: () => void;
+	export let handleCloseModal: () => void;
 	export let ariaLabelledby: string;
 	export let ariaDescribedby: string;
+
+	function handleSwipe(
+		event: CustomEvent<{
+			direction: 'top' | 'right' | 'bottom' | 'left';
+			target: EventTarget;
+		}>
+	) {
+		if (event.detail.direction === 'bottom') {
+			handleCloseModal();
+		}
+	}
 </script>
 
 <svelte:head>
@@ -26,10 +37,11 @@
 		aria-modal="true"
 		aria-labelledby={ariaLabelledby}
 		aria-describedby={ariaDescribedby}
-		class="grid place-items-center fixed top-0 right-0 bottom-0 left-0 z-50"
+		class="fixed top-0 right-0 bottom-0 left-0 z-50 grid place-items-center"
 	>
-		<div use:clickOutside on:clickOutside={onClickCloseButton} transition:slide class="wrapper">
-			<button on:click={onClickCloseButton} class="close">
+		<div use:swipe on:swipe={handleSwipe} transition:slide class="wrapper">
+			<span class="drag-bar" />
+			<button on:click={handleCloseModal} class="close">
 				<span />
 				<span />
 				<span />
@@ -38,7 +50,7 @@
 				<slot />
 			</div>
 		</div>
-		<div transition:fade={{ duration: 100 }} class="overlay" />
+		<button on:click={handleCloseModal} transition:fade={{ duration: 100 }} class="overlay" />
 	</div>
 {/if}
 
@@ -50,7 +62,7 @@
 	}
 	.wrapper {
 		background-color: #fff;
-		height: calc(100vh * 0.83);
+		height: calc(100dvh * 0.83);
 		z-index: 101;
 		border-top-left-radius: theme(borderRadius.2xl);
 		border-top-right-radius: theme(borderRadius.2xl);
@@ -100,5 +112,14 @@
 		&:nth-child(3) {
 			transform: rotate(45deg) translateY(6px);
 		}
+	}
+	.drag-bar {
+		&::after {
+			content: '';
+			width: 150px;
+			background-color: theme(colors.placeholder);
+			@apply rounded-full block h-1;
+		}
+		@apply absolute top-1 left-1/2 -translate-x-1/2 cursor-grab p-4 w-full flex justify-center;
 	}
 </style>

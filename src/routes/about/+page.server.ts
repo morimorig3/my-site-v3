@@ -2,17 +2,18 @@ import { error } from '@sveltejs/kit';
 
 import type { PageServerLoad } from './$types';
 
-import { loadHistory } from '$lib/server/about';
+import { ERROR_MESSAGE_COMMON } from '$lib/const';
+import { loadHistoryList } from '$lib/server/about';
 
 export const prerender = true;
 
 export const load: PageServerLoad = async () => {
-	const response = await loadHistory();
-	if (response) {
-		return {
-			history: response
-		};
+	const response = await loadHistoryList();
+	if (!response) {
+		throw error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 
-	throw error(404, 'Not found');
+	return {
+		historyList: response
+	};
 };

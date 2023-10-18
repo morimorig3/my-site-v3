@@ -78,3 +78,5 @@ export const ICON_MAP = {
 	SiSvelte: SiSvelte,
 	default: FaFlag
 } as const;
+
+export const ERROR_MESSAGE_COMMON = 'データの取得に失敗しました';

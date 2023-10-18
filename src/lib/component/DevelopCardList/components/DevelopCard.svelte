@@ -4,7 +4,7 @@
 	import LinkList from './LinkList.svelte';
 	import TopicList from './TopicList.svelte';
 
-	import type { GitHubGetUserReposData } from '$lib/server/githubAPI/types';
+	import type { GitHubGetUserReposData } from '$lib/server/github/types';
 
 	import { formatDate } from '$lib/functions/formatDate';
 
