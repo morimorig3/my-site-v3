@@ -1,59 +1,21 @@
 <script lang="ts">
-	import { afterUpdate } from 'svelte';
-
 	import { fade, slide } from 'svelte/transition';
 	import { focusTrap } from 'svelte-focus-trap';
-	import { pan } from 'svelte-gestures';
+	import { swipe } from 'svelte-gestures';
 
 	export let isOpen: boolean;
 	export let handleCloseModal: () => void;
 	export let ariaLabelledby: string;
 	export let ariaDescribedby: string;
 
-	let modal: HTMLDivElement;
-	let panY = 0;
-	let modalOffsetTop = 0;
-	$: translateY = panY - modalOffsetTop;
-	$: threshold = modalOffsetTop + 51;
-
-	// ドラッグ可能範囲
-	$: minPanY = modalOffsetTop;
-	$: maxPanY = modalOffsetTop + 101;
-
-	afterUpdate(() => {
-		// モーダルを閉じた時に値を初期化する
-		if (isOpen) return;
-		panY = 0;
-		modalOffsetTop = 0;
-		translateY = 0;
-	});
-
-	function handlePan(
+	function handleSwipe(
 		event: CustomEvent<{
-			x: number;
-			y: number;
-			target: HTMLDivElement;
+			direction: 'top' | 'right' | 'bottom' | 'left';
+			target: EventTarget;
 		}>
 	) {
-		const newPanY = event.detail.y;
-		// モーダル表示後にoffsetTopを取得する
-		if (!modalOffsetTop) {
-			modalOffsetTop = modal.offsetTop;
-		}
-
-		// スクロールポジションが指定の範囲外のとき抜ける
-		if (newPanY < minPanY || newPanY > maxPanY) return;
-		// 値が同じ時は抜ける
-		if (panY === newPanY) return;
-
-		panY = newPanY;
-	}
-
-	function handlePanUp() {
-		if (panY > threshold && panY < maxPanY) {
+		if (event.detail.direction === 'bottom') {
 			handleCloseModal();
-		} else {
-			translateY = 0;
 		}
 	}
 </script>
@@ -75,29 +37,17 @@
 		aria-modal="true"
 		aria-labelledby={ariaLabelledby}
 		aria-describedby={ariaDescribedby}
-		class="fixed top-0 right-0 bottom-0 left-0 z-50"
+		class="fixed top-0 right-0 bottom-0 left-0 z-50 grid place-items-center"
 	>
-		<div
-			class="w-full h-full grid place-items-center"
-			use:pan={{ delay: 0 }}
-			on:pan={handlePan}
-			on:panup={handlePanUp}
-		>
-			<div
-				bind:this={modal}
-				transition:slide
-				class="wrapper transition-transform"
-				style:transform={`translateY(${translateY}px)`}
-			>
-				<span class="drag-bar" />
-				<button on:click={handleCloseModal} class="close">
-					<span />
-					<span />
-					<span />
-				</button>
-				<div class="inner">
-					<slot />
-				</div>
+		<div use:swipe on:swipe={handleSwipe} transition:slide class="wrapper">
+			<span class="drag-bar" />
+			<button on:click={handleCloseModal} class="close">
+				<span />
+				<span />
+				<span />
+			</button>
+			<div class="inner">
+				<slot />
 			</div>
 		</div>
 		<button on:click={handleCloseModal} transition:fade={{ duration: 100 }} class="overlay" />
