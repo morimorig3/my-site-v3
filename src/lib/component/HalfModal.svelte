@@ -79,7 +79,7 @@
 	>
 		<div
 			class="w-full h-full grid place-items-center"
-			use:pan={{ delay: 100 }}
+			use:pan={{ delay: 0 }}
 			on:pan={handlePan}
 			on:panup={handlePanUp}
 		>
