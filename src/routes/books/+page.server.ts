@@ -7,8 +7,6 @@ import { loadBookReviewList } from '$lib/server/books';
 import { reviewedWith } from '$lib/server/books/functions/reviewedWith';
 import { getBookList } from '$lib/server/googleBooks';
 
-export const prerender = true;
-
 export const load: PageServerLoad = async () => {
 	const {
 		favoriteBookShelves: favoriteBookShelvesResponse,

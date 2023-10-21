@@ -6,8 +6,6 @@ import { ERROR_MESSAGE_COMMON } from '$lib/const';
 import { loadDevelopRepoList } from '$lib/server/develop';
 import { getUserRepos } from '$lib/server/github';
 
-export const prerender = true;
-
 export const load: PageServerLoad = async () => {
 	const userReposResponse = await getUserRepos();
 	const developRepoListResponse = await loadDevelopRepoList();

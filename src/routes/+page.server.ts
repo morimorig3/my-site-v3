@@ -8,8 +8,6 @@ import { getUserRepos } from '$lib/server/github';
 import { getBookList } from '$lib/server/googleBooks';
 import { loadWorkDetailList } from '$lib/server/works';
 
-export const prerender = true;
-
 export const load: PageServerLoad = async () => {
 	const userReposResponse = await getUserRepos();
 	const developRepoListResponse = await loadDevelopRepoList();
