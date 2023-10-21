@@ -23,10 +23,10 @@
 	pathName={$page.url.pathname}
 />
 
-<div class="bg-lightTertiary">
-	<div class="shadow-md bg-white">
+<div class="bg-lightTertiary dark:bg-lightPrimary">
+	<div class="shadow-md bg-white dark:bg-lightSecondary">
 		<div class="l-container py-6 tablet:py-8 laptop:py-10 mb-6">
-			<h1 class="text-heading-1 mb-6">{favoriteBookShelves.title}</h1>
+			<h1 class="text-heading-1 mb-6 dark:text-lightWhite">{favoriteBookShelves.title}</h1>
 			<BookListLarge bookItems={favoriteBookShelves.bookList} />
 		</div>
 	</div>
@@ -34,7 +34,7 @@
 		{#if !$isDeskTop}
 			<div
 				role="tablist"
-				class="w-full grid auto-cols-fr grid-flow-col rounded-lg border shadow bg-white"
+				class="w-full grid auto-cols-fr grid-flow-col rounded-lg overflow-hidden border shadow bg-white dark:bg-lightBody dark:border-black"
 			>
 				{#each bookShelves as { title }, index}
 					<TabButton
@@ -49,7 +49,7 @@
 			{#each bookShelves as { bookList, title }, index (title)}
 				{#if $isDeskTop}
 					<div class="flex-shrink-0 w-80">
-						<p class="text-body font-bold">{title}</p>
+						<p class="text-body font-bold dark:text-lightWhite">{title}</p>
 						<BookListSmall bookItems={bookList} />
 					</div>
 				{:else if activeTabIndex === index}
