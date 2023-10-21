@@ -16,11 +16,13 @@
 <svelte:window bind:scrollY={y} />
 
 <header
-	class="fixed top-0 w-full z-50 transition-shadow duration-250 border-b u-backdrop-white"
+	class="fixed top-0 w-full z-50 transition-shadow duration-250 border-b dark:border-lightSecondary u-backdrop-white u-backdrop-black"
 	class:isScroll
 >
 	<div class="l-container flex items-center justify-between gap-x-4 relative h-16 tablet:h-20">
-		<a class="font-bold text-lg tablet:text-xl text-body" href="/">morimorig3.com</a>
+		<a class="font-bold text-lg tablet:text-xl text-body dark:text-lightWhite" href="/"
+			>morimorig3.com</a
+		>
 		<nav class="hidden laptop:block">
 			<ul class="flex gap-x-4 items-center">
 				<ThemeSwitch />

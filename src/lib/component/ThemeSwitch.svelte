@@ -10,10 +10,10 @@
 <button on:click={theme.toggle} class="block rounded-full">
 	<span class="block w-7 h-7 laptop:w-6 laptop:h-6 p-1 rounded-full relative">
 		<span aria-hidden={$theme === THEME.DARK} class="icon">
-			<FaMoon className="h-full fill-body" />
+			<FaMoon className="h-full fill-body dark:fill-lightWhite" />
 		</span>
 		<span aria-hidden={$theme !== THEME.DARK} class="icon">
-			<FaSun className="h-full fill-body" />
+			<FaSun className="h-full fill-body dark:fill-lightWhite" />
 		</span>
 	</span>
 </button>

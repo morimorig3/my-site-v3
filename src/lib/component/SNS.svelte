@@ -9,29 +9,30 @@
 <ul class="flex gap-x-4">
 	<li>
 		<a href="mailto:mori.nto@outlook.jp"
-			><FaEnvelop className="fill-divider hover:fill-white h-6" /></a
+			><FaEnvelop className="fill-divider hover:fill-white h-6 dark:fill-lightBody" /></a
 		>
 	</li>
 	<li>
 		<a href="https://github.com/morimorig3" target="_blank" rel="noopener noreferrer"
-			><FaGithub className="fill-divider hover:fill-white h-6" /></a
+			><FaGithub className="fill-divider hover:fill-white h-6 dark:fill-lightBody" /></a
 		>
 	</li>
 	<li>
 		<a href="https://twitter.com/morimorig3" target="_blank" rel="noopener noreferrer"
-			><FaXTwitter className="fill-divider hover:fill-white h-6" /></a
+			><FaXTwitter className="fill-divider hover:fill-white h-6 dark:fill-lightBody" /></a
 		>
 	</li>
 	<li>
 		<a
 			href="https://www.linkedin.com/in/naoto-morishita-2b286a203?trk=contact-info"
 			target="_blank"
-			rel="noopener noreferrer"><FaLinkedIn className=" fill-divider hover:fill-white h-6" /></a
+			rel="noopener noreferrer"
+			><FaLinkedIn className="fill-divider hover:fill-white h-6 dark:fill-lightBody" /></a
 		>
 	</li>
 	<li>
 		<a href="https://qiita.com/morimorig3" target="_blank" rel="noopener noreferrer"
-			><IconQiita className="fill-divider hover:fill-white h-6" /></a
+			><IconQiita className="fill-divider hover:fill-white h-6 dark:fill-lightBody" /></a
 		>
 	</li>
 </ul>

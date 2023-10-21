@@ -15,11 +15,11 @@
 				href={homepageHref}
 				class="u-circle-icon u-link-hover"
 			>
-				<FaPlay className="h-3 fill-body" />
+				<FaPlay className="h-3 fill-body " />
 			</a>
 		{:else}
 			<span class="u-circle-icon u-link-hover">
-				<FaPlay className="h-3 fill-disabled" />
+				<FaPlay className="h-3 fill-disabled " />
 			</span>
 		{/if}
 	</li>
@@ -31,7 +31,7 @@
 				href={htmlHref}
 				class="u-circle-icon u-link-hover"
 			>
-				<FaGithub className="h-5 fill-body" />
+				<FaGithub className="h-5 fill-body " />
 			</a>
 		{:else}
 			<span class="u-circle-icon u-link-hover">

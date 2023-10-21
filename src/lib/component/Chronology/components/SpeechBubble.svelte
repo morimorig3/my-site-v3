@@ -22,10 +22,12 @@
 			on:click|preventDefault={handleClick}
 		>
 			{#if title}
-				<span class="text-label font-bold">{title}</span>
+				<span class="text-label font-bold dark:text-black">{title}</span>
 			{/if}
 			{#if description}
-				<span class="text-label-sm text-placeholder">{description}</span>
+				<span class="text-label-sm text-placeholder dark:text-body dark:text-label-sm"
+					>{description}</span
+				>
 			{/if}
 			{#if isOpen}
 				<span class="close" />
@@ -57,6 +59,7 @@
 		height: 100%;
 		border-radius: 100vh;
 		background-color: theme(colors.placeholder);
+		@apply dark:bg-body;
 	}
 	.close::before {
 		transform: translate(-50%, -50%) rotate(45deg);
@@ -74,6 +77,7 @@
 		border-radius: 10px;
 		background-color: #fff;
 		filter: drop-shadow(rgba(0, 0, 0, 0.16) 0px 1px 2px);
+		@apply dark:bg-lightBody;
 	}
 	.bubble::before {
 		content: '';
@@ -82,6 +86,11 @@
 		background-color: #fff;
 		height: calc(20px / 2 * tan(60deg));
 		width: 20px;
+		@apply dark:bg-lightBody;
+	}
+	.bubble[data-is-open='true']:hover::before {
+		background-color: #fff;
+		@apply dark:bg-lightBody;
 	}
 	.left.bubble::before {
 		top: 50%;
@@ -110,8 +119,6 @@
 	.bubble:hover::before {
 		background-color: theme(colors.sky.50);
 		transition: theme(transitionDuration.150);
-	}
-	.bubble[data-is-open='true']:hover::before {
-		background-color: #fff;
+		@apply dark:bg-lightBody;
 	}
 </style>

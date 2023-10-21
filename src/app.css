@@ -14,8 +14,13 @@
 	}
 }
 
-.u-backdrop-white {
+.light .u-backdrop-white {
 	background-color: rgba(255, 255, 255, 0.9);
+	@apply backdrop-blur-sm;
+}
+
+.dark .u-backdrop-black {
+	background-color: rgba(33, 37, 41, 0.9);
 	@apply backdrop-blur-sm;
 }
 
@@ -76,7 +81,7 @@
 .u-link-hover {
 	@apply transition-colors;
 	&:hover {
-		@apply bg-sky-50 !important;
+		@apply bg-sky-50 dark:bg-lightBody !important;
 	}
 }
 
@@ -121,7 +126,7 @@
 }
 
 .u-circle-icon {
-	@apply w-8 h-8 grid place-items-center overflow-hidden rounded-full bg-white border shadow;
+	@apply w-8 h-8 grid place-items-center overflow-hidden rounded-full bg-white border shadow dark:bg-lightBody dark:border-lightBody;
 }
 
 .topic {

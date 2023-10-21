@@ -19,12 +19,12 @@
 	description="morimorig3 のポートフォリオサイトでは、私の制作物一覧やこれまでのエンジニアとしての経験、大切にしている本のリスト、そして自分自身の経歴を紹介しています。このサイトはSvelteKitを用いて制作しています。"
 />
 
-<div class="flex flex-col dark:bg-red-500">
-	<section class="border-b">
+<div class="flex flex-col">
+	<section class="border-b dark:border-b-lightSecondary">
 		<div class="l-container py-6 tablet:py-8 laptop:py-10 flex flex-col gap-y-6">
 			<div class="text-center">
-				<h2 class="text-subtitle">Develop</h2>
-				<p class="text-label text-placeholder">学習用に制作したモノ</p>
+				<h2 class="section-title">Develop</h2>
+				<p class="section-description">学習用に制作したモノ</p>
 			</div>
 			<DevelopCardList>
 				{#each developData as item, index}
@@ -38,11 +38,11 @@
 			<a href="/develop" class="text-link self-end">もっと見る</a>
 		</div>
 	</section>
-	<section class="border-b bg-bgTertiary">
+	<section class="border-b bg-bgTertiary dark:bg-lightSecondary dark:border-b-lightSecondary">
 		<div class="l-container py-6 tablet:py-8 laptop:py-10 flex flex-col gap-y-6">
 			<div class="text-center">
-				<h2 class="text-subtitle">Works</h2>
-				<p class="text-label text-placeholder">過去から現在までのお仕事について</p>
+				<h2 class="section-title">Works</h2>
+				<p class="section-description">過去から現在までのお仕事について</p>
 			</div>
 			<WorkCardList>
 				{#each workData as { slug, title, term, image }, index}
@@ -56,21 +56,21 @@
 			<a href="/works" class="text-link self-end">もっと見る</a>
 		</div>
 	</section>
-	<section class="border-b">
+	<section class="border-b dark:border-b-lightSecondary">
 		<div class="l-container py-6 tablet:py-8 laptop:py-10 flex flex-col gap-y-6">
 			<div class="text-center">
-				<h2 class="text-subtitle">Books</h2>
-				<p class="text-label text-placeholder">お気に入りの本たち</p>
+				<h2 class="section-title">Books</h2>
+				<p class="section-description">お気に入りの本たち</p>
 			</div>
 			<BookListLarge bookItems={bookData.bookList} />
 			<a href="/books" class="text-link self-end">もっと見る</a>
 		</div>
 	</section>
-	<section class="bg-bgTertiary">
+	<section class="bg-bgTertiary dark:bg-lightSecondary">
 		<div class="l-container py-6 tablet:py-8 laptop:py-10 flex flex-col gap-y-6">
 			<div class="text-center">
-				<h2 class="text-subtitle">About</h2>
-				<p class="text-label text-placeholder">経歴っぽいモノ</p>
+				<h2 class="section-title">About</h2>
+				<p class="section-description">経歴っぽいモノ</p>
 			</div>
 			<SpeechBubble
 				arrowPosition="bottom"
@@ -91,3 +91,12 @@
 		</div>
 	</section>
 </div>
+
+<style lang="postcss">
+	.section-title {
+		@apply text-subtitle dark:text-lightWhite;
+	}
+	.section-description {
+		@apply text-label text-placeholder dark:text-lightBody;
+	}
+</style>

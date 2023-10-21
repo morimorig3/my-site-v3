@@ -14,7 +14,7 @@
 	$: langColor = hasLangColor(language) ? LANGUAGE_COLOR_CODES[language] : DEFAULT_COLOR;
 </script>
 
-<p class="flex gap-x-1 items-center text-label font-bold">
+<p class="flex gap-x-1 items-center text-label font-bold dark:text-lightWhite">
 	<span style:background-color={langColor} class="language-icon" />
 	{language}
 </p>

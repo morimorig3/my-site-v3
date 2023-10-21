@@ -21,9 +21,11 @@
 >
 	<div class="flex flex-col gap-y-4">
 		<header class="flex flex-col">
-			<h1 class="text-body font-bold" id="book-modal-title">{volumeInfo.title}</h1>
+			<h1 class="text-body font-bold dark:text-lightWhite" id="book-modal-title">
+				{volumeInfo.title}
+			</h1>
 			{#if volumeInfo.authors?.length}
-				<p class="text-label text-description">
+				<p class="text-label text-description dark:text-lightBody">
 					{volumeInfo.authors?.map(toSingleByteChar).join(' / ')}
 				</p>
 			{/if}
@@ -33,9 +35,9 @@
 		</figure>
 		{#if review}
 			<div id="book-modal-description">
-				<h2 class="text-body font-bold">書評</h2>
+				<h2 class="text-body font-bold dark:text-lightWhite">書評</h2>
 				<!-- eslint-disable-next-line -->
-				<p class="text-body">{@html review}</p>
+				<p class="text-body dark:text-lightBody">{@html review}</p>
 			</div>
 		{/if}
 		<Divider />

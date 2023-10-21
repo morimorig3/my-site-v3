@@ -10,9 +10,11 @@
 
 <div class="flex flex-col gap-y-2">
 	<div>
-		<p class="text-label font-bold">{title}</p>
+		<p class="text-label font-bold dark:text-black">{title}</p>
 		{#if term}
-			<p class="text-label-sm text-placeholder">{formatTerm(term)}</p>
+			<p class="text-label-sm text-placeholder dark:text-body dark:text-label-sm">
+				{formatTerm(term)}
+			</p>
 		{/if}
 		{#if stacks}
 			<ul class="flex gap-x-2 py-1">

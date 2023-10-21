@@ -28,15 +28,15 @@
 		}
 	}}
 >
-	<div class="h-52 overflow-hidden border rounded-xl shadow-md">
+	<div class="h-52 overflow-hidden border rounded-xl shadow-md dark:border-lightSecondary">
 		<figure class="hover:scale-105 transition-transform duration-200">
 			<img class="w-full h-full object-cover" src={volumeInfo.imageLinks?.thumbnail} alt="" />
 		</figure>
 	</div>
 	<div class="flex flex-col gap-y-1">
-		<p class="text-label font-bold line-clamp-2">{volumeInfo.title}</p>
+		<p class="text-label font-bold line-clamp-2 dark:text-lightWhite">{volumeInfo.title}</p>
 		{#if volumeInfo.authors?.length}
-			<p class="text-label-sm text-description line-clamp-2">
+			<p class="text-label-sm text-description line-clamp-2 dark:text-lightBody">
 				{volumeInfo.authors?.map(toSingleByteChar).join(' / ')}
 			</p>
 		{/if}

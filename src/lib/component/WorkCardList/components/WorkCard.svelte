@@ -25,7 +25,7 @@
 		@media (min-width: theme(screens.laptop)) {
 			height: 200px;
 		}
-		@apply relative p-6 text-white block shadow rounded-lg overflow-hidden;
+		@apply relative p-6 text-white block shadow rounded-lg overflow-hidden dark:text-lightWhite;
 	}
 	.card__plus {
 		@apply w-10 h-10 block absolute right-6 bottom-6;
