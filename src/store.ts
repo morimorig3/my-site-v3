@@ -1,5 +1,10 @@
 import { writable } from 'svelte/store';
 
+import type { Theme } from '$lib/types';
+
+import { browser } from '$app/environment';
+import { THEME, THEME_LOCAL_STORAGE_KEY } from '$lib/const';
+
 function createFilterTopics() {
 	const { subscribe, set, update } = writable<string[]>([]);
 
@@ -24,3 +29,33 @@ function createIsDesktop() {
 }
 
 export const isDeskTop = createIsDesktop();
+
+function createTheme() {
+	const localStorageTheme =
+		browser && (localStorage.getItem(THEME_LOCAL_STORAGE_KEY) as Theme | null);
+	const OSTheme =
+		browser && window.matchMedia('(prefers-color-scheme: dark)').matches ? THEME.DARK : THEME.LIGHT;
+	if (!localStorageTheme && browser) {
+		localStorage.setItem(THEME_LOCAL_STORAGE_KEY, OSTheme);
+	}
+	const initialTheme = localStorageTheme || OSTheme;
+	const { subscribe, update } = writable<Theme>(initialTheme);
+
+	return {
+		subscribe,
+		toggle: () => {
+			update((state) => {
+				const newTheme = state === THEME.DARK ? THEME.LIGHT : THEME.DARK;
+				const html: HTMLHtmlElement | null = document.querySelector('html');
+				localStorage.setItem(THEME_LOCAL_STORAGE_KEY, newTheme);
+				if (html) {
+					html.classList.remove(state);
+					html.classList.add(newTheme);
+				}
+				return newTheme;
+			});
+		}
+	};
+}
+
+export const theme = createTheme();

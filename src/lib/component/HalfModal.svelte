@@ -66,7 +66,7 @@
 		z-index: 101;
 		border-top-left-radius: theme(borderRadius.2xl);
 		border-top-right-radius: theme(borderRadius.2xl);
-		@apply fixed right-0 bottom-0 left-0 shadow-2xl pt-14 px-6 tablet:px-8 laptop:px-10;
+		@apply fixed right-0 bottom-0 left-0 shadow-2xl pt-14 px-6 tablet:px-8 laptop:px-10 dark:bg-lightSecondary;
 		@media (min-width: theme(screens.tablet)) {
 			position: relative;
 			width: 375px;
@@ -102,6 +102,7 @@
 		background-color: theme(colors.body);
 		transform-origin: right;
 		transition: transform 0.25s, opacity 0.25s;
+		@apply dark:bg-lightWhite;
 		&:nth-child(1) {
 			transform: rotate(-45deg) translateY(-6px);
 		}

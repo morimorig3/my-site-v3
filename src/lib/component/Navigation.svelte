@@ -17,14 +17,16 @@
 
 <div
 	class:isOpen
-	class="navigation u-dynamicHeight fixed top-16 tablet:top-20 left-0 w-full grid place-items-center z-50 u-backdrop-white"
+	class="navigation u-dynamicHeight fixed top-16 tablet:top-20 left-0 w-full grid place-items-center z-50 u-backdrop-white u-backdrop-black"
 >
 	<nav class="max-w-screen-tablet w-full px-6 tablet:px-8 laptop:px-10">
 		<ul>
 			{#each NAVIGATION_LIST as { title, path }, index}
 				<li class="animate-fadeInDown opacity-0" style="animation-delay:{150 + index * 50}ms">
-					<a class="inline-block text-title text-body" href={path} on:click={handleLinkClick}
-						>{title}</a
+					<a
+						class="inline-block text-title text-body dark:text-lightWhite"
+						href={path}
+						on:click={handleLinkClick}>{title}</a
 					>
 				</li>
 			{/each}

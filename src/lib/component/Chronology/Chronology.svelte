@@ -49,6 +49,7 @@
 		color: theme(colors.placeholder);
 		background-color: #fff;
 		z-index: 1;
+		@apply dark:bg-lightPrimary dark:text-lightWhite;
 		@media (min-width: theme(screens.tablet)) {
 			transform: translateX(0);
 		}
@@ -67,6 +68,7 @@
 			z-index: 10;
 			transform: translateY(-50%) translateX(-50%);
 			border: 4px solid #fff;
+			@apply dark:border-lightPrimary dark:bg-lightWhite;
 			@media (min-width: theme(screens.tablet)) {
 				margin-left: theme(space.5);
 			}
@@ -89,6 +91,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+		@apply dark:bg-lightWhite;
 		@media (min-width: theme(screens.tablet)) {
 			margin-left: theme(space.5);
 		}

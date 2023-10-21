@@ -13,7 +13,7 @@
 
 <svelte:window bind:innerWidth={screenSize} />
 
-<div class="flex flex-col min-h-screen pt-16 tablet:pt-20">
+<div class="flex flex-col min-h-screen pt-16 tablet:pt-20 dark:bg-lightPrimary">
 	<Header />
 	<main class="flex-1">
 		<slot />

@@ -30,7 +30,10 @@
 				<ul class="flex gap-2 flex-wrap">
 					{#each $filterTopics as topic}
 						<li>
-							<button class="topic relative" on:click={() => filterTopics.remove(topic)}>
+							<button
+								class="topic relative dark:bg-lightBody dark:text-lightSecondary"
+								on:click={() => filterTopics.remove(topic)}
+							>
 								#{topic}
 								<span
 									class="absolute top-0 right-0 translate-x-1/3 -translate-y-1/3 grid place-items-center text-white bg-red-500 text-label-sm rounded-full w-5 h-5 font-bold"
@@ -40,8 +43,9 @@
 						</li>
 					{/each}
 				</ul>
-				<button class="px-2 text-description text-caption-sm" on:click={filterTopics.reset}
-					>絞り込みを解除</button
+				<button
+					class="px-2 text-description text-caption-sm dark:text-lightBody"
+					on:click={filterTopics.reset}>絞り込みを解除</button
 				>
 			</div>
 		{/if}

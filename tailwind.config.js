@@ -19,6 +19,7 @@ export default {
 			},
 			colors: {
 				body: '#1A1A1C',
+				lightBody: '#ADB5BD',
 				link: '#0f83fd',
 				description: '#626264',
 				placeholder: '#757578',
@@ -29,9 +30,10 @@ export default {
 				divider: '#D8D8DB',
 				primary: 'rgba(30, 64, 175, 0.9)',
 				disabled: '#949497',
-				lightPrimary: '#0D0E10',
-				lightSecondary: '#1E1F21',
-				lightTertiary: '#F6F8F9'
+				lightPrimary: '#212529',
+				lightSecondary: '#2b3035',
+				lightTertiary: '#F6F8F9',
+				lightWhite: '#F5F5F5'
 			},
 			fontSize: {
 				'heading-1': ['28px', { lineHeight: 1.5, fontWeight: 700, letterSpacing: '0.04em' }],
@@ -49,5 +51,6 @@ export default {
 			}
 		}
 	},
-	plugins: []
+	plugins: [],
+	darkMode: 'class'
 };

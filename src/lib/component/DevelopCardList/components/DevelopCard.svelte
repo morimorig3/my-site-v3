@@ -16,7 +16,9 @@
 	<DevelopCardHeader name={item.name} description={item.description} />
 	<div class="flex flex-col">
 		{#if item.created_at}
-			<p class="text-label-sm text-description">create: {formatDate(item.created_at)}</p>
+			<p class="text-label-sm text-description dark:text-lightBody">
+				create: {formatDate(item.created_at)}
+			</p>
 		{/if}
 	</div>
 	{#if item.language}
@@ -30,6 +32,6 @@
 
 <style lang="postcss">
 	.wrapper {
-		@apply p-4 border flex flex-col gap-y-2 h-full;
+		@apply p-4 border flex flex-col gap-y-2 h-full dark:border-lightSecondary dark:bg-lightSecondary;
 	}
 </style>

@@ -6,7 +6,7 @@
 	<a href="/about">
 		<ProfileIcon />
 	</a>
-	<p class="text-label">morimorig3</p>
+	<p class="text-label dark:text-lightWhite">morimorig3</p>
 	<a class="text-label font-semibold u-underline-animation py-1" href="mailto:mori.nto@outlook.jp"
 		>mori.nto@outlook.jp</a
 	>

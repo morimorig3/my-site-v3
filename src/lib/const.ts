@@ -80,3 +80,10 @@ export const ICON_MAP = {
 } as const;
 
 export const ERROR_MESSAGE_COMMON = 'データの取得に失敗しました';
+
+export const THEME = {
+	DARK: 'dark',
+	LIGHT: 'light'
+} as const;
+
+export const THEME_LOCAL_STORAGE_KEY = 'theme';

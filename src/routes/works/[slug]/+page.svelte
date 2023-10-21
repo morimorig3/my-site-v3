@@ -36,14 +36,14 @@
 	</div>
 	<div class="flex flex-col gap-y-6">
 		<Section label="Overview">
-			<p class="text-body">{overview}</p>
+			<p class="text-body dark:text-lightBody">{overview}</p>
 		</Section>
 		<Section label="Stacks">
 			<CardList>
 				{#each stacks as { iconName, label }}
 					<CardItem>
 						<RenderIcon {iconName} className="h-8" />
-						<p class="text-label font-bold">{label}</p>
+						<p class="text-label font-bold dark:text-lightWhite">{label}</p>
 					</CardItem>
 				{/each}
 			</CardList>
@@ -52,9 +52,9 @@
 			<CardList>
 				{#each features as { iconName, title, label }}
 					<CardItem>
-						<RenderIcon {iconName} className="h-6" />
-						<p class="text-label-sm text-placeholder">{title}</p>
-						<p class="text-label font-bold">{label}</p>
+						<RenderIcon {iconName} className="h-6 dark:fill-lightWhite" />
+						<p class="text-label-sm text-placeholder dark:text-lightBody">{title}</p>
+						<p class="text-label font-bold dark:text-lightWhite">{label}</p>
 					</CardItem>
 				{/each}
 			</CardList>
@@ -63,7 +63,7 @@
 			{#each descriptions as { body, label }}
 				<Section {label}>
 					{#each body as paragraph}
-						<p class="text-body">{paragraph}</p>
+						<p class="text-body dark:text-lightBody">{paragraph}</p>
 					{/each}
 				</Section>
 			{/each}
@@ -71,7 +71,7 @@
 			<section>
 				<div
 					role="tablist"
-					class="w-full grid auto-cols-fr grid-flow-col rounded-lg border shadow bg-white mb-4"
+					class="w-full grid auto-cols-fr grid-flow-col rounded-lg border overflow-hidden shadow bg-white mb-4 dark:bg-lightBody dark:border-black"
 				>
 					{#each descriptions as { label }, index}
 						<TabButton
@@ -85,7 +85,7 @@
 					{#each descriptions as { body }, index}
 						{#if activeTabIndex === index}
 							{#each body as paragraph}
-								<p class="text-body">{paragraph}</p>
+								<p class="text-body dark:text-lightBody">{paragraph}</p>
 							{/each}
 						{/if}
 					{/each}

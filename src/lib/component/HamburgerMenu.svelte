@@ -24,6 +24,7 @@
 		width: 100%;
 		border-radius: 9999px;
 		background-color: theme(colors.body);
+		@apply dark:bg-lightWhite;
 		transform-origin: right;
 		transition: transform 0.25s, opacity 0.25s;
 		&:nth-child(1) {
