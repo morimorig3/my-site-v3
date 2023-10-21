@@ -9,13 +9,9 @@
 		"fontawesome",
 		"Fonticons",
 		"Redmine",
-		"hankyu",
-		"hanshin",
-		"SMACSS",
-		"FLOCSS",
 		"Dreamweaver",
 		"Photoshop",
-		"panup"
+		"googlebot"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }
