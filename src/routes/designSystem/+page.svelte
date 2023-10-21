@@ -1,3 +1,10 @@
+<script>
+	import { page } from '$app/stores';
+	import Head from '$lib/component/Head.svelte';
+</script>
+
+<Head pageTitle="デザインシステム" pathName={$page.url.pathname} />
+
 <div class="l-container py-6 tablet:py-8 laptop:py-10">
 	<h1 class="text-heading-1 mb-4 tablet:mb-6">デザインシステム</h1>
 	<section>

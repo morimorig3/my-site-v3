@@ -7,12 +7,17 @@
 	import DevelopCardList from '$lib/component/DevelopCardList/DevelopCardList.svelte';
 	import DevelopCard from '$lib/component/DevelopCardList/components/DevelopCard.svelte';
 	import Divider from '$lib/component/Divider.svelte';
+	import Head from '$lib/component/Head.svelte';
 	import WorkCardList from '$lib/component/WorkCardList/WorkCardList.svelte';
 	import WorkCard from '$lib/component/WorkCardList/components/WorkCard.svelte';
 
 	export let data;
 	$: ({ developData, workData, bookData, historyData } = data);
 </script>
+
+<Head
+	description="morimorig3 のポートフォリオサイトでは、私の制作物一覧やこれまでのエンジニアとしての経験、大切にしている本のリスト、そして自分自身の経歴を紹介しています。このサイトはSvelteKitを用いて制作しています。"
+/>
 
 <div class="flex flex-col">
 	<section class="border-b">

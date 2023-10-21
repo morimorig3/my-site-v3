@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { isDeskTop } from '../../store.js';
 
+	import { page } from '$app/stores';
 	import BookListLarge from '$lib/component/BookListLarge/BookListLarge.svelte';
 	import BookListSmall from '$lib/component/BookListSmall/BookListSmall.svelte';
+	import Head from '$lib/component/Head.svelte';
 	import TabButton from '$lib/component/TabButton.svelte';
+
 	export let data;
 	$: ({ favoriteBookShelves, forBeginnerBookShelves, toReadBookShelves } = data);
 	$: bookShelves = [favoriteBookShelves, forBeginnerBookShelves, toReadBookShelves];
@@ -13,6 +16,12 @@
 		activeTabIndex = index;
 	}
 </script>
+
+<Head
+	pageTitle="Books"
+	description="エンジニアとしての重要な「思考方法」や「テクニック」を磨くための書籍を紹介しています。"
+	pathName={$page.url.pathname}
+/>
 
 <div class="bg-lightTertiary">
 	<div class="shadow-md bg-white">

@@ -3,8 +3,10 @@
 
 	import { filterTopics } from '../../store.js';
 
+	import { page } from '$app/stores';
 	import DevelopCardList from '$lib/component/DevelopCardList/DevelopCardList.svelte';
 	import DevelopCard from '$lib/component/DevelopCardList/components/DevelopCard.svelte';
+	import Head from '$lib/component/Head.svelte';
 
 	export let data;
 	$: ({ developList } = data);
@@ -14,6 +16,12 @@
 		  })
 		: developList;
 </script>
+
+<Head
+	pageTitle="Develop"
+	description="新しい技術スキルを身につける過程で制作した作品を紹介しています。"
+	pathName={$page.url.pathname}
+/>
 
 <div class="l-container py-6 tablet:py-8 laptop:py-10">
 	<div class="flex flex-col gap-y-6">
