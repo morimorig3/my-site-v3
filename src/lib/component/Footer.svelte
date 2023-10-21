@@ -3,7 +3,7 @@
 	import SNS from './SNS.svelte';
 </script>
 
-<footer class="bg-lightSecondary dark:bg-lightPrimary">
+<footer class="bg-lightSecondary dark:bg-zinc-900">
 	<div class="l-container py-6 tablet:py-8 laptop:py-6">
 		<div class="flex flex-col justify-center items-center gap-y-6 laptop:flex-row laptop:gap-x-8">
 			<CopyRight />

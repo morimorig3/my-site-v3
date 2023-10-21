@@ -130,7 +130,7 @@
 }
 
 .topic {
-	@apply px-2 py-1 border rounded-full whitespace-nowrap shrink-0 text-description text-label-sm;
+	@apply px-2 py-1 border rounded-full whitespace-nowrap shrink-0 text-description text-label-sm dark:bg-transparent dark:border-lightBody dark:text-lightBody;
 }
 
 .u-layered-bg {

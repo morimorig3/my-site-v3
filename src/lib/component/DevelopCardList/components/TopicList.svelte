@@ -9,7 +9,7 @@
 		<li>
 			<button
 				class:isPressed={$filterTopics.includes(topic)}
-				class="topic u-link-hover"
+				class="topic hover:bg-sky-50"
 				on:click={() => filterTopics.add(topic)}>#{topic}</button
 			>
 		</li>
@@ -18,6 +18,6 @@
 
 <style lang="postcss">
 	.isPressed {
-		@apply bg-sky-50;
+		@apply bg-sky-50 dark:bg-lightBody dark:text-lightSecondary;
 	}
 </style>
