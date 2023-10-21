@@ -10,10 +10,13 @@
 	$: bgImage = `url(${src})`;
 </script>
 
-<a {href} class="card u-layered-bg" style:--bg-image={bgImage}>
-	<p class="text-subtitle">{title}</p>
-	<p class="text-label-sm">{formatTerm(term)}</p>
-	<span class="card__plus" />
+<a {href} class="card">
+	<div class="card__inner">
+		<p class="text-subtitle">{title}</p>
+		<p class="text-label-sm">{formatTerm(term)}</p>
+		<span class="card__plus" />
+	</div>
+	<span class="card__bg u-layered-bg z-0" style:--bg-image={bgImage} />
 </a>
 
 <style lang="postcss">
@@ -26,6 +29,11 @@
 			height: 200px;
 		}
 		@apply relative p-6 text-white block shadow rounded-lg overflow-hidden dark:text-lightWhite;
+		&:hover {
+			.card__bg {
+				@apply scale-105;
+			}
+		}
 	}
 	.card__plus {
 		@apply w-10 h-10 block absolute right-6 bottom-6;
@@ -44,5 +52,11 @@
 		&:after {
 			transform: translate(-50%, -50%) rotate(90deg);
 		}
+	}
+	.card__inner {
+		@apply z-10 w-full h-full relative;
+	}
+	.card__bg {
+		@apply absolute top-0 right-0 bottom-0 left-0 transition-transform;
 	}
 </style>

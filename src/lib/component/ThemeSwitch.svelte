@@ -7,22 +7,24 @@
 	import { THEME } from '$lib/const';
 </script>
 
-<button on:click={theme.toggle} class="block rounded-full">
-	<span class="block w-7 h-7 laptop:w-6 laptop:h-6 p-1 rounded-full relative">
-		<span aria-hidden={$theme === THEME.DARK} class="icon">
-			<FaMoon className="h-full fill-body dark:fill-lightWhite" />
-		</span>
-		<span aria-hidden={$theme !== THEME.DARK} class="icon">
-			<FaSun className="h-full fill-body dark:fill-lightWhite" />
-		</span>
+<button on:click={theme.toggle} class="theme-switch">
+	<span aria-hidden={$theme === THEME.DARK} class="theme-switch__icon-wrapper">
+		<FaMoon className="w-full h-full fill-body dark:fill-lightWhite dark:hover:fill-lightBody" />
+	</span>
+	<span aria-hidden={$theme !== THEME.DARK} class="theme-switch__icon-wrapper">
+		<FaSun className="w-full h-full fill-body dark:fill-lightWhite dark:hover:fill-lightBody" />
 	</span>
 </button>
 
 <style lang="postcss">
-	.icon {
-		@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity;
+	.theme-switch {
+		@apply relative block rounded-full overflow-hidden w-7 h-7 laptop:w-6 laptop:h-6;
+		&__icon-wrapper {
+			@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity;
+		}
 	}
-	.icon[aria-hidden='false'] {
+	.theme-switch__icon-wrapper[aria-hidden='false'] {
 		opacity: 0;
+		user-select: none;
 	}
 </style>

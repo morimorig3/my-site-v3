@@ -18,7 +18,7 @@
 <div class="wrap">
 	<div class={`bubble ${arrowClass}`} data-is-open={isOpen}>
 		<button
-			class="inline-flex flex-col w-full p-4 text-left relative u-link-hover rounded-xl"
+			class="inline-flex flex-col w-full p-4 text-left relative hover:bg-sky-50 dark:hover:bg-divider rounded-xl transition-colors"
 			on:click|preventDefault={handleClick}
 		>
 			{#if title}
@@ -115,10 +115,11 @@
 		left: 50%;
 		transform: translateX(-50%);
 		clip-path: polygon(0% 0%, 100% 0, 50% 100%);
+		@apply transition-colors;
 	}
 	.bubble:hover::before {
 		background-color: theme(colors.sky.50);
 		transition: theme(transitionDuration.150);
-		@apply dark:bg-lightBody;
+		@apply dark:bg-divider;
 	}
 </style>

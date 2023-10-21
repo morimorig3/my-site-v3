@@ -20,15 +20,19 @@
 	class:isScroll
 >
 	<div class="l-container flex items-center justify-between gap-x-4 relative h-16 tablet:h-20">
-		<a class="font-bold text-lg tablet:text-xl text-body dark:text-lightWhite" href="/"
-			>morimorig3.com</a
+		<a
+			class="font-bold text-lg tablet:text-xl text-body dark:text-lightWhite dark:hover:text-lightBody"
+			href="/">morimorig3.com</a
 		>
 		<nav class="hidden laptop:block">
 			<ul class="flex gap-x-4 items-center">
 				<ThemeSwitch />
 				{#each NAVIGATION_LIST as { title, path }}
 					<li>
-						<a class="text-label font-bold text-body" href={path}>{title}</a>
+						<a
+							class="text-label font-bold text-body dark:text-lightWhite dark:hover:text-lightBody"
+							href={path}>{title}</a
+						>
 					</li>
 				{/each}
 			</ul>

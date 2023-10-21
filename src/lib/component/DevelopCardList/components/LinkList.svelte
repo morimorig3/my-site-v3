@@ -13,12 +13,12 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				href={homepageHref}
-				class="u-circle-icon u-link-hover"
+				class="u-circle-icon hover:bg-sky-50 dark:bg-lightWhite dark:hover:bg-lightBody"
 			>
-				<FaPlay className="h-3 fill-body " />
+				<FaPlay className="h-3 fill-body" />
 			</a>
 		{:else}
-			<span class="u-circle-icon u-link-hover">
+			<span class="u-circle-icon">
 				<FaPlay className="h-3 fill-disabled " />
 			</span>
 		{/if}
@@ -29,12 +29,12 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				href={htmlHref}
-				class="u-circle-icon u-link-hover"
+				class="u-circle-icon hover:bg-sky-50 dark:bg-lightWhite dark:hover:bg-lightBody"
 			>
 				<FaGithub className="h-5 fill-body " />
 			</a>
 		{:else}
-			<span class="u-circle-icon u-link-hover">
+			<span class="u-circle-icon">
 				<FaGithub className="h-5 fill-disabled" />
 			</span>
 		{/if}
