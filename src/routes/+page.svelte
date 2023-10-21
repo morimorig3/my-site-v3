@@ -19,7 +19,7 @@
 	description="morimorig3 のポートフォリオサイトでは、私の制作物一覧やこれまでのエンジニアとしての経験、大切にしている本のリスト、そして自分自身の経歴を紹介しています。このサイトはSvelteKitを用いて制作しています。"
 />
 
-<div class="flex flex-col">
+<div class="flex flex-col dark:bg-red-500">
 	<section class="border-b">
 		<div class="l-container py-6 tablet:py-8 laptop:py-10 flex flex-col gap-y-6">
 			<div class="text-center">

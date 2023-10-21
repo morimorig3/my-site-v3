@@ -43,7 +43,18 @@ function createTheme() {
 
 	return {
 		subscribe,
-		toggle: () => update((state) => (state === THEME.DARK ? THEME.LIGHT : THEME.DARK))
+		toggle: () => {
+			update((state) => {
+				const newTheme = state === THEME.DARK ? THEME.LIGHT : THEME.DARK;
+				const html: HTMLHtmlElement | null = document.querySelector('html');
+				localStorage.setItem(THEME_LOCAL_STORAGE_KEY, newTheme);
+				if (html) {
+					html.classList.remove(state);
+					html.classList.add(newTheme);
+				}
+				return newTheme;
+			});
+		}
 	};
 }
 
