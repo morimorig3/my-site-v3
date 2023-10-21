@@ -5,8 +5,6 @@ import type { PageServerLoad } from './$types';
 import { ERROR_MESSAGE_COMMON } from '$lib/const';
 import { loadHistoryList } from '$lib/server/about';
 
-export const prerender = true;
-
 export const load: PageServerLoad = async () => {
 	const response = await loadHistoryList();
 	if (!response) {

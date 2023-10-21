@@ -5,8 +5,6 @@ import type { PageServerLoad } from './$types';
 import { ERROR_MESSAGE_COMMON } from '$lib/const';
 import { loadWorkDetailList } from '$lib/server/works';
 
-export const prerender = true;
-
 export const load: PageServerLoad = async () => {
 	const response = await loadWorkDetailList();
 	if (!response) {
