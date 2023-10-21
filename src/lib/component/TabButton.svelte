@@ -5,7 +5,8 @@
 </script>
 
 <button on:click={handleClick}
-	><span class:text-placeholder={!isActive} class="block p-3 text-label font-bold u-link-hover"
-		>{label}</span
+	><span
+		class:text-placeholder={!isActive}
+		class="block p-3 text-label font-bold hover:bg-sky-50 dark:hover:bg-divider">{label}</span
 	></button
 >
