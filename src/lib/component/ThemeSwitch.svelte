@@ -20,7 +20,7 @@
 	.theme-switch {
 		@apply relative block rounded-full overflow-hidden w-7 h-7 laptop:w-6 laptop:h-6;
 		&__icon-wrapper {
-			@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity;
+			@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity w-full h-full p-1;
 		}
 	}
 	.theme-switch__icon-wrapper[aria-hidden='false'] {
