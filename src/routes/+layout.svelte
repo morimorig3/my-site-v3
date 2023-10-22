@@ -1,17 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
-	import { theme } from '../store';
-
 	import MainLayout from '$lib/component/MainLayout.svelte';
 	import '../app.css';
-
-	onMount(() => {
-		const html: HTMLHtmlElement | null = document.querySelector('html');
-		if (html) {
-			html.classList.add($theme);
-		}
-	});
 </script>
 
 <MainLayout>
