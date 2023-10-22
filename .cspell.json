@@ -11,7 +11,9 @@
 		"Redmine",
 		"Dreamweaver",
 		"Photoshop",
-		"googlebot"
+		"googlebot",
+		"rehype",
+		"Rehype"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }

@@ -21,7 +21,7 @@ export function reviewedWith(
 		);
 		return {
 			...bookItem,
-			review: reviewTarget ? reviewTarget.review : ''
+			reviewHtml: reviewTarget ? reviewTarget.reviewHtml : ''
 		};
 	});
 }

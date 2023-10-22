@@ -1,13 +1,15 @@
 <script lang="ts">
 	import { isDeskTop } from '../../store.js';
 
+	import type { PageData } from './$types.js';
+
 	import { page } from '$app/stores';
 	import BookListLarge from '$lib/component/BookListLarge/BookListLarge.svelte';
 	import BookListSmall from '$lib/component/BookListSmall/BookListSmall.svelte';
 	import Head from '$lib/component/Head.svelte';
 	import TabButton from '$lib/component/TabButton.svelte';
 
-	export let data;
+	export let data: PageData;
 	$: ({ favoriteBookShelves, forBeginnerBookShelves, toReadBookShelves } = data);
 	$: bookShelves = [favoriteBookShelves, forBeginnerBookShelves, toReadBookShelves];
 	let activeTabIndex = 0;
