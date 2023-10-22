@@ -15,5 +15,5 @@ interface Work {
 
 interface Description {
 	label: string;
-	body: string[];
+	markdown: string;
 }

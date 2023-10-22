@@ -60,11 +60,10 @@
 			</CardList>
 		</Section>
 		{#if $isDeskTop}
-			{#each descriptions as { body, label }}
+			{#each descriptions as { label, markdown }}
 				<Section {label}>
-					{#each body as paragraph}
-						<p class="text-body dark:text-lightBody">{paragraph}</p>
-					{/each}
+					<!-- eslint-disable-next-line -->
+					<div class="text-body dark:text-lightBody">{@html markdown}</div>
 				</Section>
 			{/each}
 		{:else}
@@ -82,11 +81,10 @@
 					{/each}
 				</div>
 				<div>
-					{#each descriptions as { body }, index}
+					{#each descriptions as { markdown }, index}
 						{#if activeTabIndex === index}
-							{#each body as paragraph}
-								<p class="text-body dark:text-lightBody">{paragraph}</p>
-							{/each}
+							<!-- eslint-disable-next-line -->
+							<div class="text-body dark:text-lightBody">{@html markdown}</div>
 						{/if}
 					{/each}
 				</div>
