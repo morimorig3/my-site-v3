@@ -1,1 +1,1 @@
-<hr class="border-divider" />
+<hr class="border-divider dark:border-lightWhite" />

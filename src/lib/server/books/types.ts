@@ -4,9 +4,9 @@ export type LoadBookReviewResponse = BookReview[];
 interface BookReview {
 	title: string;
 	industryIdentifierList: IndustryIdentifier[];
-	review: string;
+	reviewHtml: string;
 }
 
 export type ReviewedWith<T> = T & {
-	review?: string;
+	reviewHtml?: string;
 };

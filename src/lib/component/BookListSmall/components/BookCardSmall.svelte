@@ -12,7 +12,7 @@
 	function handleClick() {
 		isOpen = !isOpen;
 	}
-	$: ({ volumeInfo, review } = bookItem);
+	$: ({ volumeInfo, reviewHtml } = bookItem);
 </script>
 
 <div class="flex gap-x-4 items-center text-body">
@@ -23,7 +23,7 @@
 		<p class="text-label font-bold line-clamp-2 dark:text-lightWhite">{volumeInfo.title}</p>
 		<ul class="flex gap-x-2">
 			<li>
-				{#if review}
+				{#if reviewHtml}
 					<button
 						class="u-circle-icon hover:bg-sky-50 dark:bg-lightWhite dark:hover:bg-lightBody"
 						on:click={handleClick}

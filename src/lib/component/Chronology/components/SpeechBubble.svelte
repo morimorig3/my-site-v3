@@ -18,7 +18,7 @@
 <div class="wrap">
 	<div class={`bubble ${arrowClass}`} data-is-open={isOpen}>
 		<button
-			class="inline-flex flex-col w-full p-4 text-left relative hover:bg-sky-50 dark:hover:bg-divider rounded-xl transition-colors"
+			class="inline-flex flex-col w-full p-4 text-left relative hover:bg-sky-50 dark:hover:bg-lightBody rounded-xl transition-colors"
 			on:click|preventDefault={handleClick}
 		>
 			{#if title}
@@ -77,7 +77,7 @@
 		border-radius: 10px;
 		background-color: #fff;
 		filter: drop-shadow(rgba(0, 0, 0, 0.16) 0px 1px 2px);
-		@apply dark:bg-lightBody;
+		@apply dark:bg-divider;
 	}
 	.bubble::before {
 		content: '';
@@ -86,11 +86,11 @@
 		background-color: #fff;
 		height: calc(20px / 2 * tan(60deg));
 		width: 20px;
-		@apply dark:bg-lightBody;
+		@apply dark:bg-divider;
 	}
 	.bubble[data-is-open='true']:hover::before {
 		background-color: #fff;
-		@apply dark:bg-lightBody;
+		@apply dark:bg-divider;
 	}
 	.left.bubble::before {
 		top: 50%;
@@ -120,6 +120,6 @@
 	.bubble:hover::before {
 		background-color: theme(colors.sky.50);
 		transition: theme(transitionDuration.150);
-		@apply dark:bg-divider;
+		@apply dark:bg-lightBody;
 	}
 </style>

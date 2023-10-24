@@ -10,7 +10,7 @@
 	export let isOpen: boolean;
 	export let handleCloseModal: () => void;
 	export let bookItem: ReviewedWith<BookItem>;
-	$: ({ volumeInfo, review } = bookItem);
+	$: ({ volumeInfo, reviewHtml } = bookItem);
 </script>
 
 <HalfModal
@@ -33,11 +33,10 @@
 		<figure class="h-48 flex justify-center">
 			<img class="h-full" src={volumeInfo.imageLinks?.thumbnail} alt="" />
 		</figure>
-		{#if review}
+		{#if reviewHtml}
 			<div id="book-modal-description">
-				<h2 class="text-body font-bold dark:text-lightWhite">書評</h2>
 				<!-- eslint-disable-next-line -->
-				<p class="text-body dark:text-lightBody">{@html review}</p>
+				<div class="text-body dark:text-lightBody">{@html reviewHtml}</div>
 			</div>
 		{/if}
 		<Divider />

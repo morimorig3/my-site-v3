@@ -64,14 +64,11 @@
 		"descriptions": [
 			{
 				"label": "PR",
-				"body": ["静的なhtmlとcssがメインでインタラクティブの表現にはjQueryを使用していました。"]
+				"markdown": "data/markdown/1901-coder_pr.md"
 			},
 			{
 				"label": "Details",
-				"body": [
-					"バナー制作やコンテンツ追加・差し替えなどのWebサイト運用業務に携わりました",
-					"クライアント担当者・Webディレクター・デザイナー・エンジニアのそれぞれ1人ずつで"
-				]
+				"markdown": "data/markdown/1901-coder_details.md"
 			}
 		]
 	},
@@ -136,14 +133,11 @@
 		"descriptions": [
 			{
 				"label": "PR",
-				"body": ["静的なhtmlとcssがメインでインタラクティブの表現にはjQueryを使用していました。"]
+				"markdown": "data/markdown/1901-coder_pr.md"
 			},
 			{
 				"label": "Details",
-				"body": [
-					"バナー制作やコンテンツ追加・差し替えなどのWebサイト運用業務に携わりました",
-					"クライアント担当者・Webディレクター・デザイナー・エンジニアのそれぞれ1人ずつで"
-				]
+				"markdown": "data/markdown/1901-coder_details.md"
 			}
 		]
 	},
@@ -195,14 +189,11 @@
 		"descriptions": [
 			{
 				"label": "PR",
-				"body": ["静的なhtmlとcssがメインでインタラクティブの表現にはjQueryを使用していました。"]
+				"markdown": "data/markdown/1901-coder_pr.md"
 			},
 			{
 				"label": "Details",
-				"body": [
-					"バナー制作やコンテンツ追加・差し替えなどのWebサイト運用業務に携わりました",
-					"クライアント担当者・Webディレクター・デザイナー・エンジニアのそれぞれ1人ずつで"
-				]
+				"markdown": "data/markdown/1901-coder_details.md"
 			}
 		]
 	}

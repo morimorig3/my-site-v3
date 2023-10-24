@@ -40,6 +40,12 @@ function createTheme() {
 	}
 	const initialTheme = localStorageTheme || OSTheme;
 	const { subscribe, update } = writable<Theme>(initialTheme);
+	if (browser) {
+		const html: HTMLHtmlElement | null = document.querySelector('html');
+		if (html) {
+			html.classList.add(initialTheme);
+		}
+	}
 
 	return {
 		subscribe,
