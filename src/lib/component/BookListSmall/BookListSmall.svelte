@@ -28,7 +28,7 @@
 {#if isLoadAllItems}
 	<button
 		on:click={loadNext}
-		class="w-full flex justify-center items-center text-label border shadow rounded-md bg-white h-12 relative hover:bg-sky-50 dark:bg-lightBody dark:border-0 dark:hover:bg-divider"
+		class="w-full flex justify-center items-center text-label border shadow rounded-md bg-white h-12 relative hover:bg-sky-50 dark:bg-divider dark:border-0 dark:hover:bg-lightBody"
 		>もっと見る <span
 			class="grid place-items-center text-white bg-red-500 text-label rounded-full w-6 h-6 absolute right-4"
 			>{restItemsLength}</span
