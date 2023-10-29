@@ -4,7 +4,5 @@
 
 <section>
 	<h2 class="text-subtitle mb-4 dark:text-lightWhite">{label}</h2>
-	<div>
-		<slot />
-	</div>
+	<slot />
 </section>

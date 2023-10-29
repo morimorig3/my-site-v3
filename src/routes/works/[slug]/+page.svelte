@@ -63,7 +63,7 @@
 			{#each descriptions as { label, markdown }}
 				<Section {label}>
 					<!-- eslint-disable-next-line -->
-					<div class="text-body dark:text-lightBody">{@html markdown}</div>
+					<article class="u-markdown text-body dark:text-lightBody">{@html markdown}</article>
 				</Section>
 			{/each}
 		{:else}
@@ -84,7 +84,7 @@
 					{#each descriptions as { markdown }, index}
 						{#if activeTabIndex === index}
 							<!-- eslint-disable-next-line -->
-							<div class="text-body dark:text-lightBody">{@html markdown}</div>
+							<article class="u-markdown text-body dark:text-lightBody">{@html markdown}</article>
 						{/if}
 					{/each}
 				</div>

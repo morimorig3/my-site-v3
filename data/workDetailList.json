@@ -63,12 +63,12 @@
 		],
 		"descriptions": [
 			{
-				"label": "PR",
-				"markdown": "data/markdown/1901-coder_pr.md"
+				"label": "こだわり",
+				"markdown": "data/markdown/2204-front-end-engineer_pr.md"
 			},
 			{
-				"label": "Details",
-				"markdown": "data/markdown/1901-coder_details.md"
+				"label": "詳細",
+				"markdown": "data/markdown/2204-front-end-engineer_details.md"
 			}
 		]
 	},
@@ -132,12 +132,12 @@
 		],
 		"descriptions": [
 			{
-				"label": "PR",
-				"markdown": "data/markdown/1901-coder_pr.md"
+				"label": "こだわり",
+				"markdown": "data/markdown/2004-web-engineer_pr.md"
 			},
 			{
-				"label": "Details",
-				"markdown": "data/markdown/1901-coder_details.md"
+				"label": "詳細",
+				"markdown": "data/markdown/2004-web-engineer_details.md"
 			}
 		]
 	},
@@ -188,11 +188,11 @@
 		],
 		"descriptions": [
 			{
-				"label": "PR",
+				"label": "こだわり",
 				"markdown": "data/markdown/1901-coder_pr.md"
 			},
 			{
-				"label": "Details",
+				"label": "詳細",
 				"markdown": "data/markdown/1901-coder_details.md"
 			}
 		]

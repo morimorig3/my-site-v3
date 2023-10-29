@@ -24,9 +24,29 @@
 	@apply backdrop-blur-sm;
 }
 
+.u-markdown {
+	> * + * {
+		margin-top: 1em;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 2em;
+	}
+}
+
 .u-list {
 	list-style-type: disc;
 	padding-left: 1em;
+}
+
+.u-blockquote {
+	font-style: italic;
+	padding-left: 1em;
+	border-left: 3px solid currentColor;
 }
 
 .u-dynamicHeight {
