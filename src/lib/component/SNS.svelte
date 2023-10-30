@@ -30,7 +30,7 @@
 	</li>
 	<li>
 		<a
-			href="https://www.linkedin.com/in/naoto-morishita-2b286a203?trk=contact-info"
+			href="https://www.linkedin.com/in/naoto-morishita-2b286a203"
 			target="_blank"
 			rel="noopener noreferrer"
 			><FaLinkedIn
