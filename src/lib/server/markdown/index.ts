@@ -1,4 +1,6 @@
+import rehypeAttrs from 'rehype-attr';
 import rehypeClassNames, { type Options } from 'rehype-class-names';
+import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
@@ -18,7 +20,9 @@ export const markdownToHtml = async (markdown: string): Promise<string> => {
 	};
 	const html = await unified()
 		.use(remarkParse)
-		.use(remarkRehype)
+		.use(remarkRehype, { allowDangerousHtml: true })
+		.use(rehypeRaw)
+		.use(rehypeAttrs, { properties: 'attr' })
 		// @ts-expect-error 型解決ができないため
 		.use(rehypeClassNames, options)
 		.use(rehypeStringify)
