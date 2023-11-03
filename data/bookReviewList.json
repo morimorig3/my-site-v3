@@ -1,5 +1,15 @@
 [
 	{
+		"title": "SOFT SKILLS",
+		"industryIdentifierList": [
+			{
+				"type": "ISBN_10",
+				"identifier": "4822251551"
+			}
+		],
+		"reviewHtml": "data/markdown/books_SOFT_SKILLS_4822251551.md"
+	},
+	{
 		"title": "達人プログラマー(第2版): 熟達に向けたあなたの旅",
 		"industryIdentifierList": [
 			{
@@ -7,6 +17,56 @@
 				"identifier": "4274226298"
 			}
 		],
-		"reviewHtml": "data/markdown/4274226298.md"
+		"reviewHtml": "data/markdown/books_達人プログラマー_4274226298.md"
+	},
+	{
+		"title": "Clean Code",
+		"industryIdentifierList": [
+			{
+				"type": "ISBN_10",
+				"identifier": "4048930591"
+			}
+		],
+		"reviewHtml": "data/markdown/books_CleanCode_4048930591.md"
+	},
+	{
+		"title": "リファクタリング 既存のコードを安全に改善する（第2版）",
+		"industryIdentifierList": [
+			{
+				"type": "ISBN_10",
+				"identifier": "4274224546"
+			}
+		],
+		"reviewHtml": "data/markdown/books_リファクタリング_4274224546.md"
+	},
+	{
+		"title": "INSPIRED",
+		"industryIdentifierList": [
+			{
+				"type": "ISBN_10",
+				"identifier": "4820727508"
+			}
+		],
+		"reviewHtml": "data/markdown/books_INSPIRED_4820727508.md"
+	},
+	{
+		"title": "開眼JavaScript",
+		"industryIdentifierList": [
+			{
+				"type": "ISBN_10",
+				"identifier": "487311621X"
+			}
+		],
+		"reviewHtml": "data/markdown/books_開眼JavaScript_487311621X.md"
+	},
+	{
+		"title": "ノンデザイナーズ・デザインブック　［第4版］",
+		"industryIdentifierList": [
+			{
+				"type": "ISBN_10",
+				"identifier": "4839955557"
+			}
+		],
+		"reviewHtml": "data/markdown/books_ノンデザイナーズ・デザインブック_4839955557.md"
 	}
 ]
