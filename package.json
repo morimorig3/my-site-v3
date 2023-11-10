@@ -24,6 +24,7 @@
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@sveltejs/adapter-vercel": "^3.0.3",
 		"@sveltejs/kit": "^1.20.4",
+		"@types/nodemailer": "^6.4.14",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.14",
@@ -57,6 +58,7 @@
 	"type": "module",
 	"dependencies": {
 		"axios": "^1.5.0",
+		"nodemailer": "^6.9.7",
 		"svelte-gestures": "^1.5.2"
 	}
 }
