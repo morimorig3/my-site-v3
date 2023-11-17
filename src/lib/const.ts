@@ -44,6 +44,10 @@ export const NAVIGATION_LIST = [
 	{
 		path: '/books',
 		title: 'Books'
+	},
+	{
+		path: '/contact',
+		title: 'Contact'
 	}
 ] as const;
 
