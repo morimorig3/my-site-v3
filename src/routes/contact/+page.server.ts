@@ -1,19 +1,28 @@
+import { fail } from '@sveltejs/kit';
+
 import { createTransport } from 'nodemailer';
+import { superValidate } from 'sveltekit-superforms/server';
 
 import type { Actions } from './$types';
 
 import { env } from '$env/dynamic/private';
+import { contactFormSchema } from '$lib/schemas';
 
 export const prerender = false;
 
+export const load = async () => {
+	const form = await superValidate(contactFormSchema);
+	return { form };
+};
+
 export const actions = {
 	default: async ({ request }) => {
-		const data = await request.formData();
+		const form = await superValidate(request, contactFormSchema);
+		if (!form.valid) {
+			return fail(400, { form });
+		}
 		const admin = env.CONTACT_FORM_RECEIVE_EMAIL;
-		const name = data.get('name') as string; // TODO: 型ガードにする？
-		const user = data.get('email') as string;
-		const message = data.get('message');
-
+		// TODO: どっかに定数で持っておく
 		const transporter = createTransport({
 			service: 'Gmail',
 			auth: {
@@ -21,6 +30,7 @@ export const actions = {
 				pass: env.GOOGLE_APP_PASSWORD
 			}
 		});
+		const { name, email, message } = form.data;
 
 		transporter
 			.sendMail({
@@ -31,10 +41,12 @@ export const actions = {
 			.then(() => {
 				transporter.sendMail({
 					from: admin,
-					to: user,
+					to: email,
 					subject: 'お問い合わせありがとうございます',
 					text: 'お問い合わせありがとうございます本文'
 				});
 			});
+
+		return { form };
 	}
 } satisfies Actions;

@@ -13,7 +13,8 @@
 		"Photoshop",
 		"googlebot",
 		"rehype",
-		"Rehype"
+		"Rehype",
+		"sveltekit-superforms"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }
