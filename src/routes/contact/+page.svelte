@@ -11,13 +11,16 @@
 	export let data: PageData;
 	export let form: ActionData;
 	let isVisibleOverlay = false;
+	let isVisibleModal = false;
+	let formElement: HTMLFormElement;
 
 	const {
 		form: contactForm,
 		enhance,
 		errors,
 		submitting,
-		reset
+		reset,
+		validate
 	} = superForm(data.form, {
 		validators: contactFormSchema
 	});
@@ -28,6 +31,21 @@
 	description="morimorig3 へのお問い合わせページです"
 	pathName={$page.url.pathname}
 />
+
+{#if isVisibleModal}
+	<button class="overlay">
+		<div>
+			<button
+				on:click={() => {
+					isVisibleOverlay = true;
+					formElement.submit();
+					isVisibleModal = false;
+				}}>送信する</button
+			>
+			<button on:click={() => (isVisibleModal = false)}>閉じる</button>
+		</div>
+	</button>
+{/if}
 
 {#if isVisibleOverlay}
 	<button class="overlay">
@@ -58,10 +76,8 @@
 	<form
 		class="max-w-screen-tablet mx-auto flex flex-col gap-y-8"
 		method="POST"
+		bind:this={formElement}
 		use:enhance
-		on:submit={() => {
-			isVisibleOverlay = true;
-		}}
 	>
 		<div class="floating-input">
 			<input
@@ -100,6 +116,12 @@
 			{#if $errors.message}<span class="invalid">{$errors.message}</span>{/if}
 		</div>
 		<button
+			on:click={async () => {
+				const result = await validate();
+				if (result.valid) {
+					isVisibleModal = true;
+				}
+			}}
 			class="w-full text-label font-bold border shadow rounded-md bg-white h-12 relative
 			hover:bg-sky-50 dark:bg-divider dark:border-0 dark:hover:bg-lightBody">確認</button
 		>
