@@ -4,6 +4,7 @@
 	import type { ActionData, PageData } from './$types';
 
 	import { page } from '$app/stores';
+	import CustomButton from '$lib/component/CustomButton.svelte';
 	import FloatingLabelInput from '$lib/component/FloatingLabelInput.svelte';
 	import Head from '$lib/component/Head.svelte';
 	import Spinner from '$lib/component/Icons/Spinner.svelte';
@@ -99,16 +100,15 @@
 			value={$contactForm.message}
 			errorMessage={$errors.message}
 		/>
-		<button
-			on:click={async () => {
+		<CustomButton
+			handleClick={async () => {
 				const result = await validate();
 				if (result.valid) {
 					isVisibleModal = true;
 				}
 			}}
-			class="w-full text-label font-bold border shadow rounded-md bg-white h-12 relative
-			hover:bg-sky-50 dark:bg-divider dark:border-0 dark:hover:bg-lightBody">確認</button
-		>
+			label="確認"
+		/>
 	</form>
 </div>
 
