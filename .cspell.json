@@ -14,7 +14,8 @@
 		"googlebot",
 		"rehype",
 		"Rehype",
-		"sveltekit-superforms"
+		"sveltekit-superforms",
+		"grecaptcha"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }

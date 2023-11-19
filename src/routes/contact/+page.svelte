@@ -1,15 +1,24 @@
 <script lang="ts">
 	import { superForm } from 'sveltekit-superforms/client';
 
-	import type { PageData } from './$types';
+	import type { ActionData, PageData } from './$types';
 
 	import { page } from '$app/stores';
 	import Head from '$lib/component/Head.svelte';
+	import Spinner from '$lib/component/Icons/Spinner.svelte';
 	import { contactFormSchema } from '$lib/schemas';
 
 	export let data: PageData;
+	export let form: ActionData;
+	let isVisibleOverlay = false;
 
-	const { form, enhance, errors } = superForm(data.form, {
+	const {
+		form: contactForm,
+		enhance,
+		errors,
+		submitting,
+		reset
+	} = superForm(data.form, {
 		validators: contactFormSchema
 	});
 </script>
@@ -20,12 +29,39 @@
 	pathName={$page.url.pathname}
 />
 
+{#if isVisibleOverlay}
+	<button class="overlay">
+		{#if $submitting}
+			<Spinner />
+		{:else if form?.success}
+			<div>
+				<p>送信ありがとうございます。お問合せを受け付けました。</p>
+				<button
+					on:click={() => {
+						isVisibleOverlay = false;
+						reset();
+					}}>閉じる</button
+				>
+			</div>
+		{:else}
+			<p>送信失敗</p>
+			<button
+				on:click={() => {
+					isVisibleOverlay = false;
+				}}>閉じる</button
+			>
+		{/if}
+	</button>
+{/if}
+
 <div class="l-container py-6 tablet:py-8 laptop:py-10">
 	<form
 		class="max-w-screen-tablet mx-auto flex flex-col gap-y-8"
 		method="POST"
-		action="/contact"
 		use:enhance
+		on:submit={() => {
+			isVisibleOverlay = true;
+		}}
 	>
 		<div class="floating-input">
 			<input
@@ -35,7 +71,7 @@
 				autocomplete="off"
 				name="name"
 				aria-invalid={$errors.name ? 'true' : undefined}
-				bind:value={$form.name}
+				bind:value={$contactForm.name}
 			/>
 			<label class="floating-input__label" for="Name">Name</label>
 			{#if $errors.name}<span class="invalid">{$errors.name}</span>{/if}
@@ -48,7 +84,7 @@
 				autocomplete="off"
 				name="email"
 				aria-invalid={$errors.email ? 'true' : undefined}
-				bind:value={$form.email}
+				bind:value={$contactForm.email}
 			/>
 			<label class="floating-input__label" for="E-mail">E-mail</label>
 			{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
@@ -59,13 +95,13 @@
 				placeholder="本文"
 				name="message"
 				aria-invalid={$errors.message ? 'true' : undefined}
-				bind:value={$form.message}
+				bind:value={$contactForm.message}
 			/>
 			{#if $errors.message}<span class="invalid">{$errors.message}</span>{/if}
 		</div>
 		<button
-			class="w-full text-label font-bold border shadow rounded-md bg-white h-12 relative hover:bg-sky-50 dark:bg-divider dark:border-0 dark:hover:bg-lightBody"
-			>確認</button
+			class="w-full text-label font-bold border shadow rounded-md bg-white h-12 relative
+			hover:bg-sky-50 dark:bg-divider dark:border-0 dark:hover:bg-lightBody">確認</button
 		>
 	</form>
 </div>
@@ -112,5 +148,10 @@
 	}
 	.invalid {
 		@apply text-red-500 text-label-sm;
+	}
+	.overlay {
+		@apply fixed w-screen h-screen top-0 left-0;
+		z-index: 50;
+		background-color: rgba(255, 255, 255, 0.9);
 	}
 </style>

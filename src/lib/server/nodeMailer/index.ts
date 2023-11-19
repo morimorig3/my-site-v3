@@ -3,7 +3,6 @@ import type { ContactFormSchemaType } from '$lib/schemas/types';
 import { env } from '$env/dynamic/private';
 import { TRANSPORTER } from '$lib';
 
-
 /**
  * Gmailからtoへメールを送信する
  * @param to - 宛先
