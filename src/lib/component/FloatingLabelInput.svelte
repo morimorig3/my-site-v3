@@ -16,7 +16,7 @@
 		bind:value
 	/>
 	<label class="floating-input__label" for={label}>{label}</label>
-	{#if errorMessage}<span class="invalid">{errorMessage}</span>{/if}
+	{#if errorMessage}<span class="text-red-500 text-label-sm">{errorMessage}</span>{/if}
 </div>
 
 <style lang="postcss">

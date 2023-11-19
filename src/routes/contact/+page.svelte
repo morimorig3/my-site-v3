@@ -7,6 +7,7 @@
 	import FloatingLabelInput from '$lib/component/FloatingLabelInput.svelte';
 	import Head from '$lib/component/Head.svelte';
 	import Spinner from '$lib/component/Icons/Spinner.svelte';
+	import TextAreaInput from '$lib/component/TextAreaInput.svelte';
 	import { contactFormSchema } from '$lib/schemas';
 
 	export let data: PageData;
@@ -92,16 +93,12 @@
 			value={$contactForm.email}
 			errorMessage={$errors.email}
 		/>
-		<div>
-			<textarea
-				class="textarea"
-				placeholder="本文"
-				name="message"
-				aria-invalid={$errors.message ? 'true' : undefined}
-				bind:value={$contactForm.message}
-			/>
-			{#if $errors.message}<span class="invalid">{$errors.message}</span>{/if}
-		</div>
+		<TextAreaInput
+			placeholder="本文"
+			name="message"
+			value={$contactForm.message}
+			errorMessage={$errors.message}
+		/>
 		<button
 			on:click={async () => {
 				const result = await validate();
@@ -116,19 +113,6 @@
 </div>
 
 <style lang="postcss">
-	.textarea {
-		min-height: 200px;
-		@apply border rounded-md w-full p-2 bg-transparent dark:text-lightBody dark:border-placeholder;
-		&::placeholder {
-			@apply text-placeholder;
-		}
-		&:focus {
-			@apply border-body outline-none dark:border-white;
-		}
-	}
-	.invalid {
-		@apply text-red-500 text-label-sm;
-	}
 	.overlay {
 		@apply fixed w-screen h-screen top-0 left-0;
 		z-index: 50;
