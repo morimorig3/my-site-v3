@@ -4,6 +4,7 @@
 	import type { ActionData, PageData } from './$types';
 
 	import { page } from '$app/stores';
+	import FloatingLabelInput from '$lib/component/FloatingLabelInput.svelte';
 	import Head from '$lib/component/Head.svelte';
 	import Spinner from '$lib/component/Icons/Spinner.svelte';
 	import { contactFormSchema } from '$lib/schemas';
@@ -79,32 +80,18 @@
 		bind:this={formElement}
 		use:enhance
 	>
-		<div class="floating-input">
-			<input
-				class="floating-input__input"
-				type="text"
-				placeholder="Name"
-				autocomplete="off"
-				name="name"
-				aria-invalid={$errors.name ? 'true' : undefined}
-				bind:value={$contactForm.name}
-			/>
-			<label class="floating-input__label" for="Name">Name</label>
-			{#if $errors.name}<span class="invalid">{$errors.name}</span>{/if}
-		</div>
-		<div class="floating-input">
-			<input
-				class="floating-input__input"
-				type="text"
-				placeholder="E-mail"
-				autocomplete="off"
-				name="email"
-				aria-invalid={$errors.email ? 'true' : undefined}
-				bind:value={$contactForm.email}
-			/>
-			<label class="floating-input__label" for="E-mail">E-mail</label>
-			{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
-		</div>
+		<FloatingLabelInput
+			label="Name"
+			name="name"
+			value={$contactForm.name}
+			errorMessage={$errors.name}
+		/>
+		<FloatingLabelInput
+			label="E-mail"
+			name="email"
+			value={$contactForm.email}
+			errorMessage={$errors.email}
+		/>
 		<div>
 			<textarea
 				class="textarea"
@@ -129,35 +116,6 @@
 </div>
 
 <style lang="postcss">
-	.floating-input {
-		@apply relative dark:text-lightBody;
-		&__input {
-			@apply w-full h-full p-2 pt-4 border-b bg-transparent dark:border-placeholder;
-			&:focus {
-				@apply border-body outline-none dark:border-white;
-			}
-			&::placeholder {
-				color: transparent;
-			}
-			&:-internal-autofill-selected {
-				@apply bg-transparent;
-			}
-			&:focus + .floating-input__label,
-			&:not(:placeholder-shown) + .floating-input__label {
-				transform: translateY(-100%) scale(0.75);
-			}
-		}
-		&__label {
-			position: absolute;
-			top: theme(space.4);
-			left: 0;
-			color: theme(colors.placeholder);
-			pointer-events: none;
-			transform-origin: left center;
-			transition: transform 250ms;
-		}
-	}
-
 	.textarea {
 		min-height: 200px;
 		@apply border rounded-md w-full p-2 bg-transparent dark:text-lightBody dark:border-placeholder;
