@@ -1,20 +1,25 @@
 <script lang="ts">
 	import { superForm } from 'sveltekit-superforms/client';
 
+	import AlertPopup from './components/AlertPopup.svelte';
+	import ConfirmPopup from './components/ConfirmPopup.svelte';
+
 	import type { ActionData, PageData } from './$types';
+	import type { MouseEventHandler } from 'svelte/elements';
 
 	import { page } from '$app/stores';
-	import CustomButton from '$lib/component/CustomButton.svelte';
+	import CustomButton from '$lib/component/CustomButton/CustomButton.svelte';
 	import FloatingLabelInput from '$lib/component/FloatingLabelInput.svelte';
 	import Head from '$lib/component/Head.svelte';
 	import Spinner from '$lib/component/Icons/Spinner.svelte';
+	import ModalWrapper from '$lib/component/ModalWrapper.svelte';
 	import TextAreaInput from '$lib/component/TextAreaInput.svelte';
 	import { contactFormSchema } from '$lib/schemas';
 
 	export let data: PageData;
 	export let form: ActionData;
 	let isVisibleOverlay = false;
-	let isVisibleModal = false;
+	let isVisibleDialog = false;
 	let formElement: HTMLFormElement;
 
 	const {
@@ -22,11 +27,63 @@
 		enhance,
 		errors,
 		submitting,
-		reset,
-		validate
+		validate,
+		reset
 	} = superForm(data.form, {
 		validators: contactFormSchema
 	});
+
+	const openDialog = () => {
+		isVisibleDialog = true;
+		isVisibleOverlay = true;
+	};
+	const closeDialog = () => (isVisibleDialog = false);
+	const closeOverlay = () => {
+		isVisibleDialog = false;
+		isVisibleOverlay = false;
+	};
+	const manualValidate = () => {
+		validate('name');
+		validate('email');
+		validate('message');
+	};
+
+	/**
+	 * 確認ボタン押下ハンドラ
+	 */
+	const handleClickConfirm: MouseEventHandler<HTMLButtonElement> = async (event) => {
+		event.preventDefault();
+		manualValidate();
+		const result = await validate();
+		if (result.valid) {
+			openDialog();
+		}
+	};
+
+	/**
+	 * 確認モーダルで送信ボタン押下ハンドラ
+	 */
+	const handleSubmit: MouseEventHandler<HTMLButtonElement> = () => {
+		closeDialog();
+		formElement.requestSubmit();
+	};
+
+	/**
+	 * 問い合わせ送信完了時のハンドラ
+	 */
+	const handleSubmitComplete = () => {
+		closeOverlay();
+		reset();
+	};
+
+	/**
+	 * オーバーレイ押下ハンドラ
+	 */
+	$: handleClickOverlay = $submitting
+		? () => undefined
+		: form?.success
+		? handleSubmitComplete
+		: closeOverlay;
 </script>
 
 <Head
@@ -34,46 +91,6 @@
 	description="morimorig3 へのお問い合わせページです"
 	pathName={$page.url.pathname}
 />
-
-{#if isVisibleModal}
-	<button class="overlay">
-		<div>
-			<button
-				on:click={() => {
-					isVisibleOverlay = true;
-					formElement.submit();
-					isVisibleModal = false;
-				}}>送信する</button
-			>
-			<button on:click={() => (isVisibleModal = false)}>閉じる</button>
-		</div>
-	</button>
-{/if}
-
-{#if isVisibleOverlay}
-	<button class="overlay">
-		{#if $submitting}
-			<Spinner />
-		{:else if form?.success}
-			<div>
-				<p>送信ありがとうございます。お問合せを受け付けました。</p>
-				<button
-					on:click={() => {
-						isVisibleOverlay = false;
-						reset();
-					}}>閉じる</button
-				>
-			</div>
-		{:else}
-			<p>送信失敗</p>
-			<button
-				on:click={() => {
-					isVisibleOverlay = false;
-				}}>閉じる</button
-			>
-		{/if}
-	</button>
-{/if}
 
 <div class="l-container py-6 tablet:py-8 laptop:py-10">
 	<form
@@ -85,37 +102,42 @@
 		<FloatingLabelInput
 			label="Name"
 			name="name"
-			value={$contactForm.name}
 			errorMessage={$errors.name}
+			bind:value={$contactForm.name}
 		/>
 		<FloatingLabelInput
 			label="E-mail"
 			name="email"
-			value={$contactForm.email}
 			errorMessage={$errors.email}
+			bind:value={$contactForm.email}
 		/>
 		<TextAreaInput
 			placeholder="本文"
 			name="message"
-			value={$contactForm.message}
+			bind:value={$contactForm.message}
 			errorMessage={$errors.message}
 		/>
-		<CustomButton
-			handleClick={async () => {
-				const result = await validate();
-				if (result.valid) {
-					isVisibleModal = true;
-				}
-			}}
-			label="確認"
-		/>
+		<CustomButton handleClick={handleClickConfirm} label="確認" />
 	</form>
+	{#if isVisibleOverlay}
+		<ModalWrapper handleCloseModal={handleClickOverlay} isOpen={isVisibleOverlay}>
+			{#if isVisibleDialog}
+				<ConfirmPopup {handleSubmit} handleClickCancel={closeOverlay} />
+			{:else if $submitting}
+				<Spinner />
+			{:else if form?.success}
+				<AlertPopup
+					text="送信ありがとうございます。お問合せを受け付けました。"
+					label="閉じる"
+					handleClickButton={handleSubmitComplete}
+				/>
+			{:else}
+				<AlertPopup
+					text="送信失敗に失敗しました。恐れ入りますが時間を空けてから再度お試しください。"
+					label="閉じる"
+					handleClickButton={closeOverlay}
+				/>
+			{/if}
+		</ModalWrapper>
+	{/if}
 </div>
-
-<style lang="postcss">
-	.overlay {
-		@apply fixed w-screen h-screen top-0 left-0;
-		z-index: 50;
-		background-color: rgba(255, 255, 255, 0.9);
-	}
-</style>

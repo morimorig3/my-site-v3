@@ -20,7 +20,6 @@ export const actions = {
 		if (!form.valid) {
 			return fail(400, { form, success: false });
 		}
-		await ((second) => new Promise((resolve) => setTimeout(resolve, second * 1000)))(5);
 
 		try {
 			await sendReceiveMail(form.data);

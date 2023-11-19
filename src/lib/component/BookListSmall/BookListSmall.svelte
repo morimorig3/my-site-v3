@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 
-	import CustomButton from '../CustomButton.svelte';
+	import CustomButton from '../CustomButton/CustomButton.svelte';
 
 	import BookCardSmall from './components/BookCardSmall.svelte';
 

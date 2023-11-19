@@ -1,4 +1,9 @@
-<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+<svg
+	class="fill-white w-10 h-10"
+	width="24"
+	height="24"
+	viewBox="0 0 24 24"
+	xmlns="http://www.w3.org/2000/svg"
 	><g
 		><circle cx="12" cy="2.5" r="1.5" opacity=".14" /><circle
 			cx="16.75"
