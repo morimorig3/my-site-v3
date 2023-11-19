@@ -21,7 +21,7 @@ const sendMail = (to: string, subject: string, text: string) =>
  */
 export const sendReceiveMail = ({ name, email, message }: ContactFormSchemaType) =>
 	sendMail(
-		env.CONTACT_FORM_RECEIVE_EMAIL,
+		env.CONTACT_FORM_RECEIVE_EMAIL as string,
 		'ポートフォリオサイトから問い合わせの受付',
 		`以下の内容で問い合わせを受け付けました
         ====
