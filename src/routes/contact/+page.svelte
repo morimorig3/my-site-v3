@@ -3,6 +3,7 @@
 
 	import AlertPopup from './components/AlertPopup.svelte';
 	import ConfirmPopup from './components/ConfirmPopup.svelte';
+	import ContactMessageConfirm from './components/ContactMessageConfirm.svelte';
 
 	import type { ActionData, PageData } from './$types';
 	import type { MouseEventHandler } from 'svelte/elements';
@@ -122,7 +123,9 @@
 	{#if isVisibleOverlay}
 		<ModalWrapper handleCloseModal={handleClickOverlay} isOpen={isVisibleOverlay}>
 			{#if isVisibleDialog}
-				<ConfirmPopup {handleSubmit} handleClickCancel={closeOverlay} />
+				<ConfirmPopup {handleSubmit} handleClickCancel={closeOverlay}>
+					<ContactMessageConfirm contactForm={$contactForm} />
+				</ConfirmPopup>
 			{:else if $submitting}
 				<Spinner />
 			{:else if form?.success}

@@ -9,6 +9,7 @@
 
 <div class="wrapper">
 	<p class="text-label dark:text-lightBody">こちらの内容で送信してよろしいでしょうか？</p>
+	<slot />
 	<div class="flex gap-x-8">
 		<CustomButton buttonColorType="green" label="送信する" handleClick={handleSubmit} />
 		<CustomButton label="閉じる" handleClick={handleClickCancel} />
@@ -19,11 +20,12 @@
 	.wrapper {
 		background-color: #fff;
 		z-index: 101;
-		@apply flex flex-col gap-y-6 shadow-2xl p-6 tablet:px-8 laptop:px-10 dark:bg-lightSecondary;
+		max-height: calc(100dvh * 0.83);
+		@apply flex flex-col gap-y-6 shadow-2xl p-6 tablet:px-8 laptop:px-10 dark:bg-lightSecondary rounded-lg overflow-scroll;
 		@media (min-width: theme(screens.tablet)) {
 			width: 375px;
 			max-height: 588px;
-			border-radius: theme(borderRadius.2xl);
+			@apply rounded-2xl;
 		}
 		@media (min-width: theme(screens.desktop)) {
 			width: 640px;
