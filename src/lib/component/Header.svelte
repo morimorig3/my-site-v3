@@ -40,7 +40,7 @@
 		<span class="laptop:hidden ml-auto">
 			<ThemeSwitch />
 		</span>
-		<button class="laptop:hidden" on:click={toggleMenu}>
+		<button class="laptop:hidden" on:click={toggleMenu} aria-label="メニュー">
 			<HamburgerMenu {isOpen} />
 		</button>
 	</div>
