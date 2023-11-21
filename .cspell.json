@@ -15,7 +15,8 @@
 		"rehype",
 		"Rehype",
 		"sveltekit-superforms",
-		"grecaptcha"
+		"grecaptcha",
+		"webp"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }

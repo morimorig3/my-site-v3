@@ -14,6 +14,7 @@
 				rel="noopener noreferrer"
 				href={homepageHref}
 				class="u-circle-icon hover:bg-sky-50 dark:bg-lightWhite dark:hover:bg-lightBody"
+				aria-label="テストページのリンク"
 			>
 				<FaPlay className="h-3 fill-body" />
 			</a>
@@ -30,6 +31,7 @@
 				rel="noopener noreferrer"
 				href={htmlHref}
 				class="u-circle-icon hover:bg-sky-50 dark:bg-lightWhite dark:hover:bg-lightBody"
+				aria-label="GitHubのリンク"
 			>
 				<FaGithub className="h-5 fill-body " />
 			</a>

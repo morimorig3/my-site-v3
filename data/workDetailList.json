@@ -1,7 +1,7 @@
 [
 	{
 		"slug": "2204-front-end-engineer",
-		"image": "/works_front-end_01.jpg",
+		"image": "/works_front-end_01.webp",
 		"term": {
 			"from": "2022-04",
 			"to": ""
@@ -74,7 +74,7 @@
 	},
 	{
 		"slug": "2004-web-engineer",
-		"image": "/works_web-engineer_01.jpg",
+		"image": "/works_web-engineer_01.webp",
 		"term": {
 			"from": "2020-04",
 			"to": "2022-03"
@@ -143,7 +143,7 @@
 	},
 	{
 		"slug": "1901-coder",
-		"image": "/works_coder_01.jpg",
+		"image": "/works_coder_01.webp",
 		"term": {
 			"from": "2019-01",
 			"to": "2019-09"

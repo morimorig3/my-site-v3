@@ -7,7 +7,7 @@
 	import { THEME } from '$lib/const';
 </script>
 
-<button on:click={theme.toggle} class="theme-switch">
+<button on:click={theme.toggle} class="theme-switch" aria-label="テーマ切り替えボタン">
 	<span aria-hidden={$theme === THEME.DARK} class="theme-switch__icon-wrapper">
 		<FaMoon className="w-full h-full fill-body dark:fill-lightWhite dark:hover:fill-lightBody" />
 	</span>
