@@ -11,7 +11,8 @@ export const load: PageServerLoad = async () => {
 	const {
 		favoriteBookShelves: favoriteBookShelvesResponse,
 		forBeginnerBookShelves: forBeginnerBookShelvesResponse,
-		toReadBookShelves: toReadBookShelvesResponse
+		toReadBookShelves: toReadBookShelvesResponse,
+		goodBooksBookShelves: goodBooksBookShelvesResponse
 	} = await getBookList();
 	const loadBookReviewListResponse = await loadBookReviewList();
 
@@ -19,22 +20,26 @@ export const load: PageServerLoad = async () => {
 		!favoriteBookShelvesResponse ||
 		!forBeginnerBookShelvesResponse ||
 		!toReadBookShelvesResponse ||
+		!goodBooksBookShelvesResponse ||
 		!loadBookReviewListResponse
 	) {
 		throw error(404, { message: ERROR_MESSAGE_COMMON });
 	}
-	const [reviewedWithFavorite, reviewedWithForBeginner, reviewedWithToRead] = [
-		favoriteBookShelvesResponse,
-		forBeginnerBookShelvesResponse,
-		toReadBookShelvesResponse
-	].map((bookItem) => ({
-		...bookItem,
-		bookList: reviewedWith(bookItem.bookList, loadBookReviewListResponse)
-	}));
+	const [reviewedWithFavorite, reviewedWithForBeginner, reviewedWithToRead, reviewedWithGoodBooks] =
+		[
+			favoriteBookShelvesResponse,
+			forBeginnerBookShelvesResponse,
+			toReadBookShelvesResponse,
+			goodBooksBookShelvesResponse
+		].map((bookItem) => ({
+			...bookItem,
+			bookList: reviewedWith(bookItem.bookList, loadBookReviewListResponse)
+		}));
 
 	return {
 		favoriteBookShelves: reviewedWithFavorite,
 		forBeginnerBookShelves: reviewedWithForBeginner,
-		toReadBookShelves: reviewedWithToRead
+		toReadBookShelves: reviewedWithToRead,
+		goodBooksShelves: reviewedWithGoodBooks
 	};
 };
