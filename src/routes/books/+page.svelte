@@ -10,8 +10,8 @@
 	import TabButton from '$lib/component/TabButton.svelte';
 
 	export let data: PageData;
-	$: ({ favoriteBookShelves, forBeginnerBookShelves, toReadBookShelves } = data);
-	$: bookShelves = [favoriteBookShelves, forBeginnerBookShelves, toReadBookShelves];
+	$: ({ favoriteBookShelves, forBeginnerBookShelves, toReadBookShelves, goodBooksShelves } = data);
+	$: bookShelves = [goodBooksShelves, forBeginnerBookShelves, toReadBookShelves];
 	let activeTabIndex = 0;
 
 	function setActiveTabIndex(index: number) {

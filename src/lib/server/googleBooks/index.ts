@@ -12,13 +12,15 @@ export async function getBookList() {
 	return Promise.all([
 		getBookShelves(BOOK_SHELVES_INDEX.FAVORITE),
 		getBookShelves(BOOK_SHELVES_INDEX.TO_READ),
-		getBookShelves(BOOK_SHELVES_INDEX.FOR_BEGINNER)
+		getBookShelves(BOOK_SHELVES_INDEX.FOR_BEGINNER),
+		getBookShelves(BOOK_SHELVES_INDEX.GOOD_BOOKS)
 	])
 		.then(
 			([
 				{ items: favoriteBookList },
 				{ items: toReadBookList },
-				{ items: forBeginnerBookList }
+				{ items: forBeginnerBookList },
+				{ items: GoodBooksBookList }
 			]) => ({
 				favoriteBookShelves: {
 					bookList: favoriteBookList,
@@ -31,6 +33,10 @@ export async function getBookList() {
 				forBeginnerBookShelves: {
 					bookList: forBeginnerBookList,
 					title: '基礎知識'
+				},
+				goodBooksBookShelves: {
+					bookList: GoodBooksBookList,
+					title: '良書'
 				}
 			})
 		)
