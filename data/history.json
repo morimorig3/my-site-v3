@@ -128,7 +128,6 @@
 	},
 	{
 		"title": "Webエンジニア",
-		"url": "/works/2004-web-engineer/",
 		"description": "hankyu hanshin marketing solutions Inc.",
 		"term": {
 			"from": "2019-01",
@@ -137,6 +136,7 @@
 		"workOverviews": [
 			{
 				"title": "Web制作業務",
+				"url": "/works/2004-web-engineer/",
 				"term": {
 					"from": "2020-04",
 					"to": "2022-03"
