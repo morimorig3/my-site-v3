@@ -8,10 +8,66 @@
 		},
 		"workOverviews": [
 			{
-				"title": "転職サイトアプリ フロント実装",
+				"title": "情報サイト フロント実装",
+				"term": {
+					"from": "2024-04",
+					"to": ""
+				},
+				"stacks": [
+					{
+						"iconName": "SiTs",
+						"label": "TypeScript"
+					},
+					{
+						"iconName": "SiReact",
+						"label": "React"
+					},
+					{
+						"iconName": "SiRedux",
+						"label": "Redux"
+					},
+					{
+						"iconName": "SiNext",
+						"label": "Next"
+					},
+					{
+						"iconName": "SiGit",
+						"label": "GitHub"
+					}
+				],
+				"description": "JavaからNext.jsへのリプレイスチームにて、フロントエンドメンバーとして実装・開発を担当しました。"
+			},
+			{
+				"title": "個人学習",
+				"term": {
+					"from": "2023-01",
+					"to": ""
+				},
+				"stacks": [
+					{
+						"iconName": "FaJava",
+						"label": "Java"
+					},
+					{
+						"iconName": "SiPostgresql",
+						"label": "Postgresql"
+					},
+					{
+						"iconName": "SiAmazonWebServices",
+						"label": "AWS"
+					},
+					{
+						"iconName": "SiTerraform",
+						"label": "Terraform"
+					}
+				],
+				"description": "将来的にWebアプリケーション開発全体に携わりたいため、バックエンドの技術スタックを中心に学習を進めました。JavaによるREST APIの開発の学習。AWSを利用したECSonFargateのインフラ構築をTerraformによる実装。取得資格：AWS認定クラウドプラクティショナー"
+			},
+			{
+				"title": "ネイティブアプリ フロント実装",
 				"term": {
 					"from": "2022-04",
-					"to": ""
+					"to": "2024-03"
 				},
 				"stacks": [
 					{
@@ -43,6 +99,10 @@
 			},
 			{
 				"title": "個人学習",
+				"term": {
+					"from": "2022-04",
+					"to": ""
+				},
 				"stacks": [
 					{
 						"iconName": "SiGo",
