@@ -14,6 +14,7 @@ export interface History {
 
 export interface WorkOverview {
 	title: string;
+	url?: string;
 	term?: Term;
 	stacks?: Icon[];
 	description: string;
