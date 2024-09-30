@@ -59,6 +59,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@types/dom-view-transitions": "^1.0.5",
 		"axios": "^1.5.0",
 		"nodemailer": "^6.9.7",
 		"svelte-gestures": "^1.5.2"

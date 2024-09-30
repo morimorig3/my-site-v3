@@ -1,6 +1,19 @@
 <script lang="ts">
+	import { onNavigate } from '$app/navigation';
 	import MainLayout from '$lib/component/MainLayout.svelte';
 	import '../app.css';
+
+	// View Transition
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <MainLayout>
