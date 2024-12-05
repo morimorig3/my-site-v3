@@ -31,5 +31,8 @@
 	},
 	{
 		"repositoryName": "image-optimizer"
+	},
+	{
+		"repositoryName": "spring-todoapi"
 	}
 ]

@@ -28,6 +28,7 @@ import SiRealm from './component/Icons/SiRealm.svelte';
 import SiRedmine from './component/Icons/SiRedmine.svelte';
 import SiRedux from './component/Icons/SiRedux.svelte';
 import SiSass from './component/Icons/SiSass.svelte';
+import SiSpring from './component/Icons/SiSpring.svelte';
 import SiSvelte from './component/Icons/SiSvelte.svelte';
 import SiTerraform from './component/Icons/SiTerraform.svelte';
 import SiTs from './component/Icons/SiTs.svelte';
@@ -87,6 +88,7 @@ export const ICON_MAP = {
 	SiGatsby: SiGatsby,
 	SiSvelte: SiSvelte,
 	FaJava: FaJava,
+	SiSpring: SiSpring,
 	SiAmazonWebServices: SiAmazonWebServices,
 	SiPostgresql: SiPostgresql,
 	SiTerraform: SiTerraform,

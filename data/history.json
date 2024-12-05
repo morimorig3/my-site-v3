@@ -8,10 +8,32 @@
 		},
 		"workOverviews": [
 			{
+				"title": "情報サイト 継続開発",
+				"term": {
+					"from": "2024-10",
+					"to": ""
+				},
+				"stacks": [
+					{
+						"iconName": "FaJava",
+						"label": "Java"
+					},
+					{
+						"iconName": "SiSpring",
+						"label": "Spring"
+					},
+					{
+						"iconName": "SiReact",
+						"label": "React"
+					}
+				],
+				"description": "情報サイトの継続開発チームにて、SpringMVC+JSPで構築されているページの部分的なReact化を主に担当しました。"
+			},
+			{
 				"title": "情報サイト フロント実装",
 				"term": {
 					"from": "2024-04",
-					"to": ""
+					"to": "2024-09"
 				},
 				"stacks": [
 					{
