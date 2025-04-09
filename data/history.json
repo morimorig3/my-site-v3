@@ -8,7 +8,8 @@
 		},
 		"workOverviews": [
 			{
-				"title": "情報サイト 継続開発",
+				"title": "転職支援サービス 継続開発",
+				"url": "/works/2404-front-end-engineer/",
 				"term": {
 					"from": "2024-10",
 					"to": ""
@@ -27,10 +28,11 @@
 						"label": "React"
 					}
 				],
-				"description": "情報サイトの継続開発チームにて、SpringMVC+JSPで構築されているページの部分的なReact化を主に担当しました。"
+				"description": "転職支援サービスの継続開発チームにて、SpringMVC+JSPで構築されているページの部分的なReact化を主に担当しました。"
 			},
 			{
-				"title": "情報サイト フロント実装",
+				"title": "転職支援サービス フロント実装",
+				"url": "/works/2404-front-end-engineer/",
 				"term": {
 					"from": "2024-04",
 					"to": "2024-09"
@@ -86,8 +88,8 @@
 				"description": "将来的にWebアプリケーション開発全体に携わりたいため、バックエンドの技術スタックを中心に学習を進めました。JavaによるREST APIの開発の学習。AWSを利用したECSonFargateのインフラ構築をTerraformによる実装。取得資格：AWS認定クラウドプラクティショナー"
 			},
 			{
-				"title": "ネイティブアプリ フロント実装",
-				"url": "/works/2204-front-end-engineer/",
+				"title": "転職支援サービスアプリ フロント実装",
+				"url": "/works/2204-native-app-engineer/",
 				"term": {
 					"from": "2022-04",
 					"to": "2024-03"

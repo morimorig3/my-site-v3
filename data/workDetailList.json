@@ -1,13 +1,82 @@
 [
 	{
-		"slug": "2204-front-end-engineer",
+		"slug": "2404-front-end-engineer",
+		"image": "/works_front-end_02.webp",
+		"term": {
+			"from": "2024-04",
+			"to": ""
+		},
+		"title": "フロントエンドエンジニア（Webアプリ）",
+		"overview": "Java / Springで構築された既存Webページを解析し、Next.js / Reactによるフロントエンドの再構築を担当。\n仕様書の作成からリビルド、部分的なReact化まで幅広く対応しました。",
+		"techStacks": [
+			{
+				"iconName": "SiReact",
+				"label": "React"
+			},
+			{
+				"iconName": "SiTs",
+				"label": "TypeScript"
+			},
+			{
+				"iconName": "SiNext",
+				"label": "Next.js"
+			},
+			{
+				"iconName": "FaJava",
+				"label": "Java"
+			},
+			{
+				"iconName": "SiSpring",
+				"label": "Spring"
+			}
+		],
+		"workStyles": [
+			{
+				"iconName": "FaCode",
+				"title": "主要スキル",
+				"label": "React／TypeScript"
+			},
+			{
+				"iconName": "FaDev",
+				"title": "開発体制",
+				"label": "ウォーターフォール"
+			},
+			{
+				"iconName": "FaPeopleGroup",
+				"title": "チーム",
+				"label": "3〜5人"
+			},
+			{
+				"iconName": "FaBuildings",
+				"title": "勤務形態",
+				"label": "リモート／オフィス"
+			},
+			{
+				"iconName": "FaLocationDot",
+				"title": "勤務地",
+				"label": "東京"
+			}
+		],
+		"descriptions": [
+			{
+				"label": "担当・取り組み内容",
+				"markdown": "data/markdown/2404-front-end-engineer_pr.md"
+			},
+			{
+				"label": "成果・インパクト",
+				"markdown": "data/markdown/2404-front-end-engineer_details.md"
+			}
+		]
+	},
+	{
+		"slug": "2204-native-app-engineer",
 		"image": "/works_front-end_01.webp",
 		"term": {
 			"from": "2022-04",
-			"to": ""
+			"to": "2024-03"
 		},
 		"title": "フロントエンドエンジニア（ネイティブアプリ）",
-		"overview": "国内大手の転職支援サービスにおける、スマートフォンアプリ（iOS / Android）のフロントエンド開発を担当しました。\n既存コードベースのもとで新機能追加や改修、パフォーマンス改善にも取り組みました。",
+		"overview": "国内大手の転職支援サービスにおける、スマートフォンアプリ（React Native）のフロントエンド開発を担当しました。\n既存コードベースのもとで新機能追加や改修、パフォーマンス改善にも取り組みました。",
 		"techStacks": [
 			{
 				"iconName": "SiReact",
@@ -64,11 +133,11 @@
 		"descriptions": [
 			{
 				"label": "担当・取り組み内容",
-				"markdown": "data/markdown/2204-front-end-engineer_pr.md"
+				"markdown": "data/markdown/2204-native-app-engineer_pr.md"
 			},
 			{
 				"label": "成果・インパクト",
-				"markdown": "data/markdown/2204-front-end-engineer_details.md"
+				"markdown": "data/markdown/2204-native-app-engineer_details.md"
 			}
 		]
 	},
