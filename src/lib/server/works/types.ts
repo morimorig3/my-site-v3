@@ -8,8 +8,8 @@ interface Work {
 	title: string;
 	term: Term;
 	overview: string;
-	stacks: Icon[];
-	features: Icon[];
+	techStacks: Icon[];
+	workStyles: Icon[];
 	descriptions: Description[];
 }
 

@@ -1,14 +1,83 @@
 [
 	{
-		"slug": "2204-front-end-engineer",
+		"slug": "2404-front-end-engineer",
+		"image": "/works_front-end_02.webp",
+		"term": {
+			"from": "2024-04",
+			"to": ""
+		},
+		"title": "フロントエンドエンジニア（Webアプリ）",
+		"overview": "Java / Springで構築された既存Webページを解析し、Next.js / Reactによるフロントエンドの再構築を担当。\n仕様書の作成からリビルド、部分的なReact化まで幅広く対応しました。",
+		"techStacks": [
+			{
+				"iconName": "SiReact",
+				"label": "React"
+			},
+			{
+				"iconName": "SiTs",
+				"label": "TypeScript"
+			},
+			{
+				"iconName": "SiNext",
+				"label": "Next.js"
+			},
+			{
+				"iconName": "FaJava",
+				"label": "Java"
+			},
+			{
+				"iconName": "SiSpring",
+				"label": "Spring"
+			}
+		],
+		"workStyles": [
+			{
+				"iconName": "FaCode",
+				"title": "主要スキル",
+				"label": "React／TypeScript"
+			},
+			{
+				"iconName": "FaDev",
+				"title": "開発体制",
+				"label": "ウォーターフォール"
+			},
+			{
+				"iconName": "FaPeopleGroup",
+				"title": "チーム",
+				"label": "3〜5人"
+			},
+			{
+				"iconName": "FaBuildings",
+				"title": "勤務形態",
+				"label": "リモート／オフィス"
+			},
+			{
+				"iconName": "FaLocationDot",
+				"title": "勤務地",
+				"label": "東京"
+			}
+		],
+		"descriptions": [
+			{
+				"label": "担当・取り組み内容",
+				"markdown": "data/markdown/2404-front-end-engineer_pr.md"
+			},
+			{
+				"label": "成果・インパクト",
+				"markdown": "data/markdown/2404-front-end-engineer_details.md"
+			}
+		]
+	},
+	{
+		"slug": "2204-native-app-engineer",
 		"image": "/works_front-end_01.webp",
 		"term": {
 			"from": "2022-04",
-			"to": ""
+			"to": "2024-03"
 		},
-		"title": "フロントエンドエンジニア",
-		"overview": "React NativeによるiOS/Androidアプリのフロントエンド開発",
-		"stacks": [
+		"title": "フロントエンドエンジニア（ネイティブアプリ）",
+		"overview": "国内大手の転職支援サービスにおける、スマートフォンアプリ（React Native）のフロントエンド開発を担当しました。\n既存コードベースのもとで新機能追加や改修、パフォーマンス改善にも取り組みました。",
+		"techStacks": [
 			{
 				"iconName": "SiReact",
 				"label": "React"
@@ -34,7 +103,7 @@
 				"label": "Redmine"
 			}
 		],
-		"features": [
+		"workStyles": [
 			{
 				"iconName": "FaCode",
 				"title": "主要スキル",
@@ -63,12 +132,12 @@
 		],
 		"descriptions": [
 			{
-				"label": "こだわり",
-				"markdown": "data/markdown/2204-front-end-engineer_pr.md"
+				"label": "担当・取り組み内容",
+				"markdown": "data/markdown/2204-native-app-engineer_pr.md"
 			},
 			{
-				"label": "詳細",
-				"markdown": "data/markdown/2204-front-end-engineer_details.md"
+				"label": "成果・インパクト",
+				"markdown": "data/markdown/2204-native-app-engineer_details.md"
 			}
 		]
 	},
@@ -80,8 +149,8 @@
 			"to": "2022-03"
 		},
 		"title": "Webエンジニア",
-		"overview": "ランディングページ、コーポレートサイト開発",
-		"stacks": [
+		"overview": "ランディングページやコーポレートサイトを中心に、HTML / CSS / JavaScriptを用いたフロントエンド実装を担当。\n要件のすり合わせから実装、パフォーマンス改善・保守性向上まで幅広く対応しました。",
+		"techStacks": [
 			{
 				"iconName": "SiJs",
 				"label": "JavaScript"
@@ -103,7 +172,7 @@
 				"label": "CSS"
 			}
 		],
-		"features": [
+		"workStyles": [
 			{
 				"iconName": "FaCode",
 				"title": "主要スキル",
@@ -117,7 +186,7 @@
 			{
 				"iconName": "FaPeopleGroup",
 				"title": "チーム",
-				"label": "1人"
+				"label": "4人"
 			},
 			{
 				"iconName": "FaBuildings",
@@ -132,11 +201,11 @@
 		],
 		"descriptions": [
 			{
-				"label": "こだわり",
+				"label": "担当・取り組み内容",
 				"markdown": "data/markdown/2004-web-engineer_pr.md"
 			},
 			{
-				"label": "詳細",
+				"label": "成果・インパクト",
 				"markdown": "data/markdown/2004-web-engineer_details.md"
 			}
 		]
@@ -149,8 +218,8 @@
 			"to": "2019-09"
 		},
 		"title": "コーダー",
-		"overview": "Webサイトのコンテンツ更新、バナー制作業務",
-		"stacks": [
+		"overview": "Webサイトのコンテンツ更新業務やバナー制作を担当。\nHTML / CSSによる静的ページの修正・反映作業のほか、CMS操作や画像制作、品質チェックまで幅広く対応しました。",
+		"techStacks": [
 			{
 				"iconName": "SiHtml5",
 				"label": "HTML"
@@ -164,7 +233,7 @@
 				"label": "Illustrator"
 			}
 		],
-		"features": [
+		"workStyles": [
 			{
 				"iconName": "FaCode",
 				"title": "主要スキル",
@@ -188,11 +257,11 @@
 		],
 		"descriptions": [
 			{
-				"label": "こだわり",
+				"label": "担当・取り組み内容",
 				"markdown": "data/markdown/1901-coder_pr.md"
 			},
 			{
-				"label": "詳細",
+				"label": "成果・インパクト",
 				"markdown": "data/markdown/1901-coder_details.md"
 			}
 		]
