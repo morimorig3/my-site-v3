@@ -6,9 +6,9 @@
 			"from": "2022-04",
 			"to": ""
 		},
-		"title": "フロントエンドエンジニア",
-		"overview": "React NativeによるiOS/Androidアプリのフロントエンド開発",
-		"stacks": [
+		"title": "フロントエンドエンジニア（ネイティブアプリ）",
+		"overview": "国内大手の転職支援サービスにおける、スマートフォンアプリ（iOS / Android）のフロントエンド開発を担当しました。\n既存コードベースのもとで新機能追加や改修、パフォーマンス改善にも取り組みました。",
+		"techStacks": [
 			{
 				"iconName": "SiReact",
 				"label": "React"
@@ -34,7 +34,7 @@
 				"label": "Redmine"
 			}
 		],
-		"features": [
+		"workStyles": [
 			{
 				"iconName": "FaCode",
 				"title": "主要スキル",
@@ -63,11 +63,11 @@
 		],
 		"descriptions": [
 			{
-				"label": "こだわり",
+				"label": "担当・取り組み内容",
 				"markdown": "data/markdown/2204-front-end-engineer_pr.md"
 			},
 			{
-				"label": "詳細",
+				"label": "成果・インパクト",
 				"markdown": "data/markdown/2204-front-end-engineer_details.md"
 			}
 		]
@@ -80,8 +80,8 @@
 			"to": "2022-03"
 		},
 		"title": "Webエンジニア",
-		"overview": "ランディングページ、コーポレートサイト開発",
-		"stacks": [
+		"overview": "ランディングページやコーポレートサイトを中心に、HTML / CSS / JavaScriptを用いたフロントエンド実装を担当。\n要件のすり合わせから実装、パフォーマンス改善・保守性向上まで幅広く対応しました。",
+		"techStacks": [
 			{
 				"iconName": "SiJs",
 				"label": "JavaScript"
@@ -103,7 +103,7 @@
 				"label": "CSS"
 			}
 		],
-		"features": [
+		"workStyles": [
 			{
 				"iconName": "FaCode",
 				"title": "主要スキル",
@@ -117,7 +117,7 @@
 			{
 				"iconName": "FaPeopleGroup",
 				"title": "チーム",
-				"label": "1人"
+				"label": "4人"
 			},
 			{
 				"iconName": "FaBuildings",
@@ -132,11 +132,11 @@
 		],
 		"descriptions": [
 			{
-				"label": "こだわり",
+				"label": "担当・取り組み内容",
 				"markdown": "data/markdown/2004-web-engineer_pr.md"
 			},
 			{
-				"label": "詳細",
+				"label": "成果・インパクト",
 				"markdown": "data/markdown/2004-web-engineer_details.md"
 			}
 		]
@@ -149,8 +149,8 @@
 			"to": "2019-09"
 		},
 		"title": "コーダー",
-		"overview": "Webサイトのコンテンツ更新、バナー制作業務",
-		"stacks": [
+		"overview": "Webサイトのコンテンツ更新業務やバナー制作を担当。\nHTML / CSSによる静的ページの修正・反映作業のほか、CMS操作や画像制作、品質チェックまで幅広く対応しました。",
+		"techStacks": [
 			{
 				"iconName": "SiHtml5",
 				"label": "HTML"
@@ -164,7 +164,7 @@
 				"label": "Illustrator"
 			}
 		],
-		"features": [
+		"workStyles": [
 			{
 				"iconName": "FaCode",
 				"title": "主要スキル",
@@ -188,11 +188,11 @@
 		],
 		"descriptions": [
 			{
-				"label": "こだわり",
+				"label": "担当・取り組み内容",
 				"markdown": "data/markdown/1901-coder_pr.md"
 			},
 			{
-				"label": "詳細",
+				"label": "成果・インパクト",
 				"markdown": "data/markdown/1901-coder_details.md"
 			}
 		]

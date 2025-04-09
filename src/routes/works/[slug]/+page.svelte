@@ -12,7 +12,7 @@
 	import { formatTerm } from '$lib/functions/formatTerm';
 
 	export let data;
-	$: ({ title, term, overview, image, stacks, features, descriptions } = data);
+	$: ({ title, term, overview, image, techStacks, workStyles, descriptions } = data);
 	$: bgImage = `url(${image})`;
 	let activeTabIndex = 0;
 	function setActiveTabIndex(index: number) {
@@ -36,11 +36,11 @@
 	</div>
 	<div class="flex flex-col gap-y-6">
 		<Section label="Overview">
-			<p class="text-body dark:text-lightBody">{overview}</p>
+			<p class="text-body dark:text-lightBody whitespace-pre-line">{overview}</p>
 		</Section>
-		<Section label="Stacks">
+		<Section label="Tech Stacks">
 			<CardList>
-				{#each stacks as { iconName, label }}
+				{#each techStacks as { iconName, label }}
 					<CardItem>
 						<RenderIcon {iconName} className="h-8" />
 						<p class="text-label font-bold dark:text-lightWhite">{label}</p>
@@ -48,9 +48,9 @@
 				{/each}
 			</CardList>
 		</Section>
-		<Section label="Features">
+		<Section label="開発スタイル">
 			<CardList>
-				{#each features as { iconName, title, label }}
+				{#each workStyles as { iconName, title, label }}
 					<CardItem>
 						<RenderIcon {iconName} className="h-6 dark:fill-lightWhite" />
 						<p class="text-label-sm text-placeholder dark:text-lightBody">{title}</p>
