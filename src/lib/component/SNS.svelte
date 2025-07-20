@@ -4,6 +4,7 @@
 	import FaLinkedIn from './Icons/FaLinkedIn.svelte';
 	import FaXTwitter from './Icons/FaXTwitter.svelte';
 	import IconQiita from './Icons/IconQiita.svelte';
+	import IconZenn from './Icons/IconZenn.svelte';
 </script>
 
 <ul class="flex gap-x-4">
@@ -54,6 +55,17 @@
 			rel="noopener noreferrer"
 			aria-label="Qiitaリンク"
 			><IconQiita
+				className="fill-divider hover:fill-white h-6 dark:fill-lightBody dark:hover:fill-divider"
+			/></a
+		>
+	</li>
+	<li>
+		<a
+			href="https://zenn.dev/morimorig3"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Zennリンク"
+			><IconZenn
 				className="fill-divider hover:fill-white h-6 dark:fill-lightBody dark:hover:fill-divider"
 			/></a
 		>
