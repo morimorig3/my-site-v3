@@ -11,7 +11,7 @@ export const load: PageServerLoad = async () => {
 	const developRepoListResponse = await loadDevelopRepoList();
 
 	if (!userReposResponse || !developRepoListResponse) {
-		throw error(404, { message: ERROR_MESSAGE_COMMON });
+		error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 
 	const developRepoNameList = developRepoListResponse.map(({ repositoryName }) => repositoryName);

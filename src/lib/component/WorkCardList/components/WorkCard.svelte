@@ -14,9 +14,9 @@
 	<div class="card__inner">
 		<p class="text-subtitle">{title}</p>
 		<p class="text-label-sm">{formatTerm(term)}</p>
-		<span class="card__plus" />
+		<span class="card__plus"></span>
 	</div>
-	<span class="card__bg u-layered-bg z-0" style:--bg-image={bgImage} />
+	<span class="card__bg u-layered-bg z-0" style:--bg-image={bgImage}></span>
 </a>
 
 <style lang="postcss">
@@ -28,12 +28,15 @@
 		@media (min-width: theme(screens.laptop)) {
 			height: 200px;
 		}
-		@apply relative p-6 text-white block shadow rounded-lg overflow-hidden dark:text-lightWhite;
+		@apply relative p-6 text-white block shadow rounded-lg overflow-hidden;
 		&:hover {
 			.card__bg {
 				@apply scale-105;
 			}
 		}
+	}
+	:global(.dark) .card {
+		@apply text-lightWhite;
 	}
 	.card__plus {
 		@apply w-10 h-10 block absolute right-6 bottom-6;

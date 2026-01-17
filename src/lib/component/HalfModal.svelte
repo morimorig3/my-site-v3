@@ -40,17 +40,22 @@
 		class="fixed top-0 right-0 bottom-0 left-0 z-50 grid place-items-center"
 	>
 		<div use:swipe on:swipe={handleSwipe} transition:slide class="wrapper">
-			<span class="drag-bar" />
-			<button on:click={handleCloseModal} class="close">
-				<span />
-				<span />
-				<span />
+			<span class="drag-bar"></span>
+			<button on:click={handleCloseModal} class="close" aria-label="Close modal">
+				<span></span>
+				<span></span>
+				<span></span>
 			</button>
 			<div class="inner">
 				<slot />
 			</div>
 		</div>
-		<button on:click={handleCloseModal} transition:fade={{ duration: 100 }} class="overlay" />
+		<button
+			on:click={handleCloseModal}
+			transition:fade={{ duration: 100 }}
+			class="overlay"
+			aria-label="Close modal"
+		></button>
 	</div>
 {/if}
 
@@ -66,7 +71,7 @@
 		z-index: 101;
 		border-top-left-radius: theme(borderRadius.2xl);
 		border-top-right-radius: theme(borderRadius.2xl);
-		@apply fixed right-0 bottom-0 left-0 shadow-2xl pt-14 px-6 tablet:px-8 laptop:px-10 dark:bg-lightSecondary;
+		@apply fixed right-0 bottom-0 left-0 shadow-2xl pt-14 px-6 tablet:px-8 laptop:px-10;
 		@media (min-width: theme(screens.tablet)) {
 			position: relative;
 			width: 375px;
@@ -77,6 +82,9 @@
 		@media (min-width: theme(screens.desktop)) {
 			width: 640px;
 		}
+	}
+	:global(.dark) .wrapper {
+		@apply bg-lightSecondary;
 	}
 	.inner {
 		@apply py-6;
@@ -101,8 +109,9 @@
 		border-radius: 9999px;
 		background-color: theme(colors.body);
 		transform-origin: right;
-		transition: transform 0.25s, opacity 0.25s;
-		@apply dark:bg-lightWhite;
+		transition:
+			transform 0.25s,
+			opacity 0.25s;
 		&:nth-child(1) {
 			transform: rotate(-45deg) translateY(-6px);
 		}
@@ -113,6 +122,9 @@
 		&:nth-child(3) {
 			transform: rotate(45deg) translateY(6px);
 		}
+	}
+	:global(.dark) .close span {
+		@apply bg-lightWhite;
 	}
 	.drag-bar {
 		&::after {

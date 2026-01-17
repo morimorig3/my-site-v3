@@ -8,11 +8,11 @@ import { loadWorkDetailList } from '$lib/server/works';
 export const load: PageServerLoad = async ({ params }) => {
 	const response = await loadWorkDetailList();
 	if (!response) {
-		throw error(404, { message: ERROR_MESSAGE_COMMON });
+		error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 	const work = response.find(({ slug }) => slug === params.slug);
 	if (!work) {
-		throw error(404, { message: ERROR_MESSAGE_COMMON });
+		error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 
 	return work;

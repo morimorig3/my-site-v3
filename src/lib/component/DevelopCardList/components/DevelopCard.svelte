@@ -32,6 +32,9 @@
 
 <style lang="postcss">
 	.wrapper {
-		@apply p-4 border flex flex-col gap-y-2 h-full dark:border-lightSecondary dark:bg-lightSecondary;
+		@apply p-4 border flex flex-col gap-y-2 h-full;
+	}
+	:global(.dark) .wrapper {
+		@apply border-lightSecondary bg-lightSecondary;
 	}
 </style>

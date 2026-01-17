@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Chronology from '$lib/component/Chronology/Chronology.svelte';
 	import Head from '$lib/component/Head.svelte';
 
@@ -10,7 +10,7 @@
 <Head
 	pageTitle="About"
 	description="morimorig3 の簡単な経歴を紹介しています。"
-	pathName={$page.url.pathname}
+	pathName={page.url.pathname}
 />
 
 <div class="l-container py-6 tablet:py-8 laptop:py-10">

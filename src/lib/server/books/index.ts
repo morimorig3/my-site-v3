@@ -12,7 +12,7 @@ export async function loadBookReviewList() {
 	const data = await readFile('data/bookReviewList.json', {
 		encoding: 'utf-8'
 	}).catch(() => {
-		throw error(500, {
+		error(500, {
 			message: ERROR_MESSAGE_COMMON
 		});
 	});

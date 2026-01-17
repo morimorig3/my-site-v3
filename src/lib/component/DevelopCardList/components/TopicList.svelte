@@ -18,6 +18,9 @@
 
 <style lang="postcss">
 	.isPressed {
-		@apply bg-sky-50 dark:bg-lightBody dark:text-lightSecondary;
+		@apply bg-sky-50;
+	}
+	:global(.dark) .isPressed {
+		@apply bg-lightBody text-lightSecondary;
 	}
 </style>

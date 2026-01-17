@@ -3,9 +3,9 @@
 </script>
 
 <div class="wrap" class:isOpen>
-	<span class="bar" />
-	<span class="bar" />
-	<span class="bar" />
+	<span class="bar"></span>
+	<span class="bar"></span>
+	<span class="bar"></span>
 </div>
 
 <style lang="postcss">
@@ -24,9 +24,10 @@
 		width: 100%;
 		border-radius: 9999px;
 		background-color: theme(colors.body);
-		@apply dark:bg-lightWhite;
 		transform-origin: right;
-		transition: transform 0.25s, opacity 0.25s;
+		transition:
+			transform 0.25s,
+			opacity 0.25s;
 		&:nth-child(1) {
 			transform: scaleX(0.9);
 		}
@@ -36,6 +37,9 @@
 		&:nth-child(3) {
 			transform: scaleX(0.6);
 		}
+	}
+	:global(.dark) .bar {
+		@apply bg-lightWhite;
 	}
 	.wrap:hover .bar {
 		transform: scaleX(1);

@@ -94,9 +94,15 @@
 
 <style lang="postcss">
 	.section-title {
-		@apply text-subtitle dark:text-lightWhite;
+		@apply text-subtitle;
+	}
+	:global(.dark) .section-title {
+		@apply text-lightWhite;
 	}
 	.section-description {
-		@apply text-label text-placeholder dark:text-lightBody;
+		@apply text-label text-placeholder;
+	}
+	:global(.dark) .section-description {
+		@apply text-lightBody;
 	}
 </style>

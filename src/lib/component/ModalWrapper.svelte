@@ -28,7 +28,7 @@
 	transition:fade={{ duration: 100 }}
 >
 	<slot />
-	<button on:click={handleCloseModal} class="u-overlay" />
+	<button on:click={handleCloseModal} class="u-overlay" aria-label="Close modal"></button>
 </div>
 
 <style lang="postcss">

@@ -41,7 +41,7 @@ export async function getBookList() {
 			})
 		)
 		.catch(() => {
-			throw error(500, {
+			error(500, {
 				message: ERROR_MESSAGE_COMMON
 			});
 		});

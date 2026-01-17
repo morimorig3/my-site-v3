@@ -19,7 +19,7 @@ export async function getUserRepos() {
 		...GITHUB_API_HEADERS,
 		...params
 	}).catch(() => {
-		throw error(500, ERROR_MESSAGE_COMMON);
+		error(500, ERROR_MESSAGE_COMMON);
 	});
 	return data;
 }

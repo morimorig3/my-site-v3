@@ -23,7 +23,7 @@ export const load: PageServerLoad = async () => {
 		!goodBooksBookShelvesResponse ||
 		!loadBookReviewListResponse
 	) {
-		throw error(404, { message: ERROR_MESSAGE_COMMON });
+		error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 	const [reviewedWithFavorite, reviewedWithForBeginner, reviewedWithToRead, reviewedWithGoodBooks] =
 		[

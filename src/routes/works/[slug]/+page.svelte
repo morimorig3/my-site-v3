@@ -3,7 +3,7 @@
 
 	import Section from './components/Section.svelte';
 
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import CardList from '$lib/component/CardList/CardList.svelte';
 	import CardItem from '$lib/component/CardList/components/CardItem.svelte';
 	import Head from '$lib/component/Head.svelte';
@@ -23,7 +23,7 @@
 <Head
 	pageTitle={`Works - ${title}`}
 	description={`${title}として働いていた際の環境、使用していた技術スタック、おおまかな業務内容について紹介しています。}`}
-	pathName={$page.url.pathname}
+	pathName={page.url.pathname}
 />
 
 <div class="l-container py-6 tablet:py-8 laptop:py-10">

@@ -16,7 +16,7 @@
 	.wrapper {
 		background-color: #fff;
 		z-index: 101;
-		@apply flex flex-col gap-y-6 shadow-2xl p-6 tablet:px-8 laptop:px-10 dark:bg-lightSecondary;
+		@apply flex flex-col gap-y-6 shadow-2xl p-6 tablet:px-8 laptop:px-10;
 		@media (min-width: theme(screens.tablet)) {
 			width: 375px;
 			max-height: 588px;
@@ -25,5 +25,8 @@
 		@media (min-width: theme(screens.desktop)) {
 			width: 640px;
 		}
+	}
+	:global(.dark) .wrapper {
+		@apply bg-lightSecondary;
 	}
 </style>

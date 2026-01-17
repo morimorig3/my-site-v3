@@ -8,7 +8,7 @@ import { loadHistoryList } from '$lib/server/about';
 export const load: PageServerLoad = async () => {
 	const response = await loadHistoryList();
 	if (!response) {
-		throw error(404, { message: ERROR_MESSAGE_COMMON });
+		error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 
 	return {

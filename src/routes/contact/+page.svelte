@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { superForm } from 'sveltekit-superforms/client';
+	import { superForm } from 'sveltekit-superforms';
+	import { zod4Client } from 'sveltekit-superforms/adapters';
 
 	import AlertPopup from './components/AlertPopup.svelte';
 	import ConfirmPopup from './components/ConfirmPopup.svelte';
@@ -8,7 +9,7 @@
 	import type { ActionData, PageData } from './$types';
 	import type { MouseEventHandler } from 'svelte/elements';
 
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import CustomButton from '$lib/component/CustomButton/CustomButton.svelte';
 	import FloatingLabelInput from '$lib/component/FloatingLabelInput.svelte';
 	import Head from '$lib/component/Head.svelte';
@@ -28,10 +29,10 @@
 		enhance,
 		errors,
 		submitting,
-		validate,
+		validateForm,
 		reset
 	} = superForm(data.form, {
-		validators: contactFormSchema
+		validators: zod4Client(contactFormSchema)
 	});
 
 	const openDialog = () => {
@@ -43,19 +44,12 @@
 		isVisibleDialog = false;
 		isVisibleOverlay = false;
 	};
-	const manualValidate = () => {
-		validate('name');
-		validate('email');
-		validate('message');
-	};
-
 	/**
 	 * 確認ボタン押下ハンドラ
 	 */
 	const handleClickConfirm: MouseEventHandler<HTMLButtonElement> = async (event) => {
 		event.preventDefault();
-		manualValidate();
-		const result = await validate();
+		const result = await validateForm({ update: true });
 		if (result.valid) {
 			openDialog();
 		}
@@ -83,14 +77,14 @@
 	$: handleClickOverlay = $submitting
 		? () => undefined
 		: form?.success
-		? handleSubmitComplete
-		: closeOverlay;
+			? handleSubmitComplete
+			: closeOverlay;
 </script>
 
 <Head
 	pageTitle="Contact"
 	description="morimorig3 へのお問い合わせページです"
-	pathName={$page.url.pathname}
+	pathName={page.url.pathname}
 />
 
 <div class="l-container py-6 tablet:py-8 laptop:py-10">

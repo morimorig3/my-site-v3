@@ -52,7 +52,11 @@
 		height: auto;
 	}
 	.more {
-		text-shadow: 2px 2px 0 white, -2px 2px 0 white, 2px -2px 0 white, -2px -2px 0 white;
+		text-shadow:
+			2px 2px 0 white,
+			-2px 2px 0 white,
+			2px -2px 0 white,
+			-2px -2px 0 white;
 		&::after {
 			content: '';
 			height: 30px;
@@ -70,8 +74,11 @@
 		z-index: 1;
 		@apply text-label text-link font-bold flex justify-end  absolute bottom-0 left-0 right-0;
 		&.isDark {
-			text-shadow: 2px 2px 0 theme(colors.lightSecondary), -2px 2px 0 theme(colors.lightSecondary),
-				2px -2px 0 theme(colors.lightSecondary), -2px -2px 0 theme(colors.lightSecondary);
+			text-shadow:
+				2px 2px 0 theme(colors.lightSecondary),
+				-2px 2px 0 theme(colors.lightSecondary),
+				2px -2px 0 theme(colors.lightSecondary),
+				-2px -2px 0 theme(colors.lightSecondary);
 			&::after {
 				background-image: linear-gradient(
 					to top,
