@@ -1,12 +1,12 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Head from '$lib/component/Head.svelte';
 </script>
 
 <Head
 	pageTitle="プライバシーポリシー"
 	description="当サイトのプライバシーポリシーです。"
-	pathName={$page.url.pathname}
+	pathName={page.url.pathname}
 />
 
 <div class="l-container text-body py-6 tablet:py-8 laptop:py-10 dark:text-lightBody">

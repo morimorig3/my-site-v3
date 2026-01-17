@@ -30,7 +30,7 @@
 				>
 			{/if}
 			{#if isOpen}
-				<span class="close" />
+				<span class="close"></span>
 			{/if}
 		</button>
 		{#if isOpen}
@@ -59,7 +59,10 @@
 		height: 100%;
 		border-radius: 100vh;
 		background-color: theme(colors.placeholder);
-		@apply dark:bg-body;
+	}
+	:global(.dark) .close::before,
+	:global(.dark) .close::after {
+		@apply bg-body;
 	}
 	.close::before {
 		transform: translate(-50%, -50%) rotate(45deg);
@@ -77,7 +80,9 @@
 		border-radius: 10px;
 		background-color: #fff;
 		filter: drop-shadow(rgba(0, 0, 0, 0.16) 0px 1px 2px);
-		@apply dark:bg-divider;
+	}
+	:global(.dark) .bubble {
+		@apply bg-divider;
 	}
 	.bubble::before {
 		content: '';
@@ -86,11 +91,15 @@
 		background-color: #fff;
 		height: calc(20px / 2 * tan(60deg));
 		width: 20px;
-		@apply dark:bg-divider;
+	}
+	:global(.dark) .bubble::before {
+		@apply bg-divider;
 	}
 	.bubble[data-is-open='true']:hover::before {
 		background-color: #fff;
-		@apply dark:bg-divider;
+	}
+	:global(.dark) .bubble[data-is-open='true']:hover::before {
+		@apply bg-divider;
 	}
 	.left.bubble::before {
 		top: 50%;
@@ -120,6 +129,8 @@
 	.bubble:hover::before {
 		background-color: theme(colors.sky.50);
 		transition: theme(transitionDuration.150);
-		@apply dark:bg-lightBody;
+	}
+	:global(.dark) .bubble:hover::before {
+		@apply bg-lightBody;
 	}
 </style>

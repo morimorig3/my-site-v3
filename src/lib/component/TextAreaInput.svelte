@@ -12,19 +12,25 @@
 		bind:value
 		{placeholder}
 		{name}
-	/>
+	></textarea>
 	{#if errorMessage}<span class="text-red-500 text-label-sm">{errorMessage}</span>{/if}
 </div>
 
 <style lang="postcss">
 	.textarea {
 		min-height: 200px;
-		@apply border rounded-md w-full p-2 bg-transparent dark:text-lightBody dark:border-placeholder;
+		@apply border rounded-md w-full p-2 bg-transparent;
 		&::placeholder {
 			@apply text-placeholder;
 		}
 		&:focus {
-			@apply border-body outline-none dark:border-white;
+			@apply border-body outline-none;
+		}
+	}
+	:global(.dark) .textarea {
+		@apply text-lightBody border-placeholder;
+		&:focus {
+			@apply border-white;
 		}
 	}
 </style>

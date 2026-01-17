@@ -3,7 +3,7 @@
 
 	import type { PageData } from './$types.js';
 
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import BookListLarge from '$lib/component/BookListLarge/BookListLarge.svelte';
 	import BookListSmall from '$lib/component/BookListSmall/BookListSmall.svelte';
 	import Head from '$lib/component/Head.svelte';
@@ -22,7 +22,7 @@
 <Head
 	pageTitle="Books"
 	description="エンジニアとしての重要な「思考方法」や「テクニック」を磨くための書籍を紹介しています。"
-	pathName={$page.url.pathname}
+	pathName={page.url.pathname}
 />
 
 <div class="bg-lightTertiary dark:bg-lightPrimary">

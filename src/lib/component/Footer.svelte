@@ -20,7 +20,7 @@
 					rel="noopener noreferrer">お問合せフォーム</a
 				>
 			</p>
-			<div class="flex-1 justify-self-stretch self-stretch hidden laptop:block" />
+			<div class="flex-1 justify-self-stretch self-stretch hidden laptop:block"></div>
 			<SNS />
 		</div>
 	</div>

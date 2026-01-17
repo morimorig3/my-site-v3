@@ -9,6 +9,9 @@
 		@apply overflow-x-scroll flex p-1;
 	}
 	.inner {
-		@apply flex border rounded-md shadow dark:border-lightWhite;
+		@apply flex border rounded-md shadow;
+	}
+	:global(.dark) .inner {
+		@apply border-lightWhite;
 	}
 </style>

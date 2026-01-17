@@ -21,11 +21,11 @@
 
 <style lang="postcss">
 	.floating-input {
-		@apply relative dark:text-lightBody;
+		@apply relative;
 		&__input {
-			@apply w-full h-full p-2 pt-4 border-b bg-transparent dark:border-placeholder;
+			@apply w-full h-full p-2 pt-4 border-b bg-transparent;
 			&:focus {
-				@apply border-body outline-none dark:border-white;
+				@apply border-body outline-none;
 			}
 			&::placeholder {
 				color: transparent;
@@ -46,6 +46,15 @@
 			pointer-events: none;
 			transform-origin: left center;
 			transition: transform 250ms;
+		}
+	}
+	:global(.dark) .floating-input {
+		@apply text-lightBody;
+	}
+	:global(.dark) .floating-input__input {
+		@apply border-placeholder;
+		&:focus {
+			@apply border-white;
 		}
 	}
 </style>

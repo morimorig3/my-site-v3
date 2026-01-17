@@ -15,7 +15,7 @@ export async function loadWorkDetailList() {
 	const response = await readFile('data/workDetailList.json', {
 		encoding: 'utf-8'
 	}).catch(() => {
-		throw error(500, {
+		error(500, {
 			message: ERROR_MESSAGE_COMMON
 		});
 	});

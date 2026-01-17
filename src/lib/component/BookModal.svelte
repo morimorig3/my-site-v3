@@ -35,8 +35,9 @@
 		</figure>
 		{#if reviewHtml}
 			<div id="book-modal-description">
-				<!-- eslint-disable-next-line -->
-				<div class="u-markdown text-body dark:text-lightBody">{@html reviewHtml}</div>
+				<div class="u-markdown text-body dark:text-lightBody">
+					{@html reviewHtml}
+				</div>
 			</div>
 		{/if}
 		<Divider />

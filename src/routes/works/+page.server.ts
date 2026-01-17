@@ -8,7 +8,7 @@ import { loadWorkDetailList } from '$lib/server/works';
 export const load: PageServerLoad = async () => {
 	const response = await loadWorkDetailList();
 	if (!response) {
-		throw error(404, { message: ERROR_MESSAGE_COMMON });
+		error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 	const workList = response.map(({ slug, title, term, image }) => ({ slug, title, term, image }));
 
