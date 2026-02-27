@@ -21,7 +21,10 @@ import SiGulp from './component/Icons/SiGulp.svelte';
 import SiHtml5 from './component/Icons/SiHtml5.svelte';
 import SiJQuery from './component/Icons/SiJQuery.svelte';
 import SiJs from './component/Icons/SiJs.svelte';
+import SiLaravel from './component/Icons/SiLaravel.svelte';
+import SiMysql from './component/Icons/SiMysql.svelte';
 import SiNext from './component/Icons/SiNext.svelte';
+import SiPhp from './component/Icons/SiPhp.svelte';
 import SiPostgresql from './component/Icons/SiPostgresql.svelte';
 import SiReact from './component/Icons/SiReact.svelte';
 import SiRealm from './component/Icons/SiRealm.svelte';
@@ -92,6 +95,9 @@ export const ICON_MAP = {
 	SiAmazonWebServices: SiAmazonWebServices,
 	SiPostgresql: SiPostgresql,
 	SiTerraform: SiTerraform,
+	SiLaravel: SiLaravel,
+	SiPhp: SiPhp,
+	SiMysql: SiMysql,
 	default: FaFlag
 } as const;
 

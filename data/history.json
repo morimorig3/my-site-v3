@@ -1,10 +1,54 @@
 [
 	{
+		"title": "フルスタックエンジニア",
+		"description": "iRidge, Inc.",
+		"term": {
+			"from": "2025-12",
+			"to": ""
+		},
+		"workOverviews": [
+			{
+				"title": "ローカルSEOサービス 継続開発",
+				"term": {
+					"from": "2025-12",
+					"to": ""
+				},
+				"stacks": [
+					{
+						"iconName": "SiPhp",
+						"label": "PHP"
+					},
+					{
+						"iconName": "SiLaravel",
+						"label": "Laravel"
+					},
+					{
+						"iconName": "SiMysql",
+						"label": "MySQL"
+					},
+					{
+						"iconName": "SiJs",
+						"label": "JavaScript"
+					}
+				],
+				"description": "地図検索エンジン最適化サービスの継続開発チームにて、PHP + Laravelで構築されているページのフロントエンド開発／バックエンド開発を担当しています。"
+			},
+			{
+				"title": "個人学習",
+				"term": {
+					"from": "2025-12",
+					"to": ""
+				},
+				"description": "実業務でプロンプトエンジニアリングや生成AIの組み込みを担当していたこともあり機械学習に興味が湧き、基礎固めからLLMの理解を深めるための学習をしています。"
+			}
+		]
+	},
+	{
 		"title": "フロントエンドエンジニア",
 		"description": "bitA Inc.",
 		"term": {
 			"from": "2022-04",
-			"to": ""
+			"to": "2025-11"
 		},
 		"workOverviews": [
 			{

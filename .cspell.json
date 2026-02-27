@@ -18,7 +18,8 @@
 		"sveltekit-superforms",
 		"grecaptcha",
 		"webp",
-		"Fargate"
+		"Fargate",
+		"Laravel"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }
