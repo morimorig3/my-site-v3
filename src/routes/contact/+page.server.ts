@@ -7,6 +7,7 @@ import type { Actions } from './$types';
 
 import { contactFormSchema, type ContactFormData } from '$lib/schemas';
 import { sendReceiveMail } from '$lib/server/nodeMailer';
+import { verifyTurnstile } from '$lib/server/turnstile';
 
 export const prerender = false;
 
@@ -17,12 +18,24 @@ export const load = async () => {
 
 export const actions = {
 	default: async ({ request }) => {
-		const form = await superValidate(request, zod4(contactFormSchema));
+		const formData = await request.formData();
+		const turnstileToken = formData.get('cf-turnstile-response');
+
+		const form = await superValidate(formData, zod4(contactFormSchema));
 		if (!form.valid) {
 			return fail(400, { form, success: false });
 		}
 
+		if (typeof turnstileToken !== 'string' || !turnstileToken) {
+			return fail(400, { form, success: false });
+		}
+
 		try {
+			const isHuman = await verifyTurnstile(turnstileToken);
+			if (!isHuman) {
+				return fail(400, { form, success: false });
+			}
+
 			await sendReceiveMail(form.data as ContactFormData);
 			return { form, success: true };
 		} catch (_error) {

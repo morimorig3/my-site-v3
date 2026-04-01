@@ -10,6 +10,7 @@
 	import type { MouseEventHandler } from 'svelte/elements';
 
 	import { page } from '$app/state';
+	import { PUBLIC_TURNSTILE_SITE_KEY } from '$env/static/public';
 	import CustomButton from '$lib/component/CustomButton/CustomButton.svelte';
 	import FloatingLabelInput from '$lib/component/FloatingLabelInput.svelte';
 	import Head from '$lib/component/Head.svelte';
@@ -81,6 +82,10 @@
 			: closeOverlay;
 </script>
 
+<svelte:head>
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</svelte:head>
+
 <Head
 	pageTitle="Contact"
 	description="morimorig3 へのお問い合わせページです"
@@ -112,6 +117,7 @@
 			bind:value={$contactForm.message}
 			errorMessage={$errors.message}
 		/>
+		<div class="cf-turnstile" data-sitekey={PUBLIC_TURNSTILE_SITE_KEY}></div>
 		<CustomButton handleClick={handleClickConfirm} label="確認" />
 	</form>
 	{#if isVisibleOverlay}
