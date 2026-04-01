@@ -14,3 +14,6 @@ jobs:
           node-version: '22.x'
       - run: npm ci
       - run: npm run check
+        env:
+          TURNSTILE_SECRET_KEY: dummy
+          PUBLIC_TURNSTILE_SITE_KEY: dummy
