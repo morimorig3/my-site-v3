@@ -49,6 +49,30 @@
 	border-left: 3px solid currentColor;
 }
 
+.u-table {
+	width: 100%;
+	border-collapse: collapse;
+	th,
+	td {
+		@apply border border-divider px-3 py-2 text-left;
+	}
+	th {
+		@apply bg-bgSecondary dark:bg-lightSecondary font-bold;
+	}
+}
+
+[data-rehype-pretty-code-figure] {
+	pre {
+		@apply my-4 overflow-x-auto rounded-lg bg-bgTertiary p-4 text-body-sm dark:bg-lightSecondary;
+	}
+	span {
+		color: var(--shiki-light);
+	}
+}
+.dark [data-rehype-pretty-code-figure] span {
+	color: var(--shiki-dark);
+}
+
 .u-dynamicHeight {
 	height: calc(100vh - theme(space.16));
 	@media (min-width: theme(screens.tablet)) {
