@@ -3,7 +3,7 @@ title: 'ブログを始めました'
 date: '2026-07-18'
 description: 'このサイトにブログ機能を追加した経緯と、markdown + shiki 構成について。'
 tags: ['SvelteKit', 'Markdown', 'Blog']
-draft: false
+draft: true
 ---
 
 ## はじめに
