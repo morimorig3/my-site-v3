@@ -21,7 +21,10 @@ export type ContactFormData = z.infer<typeof contactFormSchema>;
  */
 export const blogFrontmatterSchema = z.object({
 	title: z.string().min(1),
-	date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+	date: z.preprocess(
+		(val) => (val instanceof Date ? val.toISOString().slice(0, 10) : val),
+		z.string().regex(/^\d{4}-\d{2}-\d{2}$/)
+	),
 	description: z.string().min(1),
 	tags: z.array(z.string()).default([]),
 	draft: z.boolean().default(false)
