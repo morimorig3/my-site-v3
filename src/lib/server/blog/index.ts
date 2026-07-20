@@ -24,7 +24,9 @@ export interface BlogPost extends BlogPostSummary {
 
 async function readAllSlugs(): Promise<string[]> {
 	const entries = await readdir(BLOG_DIR, { withFileTypes: true }).catch(() => []);
-	return entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
+	return entries
+		.filter((entry) => entry.isDirectory() && !entry.name.startsWith('.'))
+		.map((entry) => entry.name);
 }
 
 async function readFrontmatterAndBody(slug: string) {
