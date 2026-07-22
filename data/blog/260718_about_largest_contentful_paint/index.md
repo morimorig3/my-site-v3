@@ -1,4 +1,5 @@
 ---
+slug: about-largest-contentful-paint
 title: LCPについて
 date: 2026-07-18
 description: 説明文

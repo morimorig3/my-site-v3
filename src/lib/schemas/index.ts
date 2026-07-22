@@ -20,6 +20,10 @@ export type ContactFormData = z.infer<typeof contactFormSchema>;
  * ブログ記事frontmatterのZodスキーマ
  */
 export const blogFrontmatterSchema = z.object({
+	slug: z
+		.string()
+		.min(1)
+		.regex(/^[a-z0-9-]+$/),
 	title: z.string().min(1),
 	date: z.preprocess(
 		(val) => (val instanceof Date ? val.toISOString().slice(0, 10) : val),

@@ -1,4 +1,5 @@
 ---
+slug: about-core-web-vitals
 title: コアウェブバイタルについて
 date: 2026-07-18
 description: 説明文

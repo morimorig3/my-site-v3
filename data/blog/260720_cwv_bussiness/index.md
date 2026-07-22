@@ -1,4 +1,5 @@
 ---
+slug: cwv-bussiness
 title: コアウェブバイタルがビジネスに与える影響
 date: 2026-07-20
 description: 説明文

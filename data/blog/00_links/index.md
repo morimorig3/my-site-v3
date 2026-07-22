@@ -1,4 +1,5 @@
 ---
+slug: links
 title: リンク集
 date: 2026-07-19
 description: リンク集です
