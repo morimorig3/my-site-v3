@@ -19,7 +19,9 @@
 		"grecaptcha",
 		"webp",
 		"Fargate",
-		"Laravel"
+		"Laravel",
+		"noopener",
+		"noreferrer"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }

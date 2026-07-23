@@ -1,5 +1,6 @@
 import rehypeAttrs from 'rehype-attr';
 import rehypeClassNames, { type Options } from 'rehype-class-names';
+import rehypeExternalLinks from 'rehype-external-links';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeRaw from 'rehype-raw';
 import rehypeSlug from 'rehype-slug';
@@ -35,6 +36,7 @@ export const blogMarkdownToHtml = async (markdown: string): Promise<string> => {
 		.use(rehypeAttrs, { properties: 'attr' })
 		// @ts-expect-error 型解決ができないため
 		.use(rehypeClassNames, options)
+		.use(rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] })
 		.use(rehypeStringify)
 		.process(markdown);
 
