@@ -7,7 +7,7 @@
 	$: ({ title, date, description, tags, html } = data.post);
 </script>
 
-<Head pageTitle={`Blog - ${title}`} {description} pathName={page.url.pathname} />
+<Head pageTitle={title} {description} pathName={page.url.pathname} />
 
 <div class="l-container py-6 tablet:py-8 laptop:py-10">
 	<article>
