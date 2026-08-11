@@ -46,6 +46,18 @@ function resolveImagePaths(markdown: string, dirName: string): string {
 	);
 }
 
+/** Obsidianの埋め込み記法 ![[path|width]] を標準Markdown画像記法に変換する */
+function resolveObsidianEmbeds(markdown: string): string {
+	return markdown.replace(
+		/!\[\[([^\]|]+)(?:\|(\d+))?]]/g,
+		(_match, path: string, width?: string) => {
+			const filename = path.split('/').pop();
+			const image = `![](img/${filename})`;
+			return width ? `${image}<!--rehype:width=${width}-->` : image;
+		}
+	);
+}
+
 /**
  * ブログ記事一覧を取得(公開日降順、draftは除外)
  */
@@ -75,7 +87,9 @@ export async function loadBlogPost(slug: string): Promise<BlogPost> {
 		error(404, { message: ERROR_MESSAGE_COMMON });
 	}
 
-	const html = await blogMarkdownToHtml(resolveImagePaths(match.content, match.dirName));
+	const html = await blogMarkdownToHtml(
+		resolveImagePaths(resolveObsidianEmbeds(match.content), match.dirName)
+	);
 
 	return { ...match.frontmatter, html };
 }
