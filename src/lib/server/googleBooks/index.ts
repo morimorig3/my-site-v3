@@ -5,7 +5,6 @@ import { BOOK_SHELVES_INDEX, GOOGLE_BOOKS_UID } from './const';
 import type { GetBookListResponse } from './types';
 
 import { env } from '$env/dynamic/private';
-import { AXIOS } from '$lib';
 import { ERROR_MESSAGE_COMMON } from '$lib/const';
 
 export async function getBookList() {
@@ -52,9 +51,11 @@ export async function getBookList() {
  * @param shelvesIndex - 本棚ID
  */
 async function getBookShelves(shelvesIndex: number) {
-	const response = await AXIOS.get<GetBookListResponse>(
+	const response = await fetch(
 		`https://www.googleapis.com/books/v1/users/${GOOGLE_BOOKS_UID}/bookshelves/${shelvesIndex}/volumes?key=${env.GOOGLE_BOOKS_API_KEY}`
 	);
-	const { data } = response;
-	return data;
+	if (!response.ok) {
+		throw new Error(`Google Books API error: ${response.status}`);
+	}
+	return (await response.json()) as GetBookListResponse;
 }

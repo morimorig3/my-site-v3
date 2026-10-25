@@ -11,8 +11,7 @@
 		aria-invalid={errorMessage ? 'true' : undefined}
 		bind:value
 		{placeholder}
-		{name}
-	></textarea>
+		{name}></textarea>
 	{#if errorMessage}<span class="text-red-500 text-label-sm">{errorMessage}</span>{/if}
 </div>
 
