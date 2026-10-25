@@ -1,28 +1,26 @@
 <script lang="ts">
-	import { superForm } from 'sveltekit-superforms';
-	import { zod4Client } from 'sveltekit-superforms/adapters';
+	import { defaults, superForm } from 'sveltekit-superforms';
+	import { zod4, zod4Client } from 'sveltekit-superforms/adapters';
 
 	import AlertPopup from './components/AlertPopup.svelte';
 	import ConfirmPopup from './components/ConfirmPopup.svelte';
 	import ContactMessageConfirm from './components/ContactMessageConfirm.svelte';
 
-	import type { ActionData, PageData } from './$types';
 	import type { MouseEventHandler } from 'svelte/elements';
 
 	import { page } from '$app/state';
-	import { PUBLIC_TURNSTILE_SITE_KEY } from '$env/static/public';
 	import CustomButton from '$lib/component/CustomButton/CustomButton.svelte';
 	import FloatingLabelInput from '$lib/component/FloatingLabelInput.svelte';
 	import Head from '$lib/component/Head.svelte';
 	import Spinner from '$lib/component/Icons/Spinner.svelte';
 	import ModalWrapper from '$lib/component/ModalWrapper.svelte';
 	import TextAreaInput from '$lib/component/TextAreaInput.svelte';
+	import { sendContactMessage } from '$lib/functions/sendContactMessage';
 	import { contactFormSchema } from '$lib/schemas';
 
-	export let data: PageData;
-	export let form: ActionData;
 	let isVisibleOverlay = false;
 	let isVisibleDialog = false;
+	let isSuccess = false;
 	let formElement: HTMLFormElement;
 
 	const {
@@ -32,8 +30,15 @@
 		submitting,
 		validateForm,
 		reset
-	} = superForm(data.form, {
-		validators: zod4Client(contactFormSchema)
+	} = superForm(defaults(zod4(contactFormSchema)), {
+		SPA: true,
+		validators: zod4Client(contactFormSchema),
+		resetForm: false,
+		onUpdate: async ({ form }) => {
+			if (!form.valid) return;
+			const botcheck = new FormData(formElement).has('botcheck');
+			isSuccess = await sendContactMessage(form.data, botcheck);
+		}
 	});
 
 	const openDialog = () => {
@@ -69,6 +74,7 @@
 	 */
 	const handleSubmitComplete = () => {
 		closeOverlay();
+		isSuccess = false;
 		reset();
 	};
 
@@ -77,14 +83,10 @@
 	 */
 	$: handleClickOverlay = $submitting
 		? () => undefined
-		: form?.success
+		: isSuccess
 			? handleSubmitComplete
 			: closeOverlay;
 </script>
-
-<svelte:head>
-	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-</svelte:head>
 
 <Head
 	pageTitle="Contact"
@@ -95,7 +97,6 @@
 <div class="l-container py-6 tablet:py-8 laptop:py-10">
 	<form
 		class="max-w-screen-tablet mx-auto flex flex-col gap-y-8"
-		method="POST"
 		bind:this={formElement}
 		use:enhance
 	>
@@ -117,7 +118,8 @@
 			bind:value={$contactForm.message}
 			errorMessage={$errors.message}
 		/>
-		<div class="cf-turnstile" data-sitekey={PUBLIC_TURNSTILE_SITE_KEY}></div>
+		<!-- Web3Formsのハニーポット（人間には見えない） -->
+		<input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
 		<CustomButton handleClick={handleClickConfirm} label="確認" />
 	</form>
 	{#if isVisibleOverlay}
@@ -128,7 +130,7 @@
 				</ConfirmPopup>
 			{:else if $submitting}
 				<Spinner />
-			{:else if form?.success}
+			{:else if isSuccess}
 				<AlertPopup
 					text="送信ありがとうございます。お問合せを受け付けました。"
 					label="閉じる"

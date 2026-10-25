@@ -4,8 +4,8 @@
 
 pre-commitでチェック
 
-* Prettier
-* ESlint
+* oxfmt
+* oxlint
 * cSpell
 * Vitest
 * svelte-check

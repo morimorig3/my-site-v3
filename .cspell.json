@@ -21,7 +21,8 @@
 		"Fargate",
 		"Laravel",
 		"noopener",
-		"noreferrer"
+		"noreferrer",
+		"botcheck"
 	],
 	"ignorePaths": ["**/*.test.ts", "books.json"]
 }
