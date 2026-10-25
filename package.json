@@ -19,6 +19,7 @@
 		"oxfmt:fix": "oxfmt src"
 	},
 	"devDependencies": {
+		"@octokit/types": "^14.1.0",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
@@ -59,7 +60,9 @@
 		"rehype-external-links": "^3.0.0",
 		"svelte-gestures": "^1.5.2"
 	},
+	"packageManager": "pnpm@10.19.0",
 	"volta": {
-		"node": "24.22.1"
+		"node": "24.22.1",
+		"pnpm": "10.19.0"
 	}
 }

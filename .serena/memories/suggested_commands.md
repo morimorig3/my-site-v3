@@ -2,36 +2,36 @@
 
 ## 開発サーバー
 ```bash
-npm run dev
+pnpm run dev
 ```
 Vite開発サーバーを起動（ホットリロード対応）
 
 ## ビルド
 ```bash
-npm run build
+pnpm run build
 ```
 本番用ビルドを生成
 
 ## プレビュー
 ```bash
-npm run preview
+pnpm run preview
 ```
 ビルド結果をローカルでプレビュー
 
 ## テスト
 ```bash
-npm run test
+pnpm run test
 ```
 Vitestでユニットテストを実行
 
 ## 型チェック
 ```bash
-npm run svelte-check:check
+pnpm run svelte-check:check
 ```
 svelte-checkで型チェックを実行
 
 ```bash
-npm run check:watch
+pnpm run check:watch
 ```
 型チェックをウォッチモードで実行
 
@@ -39,21 +39,21 @@ npm run check:watch
 
 ### チェックのみ
 ```bash
-npm run eslint:check    # ESLintチェック
-npm run prettier:check  # Prettierチェック
-npm run cspell          # スペルチェック
+pnpm run eslint:check    # ESLintチェック
+pnpm run prettier:check  # Prettierチェック
+pnpm run cspell          # スペルチェック
 ```
 
 ### 自動修正
 ```bash
-npm run eslint:fix      # ESLint自動修正
-npm run prettier:fix    # Prettier自動フォーマット
-npm run fix             # 全ての自動修正を実行
+pnpm run eslint:fix      # ESLint自動修正
+pnpm run prettier:fix    # Prettier自動フォーマット
+pnpm run fix             # 全ての自動修正を実行
 ```
 
 ## 全チェック（CI用）
 ```bash
-npm run check
+pnpm run check
 ```
 以下を順番に実行:
 1. svelte-check（型チェック）
@@ -64,7 +64,7 @@ npm run check
 
 ## Git hooks
 ```bash
-npm run prepare
+pnpm run prepare
 ```
 Huskyをインストール（pre-commitフック設定）
 

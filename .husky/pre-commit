@@ -1,1 +1,1 @@
-npm run oxfmt:check && npm run oxlint:check
+pnpm run oxfmt:check && pnpm run oxlint:check

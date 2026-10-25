@@ -6,19 +6,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # Development
-npm run dev              # Start dev server with hot reload
-npm run build            # Production build
-npm run preview          # Preview production build
+pnpm run dev              # Start dev server with hot reload
+pnpm run build            # Production build
+pnpm run preview          # Preview production build
 
 # Testing & Validation
-npm run check            # Run all checks (svelte-check, oxfmt, oxlint, cspell, test)
-npm run test             # Run Vitest tests
-npm run svelte-check:check  # Type check only
+pnpm run check            # Run all checks (svelte-check, oxfmt, oxlint, cspell, test)
+pnpm run test             # Run Vitest tests
+pnpm run svelte-check:check  # Type check only
 
 # Linting & Formatting
-npm run oxlint:fix       # Auto-fix lint issues (oxlint)
-npm run oxfmt:fix        # Auto-format code under src/ (oxfmt)
-npm run fix              # Run all auto-fixes
+pnpm run oxlint:fix       # Auto-fix lint issues (oxlint)
+pnpm run oxfmt:fix        # Auto-format code under src/ (oxfmt)
+pnpm run fix              # Run all auto-fixes
 ```
 
 ## Architecture
