@@ -23,7 +23,7 @@ npm run fix              # Run all auto-fixes
 
 ## Architecture
 
-This is a SvelteKit v1 portfolio site using TypeScript and Tailwind CSS.
+This is a SvelteKit v2 (Svelte 5) portfolio site using TypeScript and Tailwind CSS.
 
 ### Key Directories
 - `src/lib/component/` - Reusable Svelte components
@@ -57,3 +57,7 @@ This is a SvelteKit v1 portfolio site using TypeScript and Tailwind CSS.
   3. Internal (`$lib/*`)
   4. Relative imports
   5. Type imports
+
+## Agent Rules
+
+- **Do not commit.** Never run `git commit` (or push). Leave changes in the working tree; the user commits manually.

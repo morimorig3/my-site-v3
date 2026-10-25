@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { createTransport } from 'nodemailer';
 import { Octokit } from 'octokit';
 
@@ -10,11 +9,6 @@ import { env } from '$env/dynamic/private';
 export const OCTOKIT = new Octokit({
 	auth: env.GITHUB_PERSONAL_ACCESS_TOKENS
 });
-
-/**
- * Axiosクライアント定義
- */
-export const AXIOS = axios.create();
 
 /**
  * NodeMailerクライアント

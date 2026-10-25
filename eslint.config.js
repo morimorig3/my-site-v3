@@ -102,7 +102,14 @@ export default [
       },
     },
     rules: {
-      ...svelte.configs.recommended.rules,
+      // eslint-plugin-svelte v3 provides recommended config as a flat config array
+      ...Object.assign({}, ...svelte.configs.recommended.map((config) => config.rules ?? {})),
+
+      // TODO: rules newly added to recommended in v3. Disabled until existing code is fixed.
+      'svelte/require-each-key': 'off',
+      'svelte/no-navigation-without-resolve': 'off',
+      'svelte/no-reactive-literals': 'off',
+      'svelte/no-immutable-reactive-statements': 'off',
     },
   },
 
