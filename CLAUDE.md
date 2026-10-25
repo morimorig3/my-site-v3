@@ -11,13 +11,13 @@ npm run build            # Production build
 npm run preview          # Preview production build
 
 # Testing & Validation
-npm run check            # Run all checks (svelte-check, prettier, eslint, cspell, test)
+npm run check            # Run all checks (svelte-check, oxfmt, oxlint, cspell, test)
 npm run test             # Run Vitest tests
 npm run svelte-check:check  # Type check only
 
 # Linting & Formatting
-npm run eslint:fix       # Auto-fix ESLint issues
-npm run prettier:fix     # Auto-format code
+npm run oxlint:fix       # Auto-fix lint issues (oxlint)
+npm run oxfmt:fix        # Auto-format code under src/ (oxfmt)
 npm run fix              # Run all auto-fixes
 ```
 
@@ -48,15 +48,9 @@ This is a SvelteKit v2 (Svelte 5) portfolio site using TypeScript and Tailwind C
 
 ## Code Style
 
-- **Tabs** for indentation, **single quotes**, **no trailing commas**
-- **Type imports required**: `import type { X }` not `import { X }`
-- **No console.log** in production code
-- **Import order** (enforced by ESLint):
-  1. Svelte/SvelteKit (`@sveltejs/*`, `svelte`)
-  2. External packages
-  3. Internal (`$lib/*`)
-  4. Relative imports
-  5. Type imports
+- Formatting is enforced by oxfmt (`.oxfmtrc.json`): **tabs**, **single quotes**, **no trailing commas**
+- Linting is enforced by oxlint with its default rules (`.oxlintrc.json`)
+- Follow existing import ordering: Svelte/SvelteKit → external → `$lib/*` → relative → type imports
 
 ## Agent Rules
 

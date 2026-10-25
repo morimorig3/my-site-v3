@@ -38,7 +38,7 @@ export const actions = {
 
 			await sendReceiveMail(form.data as ContactFormData);
 			return { form, success: true };
-		} catch (_error) {
+		} catch {
 			return fail(400, { form, success: false });
 		}
 	}
