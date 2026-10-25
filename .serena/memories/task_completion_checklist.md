@@ -4,7 +4,7 @@
 
 ## 必須チェック
 ```bash
-npm run check
+pnpm run check
 ```
 このコマンドで以下が全て実行されます：
 - svelte-check（型チェック）
@@ -17,30 +17,30 @@ npm run check
 
 ### 1. 型チェック
 ```bash
-npm run svelte-check:check
+pnpm run svelte-check:check
 ```
 
 ### 2. フォーマット確認・修正
 ```bash
-npm run prettier:check   # 確認のみ
-npm run prettier:fix     # 自動修正
+pnpm run prettier:check   # 確認のみ
+pnpm run prettier:fix     # 自動修正
 ```
 
 ### 3. リント確認・修正
 ```bash
-npm run eslint:check     # 確認のみ
-npm run eslint:fix       # 自動修正
+pnpm run eslint:check     # 確認のみ
+pnpm run eslint:fix       # 自動修正
 ```
 
 ### 4. スペルチェック
 ```bash
-npm run cspell
+pnpm run cspell
 ```
 未知の単語は `.cspell.json` の `words` 配列に追加
 
 ### 5. テスト
 ```bash
-npm run test
+pnpm run test
 ```
 
 ## コミット前
@@ -51,13 +51,13 @@ npm run test
 
 ### import順序エラー
 ```bash
-npm run eslint:fix
+pnpm run eslint:fix
 ```
 で自動修正
 
 ### フォーマットエラー
 ```bash
-npm run prettier:fix
+pnpm run prettier:fix
 ```
 で自動修正
 
