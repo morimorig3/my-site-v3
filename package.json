@@ -16,7 +16,7 @@
 		"eslint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,svelte}'",
 		"prettier:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx,svelte}'",
 		"cspell": "cspell -c .cspell.json 'src/**/*.{js,jsx,ts,tsx,svelte}'",
-		"prepare": "husky install"
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^6.3.4",
